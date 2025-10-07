@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-# cleantech
-=======
-# cleantech-fresh
+# cleantech-site
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This repository contains the Cleantech marketing site built with Ember.
 
 ## Prerequisites
 
-You will need the following things properly installed on your computer.
+You will need the following tooling installed:
 
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/) (with npm)
@@ -17,19 +13,19 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-- `git clone <repository-url>` this repository
-- `cd cleantech-fresh`
+- `git clone <repository-url>`
+- `cd cleantech-site`
 - `npm install`
 
 ## Running / Development
 
 - `npm run start`
-- Visit your app at [http://localhost:4200](http://localhost:4200).
-- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+- Visit your app at [http://localhost:4200](http://localhost:4200)
+- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests)
 
 ### Code Generators
 
-Make use of the many generators for code, try `ember help generate` for more details
+- `npx ember help generate`
 
 ### Running Tests
 
@@ -48,7 +44,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+Document deployment steps for your environment.
 
 ## Further Reading / Useful Links
 
@@ -57,4 +53,3 @@ Specify what it takes to deploy your app.
 - Development Browser Extensions
   - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
->>>>>>> 382e45b (Initial Commit from Ember CLI v6.7.0)
