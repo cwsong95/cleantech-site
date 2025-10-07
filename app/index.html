@@ -2,22 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>CleantechFresh</title>
-    <meta name="description" content="">
+    <title>Cleantech</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{content-for "head"}}
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/cleantech-fresh.css">
+    <!-- 🔥 Ember가 여기에 app CSS를 자동 삽입합니다 -->
+    <link rel="stylesheet" href="{{rootURL}}assets/cleantech-fresh.css">
+
+    <!-- Swiper CSS (CDN) -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
 
     {{content-for "head-footer"}}
   </head>
   <body>
     {{content-for "body"}}
 
+    <!-- Ember 빌드 산출물 -->
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/cleantech-fresh.js"></script>
+
+    <!-- Swiper JS (CDN) -->
+    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
 
     {{content-for "body-footer"}}
   </body>

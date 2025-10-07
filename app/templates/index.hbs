@@ -1,0 +1,16 @@
+<section class="hero">
+  <div class="container-app">
+    <HeroCarousel />
+  </div>
+</section>
+
+<section class="section container-app">
+  <div class="grid md:grid-cols-3 gap-8">
+    {{#each this.cards as |card|}}
+      <div class="card" data-card-id={{card.id}}>
+        <div class="card-title">{{card.title}}</div>
+        <p class="card-text">{{card.description}}</p>
+      </div>
+    {{/each}}
+  </div>
+</section>

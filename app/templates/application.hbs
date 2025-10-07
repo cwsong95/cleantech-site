@@ -1,7 +1,91 @@
-{{page-title "CleantechFresh"}}
+<header class="site-header">
+  <div class="container-app flex h-16 items-center justify-between">
+    <LinkTo @route="index" class="brand"><img src="/images/cleantech-logo.jpg" alt="Polished Aqua-Crete floor" class="clean-tech-img"></LinkTo>
 
-{{outlet}}
+    <nav class="nav">
+      <LinkTo @route="company" class="nav-link">{{this.locale.t "nav.company"}}</LinkTo>
+      <div
+        class="dropdown {{if this.productsOpen 'is-open'}}"
+        {{on "mouseenter" this.openProductsDropdown}}
+        {{on "mouseleave" this.closeProductsDropdown}}
+        {{on "focusin" this.openProductsDropdown}}
+        {{on "focusout" this.handleDropdownFocusOut}}
+      >
+        <button
+          type="button"
+          class="nav-link nav-link--trigger"
+          aria-haspopup="true"
+          aria-expanded={{if this.productsOpen "true" "false"}}
+          aria-controls="products-menu"
+          {{on "click" this.toggleProductsDropdown}}
+        >
+          {{this.locale.t "nav.products"}}
+          <svg class="caret" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <div class="dropdown-menu" id="products-menu">
+          <LinkTo
+            @route="product.aqua-crete"
+            class="dropdown-item"
+            {{on "click" this.closeProductsDropdown}}
+          >{{this.locale.t "dropdown.aqua"}}</LinkTo>
+          <LinkTo
+            @route="product.sky-floor"
+            class="dropdown-item"
+            {{on "click" this.closeProductsDropdown}}
+          >{{this.locale.t "dropdown.skyFloor"}}</LinkTo>
+          <LinkTo
+            @route="product.sky-flex"
+            class="dropdown-item"
+            {{on "click" this.closeProductsDropdown}}
+          >{{this.locale.t "dropdown.skyFlex"}}</LinkTo>
+          <LinkTo
+            @route="product.wood"
+            class="dropdown-item"
+            {{on "click" this.closeProductsDropdown}}
+          >{{this.locale.t "dropdown.wood"}}</LinkTo>
+        </div>
+      </div>
 
-{{! The following component displays Ember's default welcome message. }}
-<WelcomePage />
-{{! Feel free to remove this! }}
+      <LinkTo @route="applications"   class="nav-link">{{this.locale.t "nav.applications"}}</LinkTo>
+      <LinkTo @route="certifications" class="nav-link">{{this.locale.t "nav.certifications"}}</LinkTo>
+      <LinkTo @route="contact"        class="nav-link">{{this.locale.t "nav.contact"}}</LinkTo>
+
+      <button
+        type="button"
+        class="lang-toggle"
+        aria-label={{this.locale.toggleAriaLabel}}
+        {{on "click" this.toggleLocale}}
+      >
+        {{this.locale.toggleLabel}}
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container-app">
+    {{outlet}}
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-wrap">
+    <div>
+      <div class="font-semibold">CLEANTECH Inc.</div>
+      <div class="text-white/80 mt-2">114 C-406, Beobwon-ro, Songpa-gu, Seoul</div>
+      <div class="text-white/80">TEL 02-420-2844~5 · FAX 02-413-8605</div>
+      <p class="text-white/50">CopyrightⓒAQUA-CRETE.COM All Rights Reserved</p>
+    </div>
+    <div>
+      <div class="font-semibold">Certifications</div>
+      <ul class="list-disc ml-5 text-white/80 mt-2">
+        <li>HACCP (in progress)</li>
+        <li>Green Certification</li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold">Downloads</div>
+      <LinkTo @route="downloads" class="block text-white/80 mt-2">Brochure & SDS</LinkTo>
+    </div>
+  </div>
+</footer>

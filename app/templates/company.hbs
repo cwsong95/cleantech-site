@@ -1,0 +1,66 @@
+{{page-title (if this.locale.isKorean "회사 소개 | Cleantech" "About Us | Cleantech")}}
+
+<section class="space-y-16">
+  <header class="space-y-6 rounded-3xl border border-slate-200 bg-white p-10 shadow-xl shadow-blue-500/10">
+    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-blue-600">{{this.copy.hero.eyebrow}}</p>
+    <h1 class="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">{{this.copy.hero.title}}</h1>
+    <p class="max-w-3xl text-lg leading-relaxed text-slate-600">{{this.copy.hero.description}}</p>
+    <div class="flex flex-wrap gap-3">
+      {{#each this.copy.hero.highlight.items as |item|}}
+        <span class="rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm">
+          {{item}}
+        </span>
+      {{/each}}
+    </div>
+  </header>
+
+  <section class="space-y-10">
+    <div class="flex items-center justify-between gap-4">
+      <h2 class="text-2xl font-semibold text-slate-900">{{this.copy.timelineTitle}}</h2>
+      <div class="hidden items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:flex">
+        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-4 w-4 fill-slate-400"><path d="M5 5a1 1 0 0 0 0 2h14a1 1 0 1 0 0-2H5Zm0 6a1 1 0 0 0 0 2h9a1 1 0 1 0 0-2H5Zm0 6a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H5Z" /></svg>
+        <span>{{if this.locale.isKorean '2000년부터 현재까지' '2000 to present'}}</span>
+      </div>
+    </div>
+
+    <div class="relative pl-6 before:absolute before:bottom-0 before:top-0 before:left-2 before:w-px before:bg-gradient-to-b before:from-blue-200 before:via-slate-200 before:to-slate-200">
+      <div class="space-y-10">
+        {{#each this.copy.timeline as |block|}}
+          <article class="relative grid gap-6 rounded-3xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur">
+            <div class="flex items-center gap-3">
+              <div class="flex h-11 w-11 items-center justify-center rounded-full bg-blue-600 text-lg font-semibold text-white shadow-lg shadow-blue-500/40">
+                {{block.year}}
+              </div>
+              <div class="text-sm font-medium uppercase tracking-[0.2em] text-slate-400">{{if this.locale.isKorean '연혁' 'Milestone'}}</div>
+            </div>
+            <ul class="space-y-3 text-slate-700">
+              {{#each block.entries as |entry|}}
+                <li class="leading-relaxed">{{entry}}</li>
+              {{/each}}
+            </ul>
+            <span class="absolute left-2 top-6 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-white bg-blue-500 shadow" aria-hidden="true"></span>
+          </article>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <section class="grid gap-8 rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-500 p-10 text-white shadow-xl shadow-blue-500/30 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
+    <div class="space-y-4">
+      <p class="text-xs font-semibold uppercase tracking-[0.4em] text-white/70">Cleantech Insight</p>
+      <h2 class="text-3xl font-semibold leading-snug">{{this.copy.closing.title}}</h2>
+      <p class="text-base leading-relaxed text-white/80">{{this.copy.closing.description}}</p>
+    </div>
+    <div class="flex items-end justify-end">
+      <LinkTo
+        @route="contact"
+        class="inline-flex items-center gap-3 rounded-2xl bg-white px-6 py-3 text-base font-semibold text-blue-600 shadow-lg shadow-indigo-900/30 transition hover:bg-blue-50"
+      >
+        {{this.copy.closing.cta}}
+        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 fill-current">
+          <path d="M13 5a1 1 0 0 0 0 2h3.59l-9.3 9.29a1 1 0 1 0 1.42 1.42L18 8.41V12a1 1 0 0 0 2 0V6a1 1 0 0 0-1-1h-6Z" />
+        </svg>
+      </LinkTo>
+    </div>
+  </section>
+</section>

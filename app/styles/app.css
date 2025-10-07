@@ -1,1 +1,656 @@
-/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========= Base ========= */
+:root {
+  --bg: #fafbfc;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --primary: #2563eb;
+  --primary-strong: #1d4ed8;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Noto Sans KR", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+a:hover {
+  background-color: #f3f4f6;
+}
+
+/* ========= Layout ========= */
+.container-app {
+  max-width: 88rem;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.page {
+  padding: 44px 0;
+}
+.section {
+  padding: 64px 0;
+}
+
+/* ========= Header / Nav ========= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  width: 150px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.nav a,
+.nav-link {
+  display: inline-flex;        /* 추가 */
+  align-items: center;         /* 추가 */
+  gap: 4px;                    /* 아이콘과 텍스트 간격 */
+  font-weight: 500;
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* ▼ 아이콘 크기 조정 */
+.nav .nav-link svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+.nav a:hover,
+.nav-link:hover {
+  background: #f3f4f6;
+}
+
+.nav-link--trigger {
+  background: transparent;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  padding: 8px 12px;
+}
+
+.nav-link--trigger:focus {
+  outline: none;
+}
+
+.nav-link--trigger:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-toggle:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.lang-toggle:focus {
+  outline: none;
+}
+
+.lang-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ========= Dropdown ========= */
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 12px;
+  min-width: 220px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(2, 8, 23, 0.1);
+  padding: 6px;
+  z-index: 80;
+
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+/* manual toggle state */
+.dropdown.is-open .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* hover gap 메워주는 invisible bridge */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 12px; /* margin-top과 동일 */
+}
+
+/* ========= Buttons ========= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  transition: background-color 0.2s;
+}
+.btn:hover {
+  background: var(--primary-strong);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  transition: background-color 0.2s;
+}
+.btn-ghost:hover {
+  background: #f3f4f6;
+}
+
+/* ========= Hero / Swiper ========= */
+.hero {
+  background: radial-gradient(1000px 500px at 0% -10%, #e2e8f00f, transparent 60%),
+    radial-gradient(1000px 500px at 100% 0%, #bfdbfe1a, transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
+}
+.hero-wrap {
+  display: grid;
+  gap: 48px;
+  align-items: center;
+  padding: 80px 0;
+}
+.kicker {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #6b7280;
+}
+.hero-title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.hero-sub {
+  font-size: 18px;
+  color: #475569;
+  margin-top: 16px;
+  max-width: 32rem;
+}
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+.badge {
+  font-size: 11.2px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+.hero-img {
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Swiper helpers */
+.hero-swiper {
+  width: 100%;
+}
+.hero-swiper .swiper-slide {
+  display: flex;
+}
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+  color: var(--primary);
+}
+.hero-swiper .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+/* ========= Aqua-Crete Page ========= */
+.aqua-crete-page {
+  background: var(--bg);
+}
+
+.aqua-crete-hero {
+  display: grid;
+  gap: 48px;
+  padding: 56px;
+  border-radius: 32px;
+  background: linear-gradient(140deg, #0f4c81 0%, #1f73b7 55%, #21568b 100%);
+  color: #f8fafc;
+  overflow: hidden;
+}
+
+.aqua-crete-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.aqua-crete-hero__kicker {
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgba(248, 250, 252, 0.72);
+}
+
+.aqua-crete-hero__title {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.aqua-crete-hero__lead {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 36rem;
+  color: rgba(248, 250, 252, 0.88);
+}
+
+.aqua-crete-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.aqua-crete-hero__tags li {
+  padding: 8px 16px;
+  border-radius: 99px;
+  background: rgba(15, 30, 61, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 14px;
+}
+
+.aqua-crete-hero__cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.aqua-crete-hero__visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
+}
+
+.aqua-crete-hero__logo {
+  width: clamp(180px, 40vw, 320px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 40px rgba(10, 27, 56, 0.25);
+}
+
+.aqua-crete-hero__badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.aqua-crete-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.aqua-crete-section {
+  margin-top: 80px;
+}
+
+.aqua-crete-section:first-of-type {
+  margin-top: 64px;
+}
+
+.aqua-crete-section__head {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 62rem;
+}
+
+.aqua-crete-section__head h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.aqua-crete-section__head p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.aqua-crete-highlight {
+  display: grid;
+  gap: 32px;
+  margin-top: 32px;
+  padding: 32px;
+  border-radius: 24px;
+  background: linear-gradient(120deg, rgba(15, 76, 129, 0.08), rgba(33, 86, 139, 0.03));
+  border: 1px solid rgba(15, 76, 129, 0.12);
+}
+
+.aqua-crete-highlight h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f4c81;
+  margin-bottom: 12px;
+}
+
+.aqua-crete-highlight ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+  color: #1f2937;
+}
+
+.aqua-crete-feature-grid {
+  margin-top: 36px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.aqua-crete-feature-card {
+  position: relative;
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid rgba(15, 76, 129, 0.08);
+  box-shadow: 0 18px 35px rgba(15, 30, 61, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aqua-crete-feature-card__icon {
+  font-size: 32px;
+}
+
+.aqua-crete-feature-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f4c81;
+}
+
+.aqua-crete-feature-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1f2937;
+}
+
+.aqua-crete-stepper {
+  position: relative;
+  margin-top: 36px;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 28px;
+  counter-reset: step;
+}
+
+.aqua-crete-stepper li {
+  position: relative;
+  padding-left: 64px;
+  border-left: 2px solid rgba(15, 76, 129, 0.15);
+}
+
+.aqua-crete-stepper li::before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  left: -18px;
+  top: -4px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0f4c81;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(15, 30, 61, 0.12);
+}
+
+.aqua-crete-stepper h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.aqua-crete-stepper p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.aqua-crete-application-grid {
+  margin-top: 36px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.aqua-crete-application-grid article {
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid rgba(15, 76, 129, 0.08);
+  box-shadow: 0 14px 30px rgba(15, 30, 61, 0.05);
+}
+
+.aqua-crete-application-grid h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f4c81;
+}
+
+.aqua-crete-application-grid p {
+  margin: 0;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.aqua-crete-callout {
+  margin-top: 96px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 48px;
+  border-radius: 28px;
+  background: linear-gradient(125deg, #0f4c81 0%, #1f73b7 60%, #164473 100%);
+  color: #f8fafc;
+}
+
+.aqua-crete-callout__content {
+  max-width: 40rem;
+}
+
+.aqua-crete-callout__content h2 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.aqua-crete-callout__content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(248, 250, 252, 0.88);
+}
+
+.aqua-crete-callout__cta .btn {
+  box-shadow: 0 12px 24px rgba(10, 33, 63, 0.35);
+}
+
+@media (max-width: 768px) {
+  .aqua-crete-hero {
+    padding: 40px 28px;
+  }
+
+  .aqua-crete-hero__visual {
+    align-items: flex-start;
+  }
+
+  .aqua-crete-stepper li {
+    padding-left: 48px;
+  }
+
+  .aqua-crete-callout {
+    padding: 32px;
+  }
+}
+
+/* ========= Cards ========= */
+.card {
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+.card-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+.card-text {
+  margin-top: 8px;
+  color: #475569;
+}
+
+/* ========= Footer ========= */
+.site-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #0f1a2d;
+  color: #fff;
+  padding: 24px;
+  z-index: 60;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.footer-wrap {
+  display: grid;
+  gap: 32px;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .footer-wrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* footer 높이에 맞춰 본문 여백 확보 */
+main,
+.page,
+.section {
+  padding-bottom: 120px; /* footer height */
+}
+
+/* ========= Larger screens spacing ========= */
+@media (min-width: 768px) {
+  .page {
+    padding-bottom: 200px;
+  }
+  .section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .hero-wrap {
+    grid-template-columns: 1fr 1fr;
+    padding: 112px 0;
+  }
+  .hero-title {
+    font-size: 48px;
+  }
+}

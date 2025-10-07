@@ -1,19 +1,28 @@
+/* eslint-env node */
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
-  const app = new EmberApp(defaults, {
-    emberData: {
-      deprecations: {
-        // New projects can safely leave this deprecation disabled.
-        // If upgrading, to opt-into the deprecated behavior, set this to true and then follow:
-        // https://deprecations.emberjs.com/id/ember-data-deprecate-store-extends-ember-object
-        // before upgrading to Ember Data 6.0
-        DEPRECATE_STORE_EXTENDS_EMBER_OBJECT: false,
+  let app = new EmberApp(defaults, {
+    postcssOptions: {
+      compile: {
+        enabled: true,
+        cacheInclude: [/.*\.(css|hbs|js|ts|html)$/],
+        plugins: [
+          require('postcss-import'),            // ← @import 처리 (custom.css 포함)
+          require('tailwindcss')({              // ← Tailwind 전개
+            content: [
+              './app/**/*.{hbs,js,ts}',
+              './app/index.html'
+            ],
+            theme: { extend: {} },
+            plugins: [],
+          }),
+          require('autoprefixer')(),            // ← 브라우저 접두사
+        ],
       },
     },
-    // Add options here
   });
 
   return app.toTree();
