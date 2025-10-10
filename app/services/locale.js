@@ -24,7 +24,7 @@ const MESSAGES = {
         name: 'CLEANTECH Inc.',
         address: '114 C-406, Beobwon-ro, Songpa-gu, Seoul',
         contact: 'TEL 02-420-2844~5 · FAX 02-413-8605',
-        copyright: 'CopyrightⓒAQUA-CRETE.COM All Rights Reserved',
+        copyright: 'Copyrightⓒ--- All Rights Reserved',
       },
       certifications: {
         title: 'Certifications',
@@ -58,7 +58,7 @@ const MESSAGES = {
         name: 'CLEANTECH Inc.',
         address: '서울특별시 송파구 법원로 114 C-406',
         contact: '전화 02-420-2844~5 · 팩스 02-413-8605',
-        copyright: 'CopyrightⓒAQUA-CRETE.COM All Rights Reserved',
+        copyright: 'Copyrightⓒ--- All Rights Reserved',
       },
       certifications: {
         title: '인증 현황',
