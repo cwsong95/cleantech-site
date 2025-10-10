@@ -31,7 +31,7 @@ const CONTENT = {
       },
       {
         id: 'ks',
-        title: '아쿠아크리트 KS 인증서',
+        title: '아쿠아크리트 ISO 인증서',
         summary: '도막형 바닥재 · 무기고분자 세라믹 불연성 바닥재 KS 인증',
         image: '/images/아쿠아크리트-KS-인증서.jpg',
       },
