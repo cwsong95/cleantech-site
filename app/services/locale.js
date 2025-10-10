@@ -13,7 +13,7 @@ const MESSAGES = {
       aqua: 'Aqua-Crete',
       skyFloor: 'SKY Floor',
       skyFlex: 'SKY Flex',
-      wood: 'Wood',
+      wood: 'Wood Preservative',
     },
     localeToggle: {
       label: '한글',
@@ -47,7 +47,7 @@ const MESSAGES = {
       aqua: '아쿠아크리트',
       skyFloor: '스카이 플로어',
       skyFlex: '스카이 플렉스',
-      wood: '우드',
+      wood: '목재 방부재',
     },
     localeToggle: {
       label: 'EN',
