@@ -28,7 +28,7 @@ const MESSAGES = {
       },
       certifications: {
         title: 'Certifications',
-        items: ['HACCP (in progress)', 'Green Certification'],
+        items: ['HACCP (in progress)', 'ECO-Friendly', 'New Excellent Product(NEP)'],
       },
       downloads: {
         title: 'Downloads',
@@ -62,7 +62,7 @@ const MESSAGES = {
       },
       certifications: {
         title: '인증 현황',
-        items: ['HACCP (진행 중)', '녹색인증'],
+        items: ['HACCP', '친환경', '신제품'],
       },
       downloads: {
         title: '자료실',
