@@ -41,7 +41,6 @@ a:hover {
   isolation: isolate;
   max-width: 88rem;
   margin: 0 auto;
-  padding: 0 24px;
   overflow: visible;
 }
 .container-app::before,
