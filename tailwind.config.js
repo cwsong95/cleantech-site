@@ -1,8 +1,12 @@
+// tailwind.config.js
 module.exports = {
   content: [
-    "./app/**/*.{hbs,js,ts}",
-    "./app/index.html"
+    './app/**/*.hbs',
+    './app/**/*.{js,ts}',
+    './public/index.html',
   ],
-  theme: { extend: {} },
+  theme: {
+    extend: {},
+  },
   plugins: [],
 };
