@@ -1,34 +1,29 @@
-<div class="swiper hero-swiper">
-  <div class="swiper-wrapper">
-    {{#each this.slides key="id" as |slide|}}
-      <div class="swiper-slide" data-slide-id={{slide.id}}>
-        <div class="hero-wrap">
-          <div class="hero-wrap-container">
-            <p class="kicker">{{slide.kicker}}</p>
-            <h1 class="hero-title">{{slide.titleLead}} <span class="text-primary">{{slide.product}}</span></h1>
-            <p class="hero-sub">{{slide.subtitle}}</p>
-            <div class="hero-ctas">
-              {{#each slide.ctas as |cta|}}
-                <LinkTo @route={{cta.route}} class={{cta.className}}>
-                  {{cta.label}}
-                </LinkTo>
-              {{/each}}
-            </div>
-            {{#if slide.badges}}
-              <div class="badges">
-                {{#each slide.badges as |badge|}}
-                  <span class="badge">{{badge}}</span>
-                {{/each}}
-              </div>
-            {{/if}}
+<div class="hero-stack">
+  {{#each this.slides key="id" as |slide|}}
+    <section class="hero-section" data-slide-id={{slide.id}}>
+      <div class="hero-slide__inner">
+        <div class="hero-slide__content">
+          <div class="hero-slide__copy">
+            <p class="hero-slide__kicker">{{slide.kicker}}</p>
+            <p class="hero-slide__lead">{{slide.titleLead}}</p>
+            <h1 class="hero-slide__title">{{slide.product}}</h1>
           </div>
-          <img src={{slide.image}} alt={{slide.imageAlt}} class="hero-img">
+          <div class="hero-slide__actions">
+            {{#each slide.ctas as |cta|}}
+              <LinkTo @route={{cta.route}} class="hero-slide__link">
+                {{cta.label}}
+              </LinkTo>
+            {{/each}}
+          </div>
+        </div>
+        <div class="hero-slide__visual">
+          <img
+            src={{slide.image}}
+            alt={{slide.imageAlt}}
+            class="hero-slide__image"
+          >
         </div>
       </div>
-    {{/each}}
-  </div>
-
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
+    </section>
+  {{/each}}
 </div>
