@@ -46,7 +46,6 @@
         </div>
       </div>
 
-      <LinkTo @route="applications"   class="nav-link">{{this.locale.t "nav.applications"}}</LinkTo>
       <LinkTo @route="certifications" class="nav-link">{{this.locale.t "nav.certifications"}}</LinkTo>
       <LinkTo @route="contact"        class="nav-link">{{this.locale.t "nav.contact"}}</LinkTo>
 
@@ -71,21 +70,34 @@
 <footer class="site-footer">
   <div class="footer-wrap">
     <div>
-      <div class="font-semibold">CLEANTECH Inc.</div>
-      <div class="text-white/80 mt-2">114 C-406, Beobwon-ro, Songpa-gu, Seoul</div>
-      <div class="text-white/80">TEL 02-420-2844~5 · FAX 02-413-8605</div>
-      <p class="text-white/50">CopyrightⓒAQUA-CRETE.COM All Rights Reserved</p>
+      <div class="font-semibold">{{this.locale.t "footer.company.name"}}</div>
+      <div class="text-white/80 mt-2">
+        {{this.locale.t "footer.company.address"}}
+      </div>
+      <div class="text-white/80">
+        {{this.locale.t "footer.company.contact"}}
+      </div>
+      <p class="text-white/50">
+        {{this.locale.t "footer.company.copyright"}}
+      </p>
     </div>
     <div>
-      <div class="font-semibold">Certifications</div>
+      <div class="font-semibold">
+        {{this.locale.t "footer.certifications.title"}}
+      </div>
       <ul class="list-disc ml-5 text-white/80 mt-2">
-        <li>HACCP (in progress)</li>
-        <li>Green Certification</li>
+        {{#each (this.locale.t "footer.certifications.items") as |item|}}
+          <li>{{item}}</li>
+        {{/each}}
       </ul>
     </div>
     <div>
-      <div class="font-semibold">Downloads</div>
-      <LinkTo @route="downloads" class="block text-white/80 mt-2">Brochure & SDS</LinkTo>
+      <div class="font-semibold">
+        {{this.locale.t "footer.downloads.title"}}
+      </div>
+      <LinkTo @route="downloads" class="block text-white/80 mt-2">
+        {{this.locale.t "footer.downloads.link"}}
+      </LinkTo>
     </div>
   </div>
 </footer>

@@ -6,7 +6,6 @@ const MESSAGES = {
     nav: {
       company: 'About',
       products: 'Products',
-      applications: 'Applications',
       certifications: 'Certifications',
       contact: 'Contact',
     },
@@ -20,12 +19,27 @@ const MESSAGES = {
       label: '한글',
       aria: 'Switch to Korean',
     },
+    footer: {
+      company: {
+        name: 'CLEANTECH Inc.',
+        address: '114 C-406, Beobwon-ro, Songpa-gu, Seoul',
+        contact: 'TEL 02-420-2844~5 · FAX 02-413-8605',
+        copyright: 'CopyrightⓒAQUA-CRETE.COM All Rights Reserved',
+      },
+      certifications: {
+        title: 'Certifications',
+        items: ['HACCP (in progress)', 'Green Certification'],
+      },
+      downloads: {
+        title: 'Downloads',
+        link: 'Brochure & SDS',
+      },
+    },
   },
   ko: {
     nav: {
       company: '회사 소개',
       products: '제품',
-      applications: '적용 분야',
       certifications: '인증',
       contact: '문의하기',
     },
@@ -38,6 +52,22 @@ const MESSAGES = {
     localeToggle: {
       label: 'EN',
       aria: '영어로 전환',
+    },
+    footer: {
+      company: {
+        name: 'CLEANTECH Inc.',
+        address: '서울특별시 송파구 법원로 114 C-406',
+        contact: '전화 02-420-2844~5 · 팩스 02-413-8605',
+        copyright: 'CopyrightⓒAQUA-CRETE.COM All Rights Reserved',
+      },
+      certifications: {
+        title: '인증 현황',
+        items: ['HACCP (진행 중)', '녹색인증'],
+      },
+      downloads: {
+        title: '자료실',
+        link: '브로슈어 & SDS',
+      },
     },
   },
 };
