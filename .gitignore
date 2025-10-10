@@ -16,3 +16,8 @@
 
 # broccoli-debug
 /DEBUG/
+
+# legacy backups we don't want to track
+node_modules.__old__/
+package-lock.__old__
+
