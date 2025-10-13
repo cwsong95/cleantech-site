@@ -77,6 +77,11 @@ a:hover { background-color: #f3f4f6; }
 }
 .btn-ghost:hover { background: #f3f4f6; }
 
+/* footer downloads hover */
+.site-footer .footer-wrap a:hover {
+  color: #0f1a2d !important;
+}
+
 /* ========= Hero / Swiper ========= */
 .hero {
   background:

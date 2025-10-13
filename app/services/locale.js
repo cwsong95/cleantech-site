@@ -32,7 +32,7 @@ const MESSAGES = {
       },
       downloads: {
         title: 'Downloads',
-        link: 'Brochure & SDS',
+        link: 'Catalog',
       },
     },
   },
@@ -66,7 +66,7 @@ const MESSAGES = {
       },
       downloads: {
         title: '자료실',
-        link: '브로슈어 & SDS',
+        link: '카탈로그',
       },
     },
   },
