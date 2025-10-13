@@ -70,7 +70,10 @@
 <footer class="site-footer">
   <div class="footer-wrap">
     <div>
-      <div class="font-semibold">{{this.locale.t "footer.company.name"}}</div>
+      <div class="font-semibold flex items-center gap-2">
+        <img src="/images/cleantech-icon.jpg" alt="" aria-hidden="true" class="h-5 w-auto object-contain">
+        {{this.locale.t "footer.company.name"}}
+      </div>
       <div class="text-white/80 mt-2">
         {{this.locale.t "footer.company.address"}}
       </div>
@@ -95,7 +98,7 @@
       <div class="font-semibold">
         {{this.locale.t "footer.downloads.title"}}
       </div>
-      <LinkTo @route="downloads" class="block text-white/80 mt-2">
+      <LinkTo @route="downloads" class="mt-2 flex items-center gap-2 text-white/80 catalog">
         {{this.locale.t "footer.downloads.link"}}
       </LinkTo>
     </div>

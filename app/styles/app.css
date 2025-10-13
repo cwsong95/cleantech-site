@@ -76,6 +76,10 @@ a:hover {
   padding: 64px 0;
 }
 
+.catalog {
+  width: fit-content;
+}
+
 /* ========= Header / Nav ========= */
 .site-header {
   position: sticky;
