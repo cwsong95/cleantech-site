@@ -1,0 +1,16 @@
+<div class="swiper gallery-swiper" id={{this.sliderId}}>
+  <div class="swiper-wrapper">
+    {{#each this.slides as |slide|}}
+      <div class="swiper-slide" data-slide-id={{slide.id}}>
+        <figure class="gallery-slide">
+          <img
+            src={{slide.src}}
+            alt={{slide.alt}}
+            class="gallery-image"
+            loading="lazy"
+          >
+        </figure>
+      </div>
+    {{/each}}
+  </div>
+</div>

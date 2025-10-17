@@ -1,19 +1,29 @@
 <div class="swiper hero-swiper">
   <div class="swiper-wrapper">
     {{#each this.slides key="id" as |slide|}}
-      <div class="swiper-slide" data-slide-id={{slide.id}}>
+      <div
+        class="swiper-slide"
+        data-slide-id={{slide.id}}
+        role="link"
+        tabindex="0"
+        aria-label={{slide.product}}
+        {{on "click" (fn this.handleSlideClick slide)}}
+        {{on "keydown" (fn this.handleSlideKeydown slide)}}
+      >
         <div class="hero-wrap">
           <div class="hero-wrap-container">
             <p class="kicker">{{slide.kicker}}</p>
             <h1 class="hero-title">{{slide.titleLead}} <span class="text-primary">{{slide.product}}</span></h1>
             <p class="hero-sub">{{slide.subtitle}}</p>
-            <div class="hero-ctas">
-              {{#each slide.ctas as |cta|}}
-                <LinkTo @route={{cta.route}} class={{cta.className}}>
-                  {{cta.label}}
-                </LinkTo>
-              {{/each}}
-            </div>
+            {{#if slide.ctas.length}}
+              <div class="hero-ctas">
+                {{#each slide.ctas as |cta|}}
+                  <LinkTo @route={{cta.route}} class={{cta.className}}>
+                    {{cta.label}}
+                  </LinkTo>
+                {{/each}}
+              </div>
+            {{/if}}
             {{#if slide.badges}}
               <div class="badges">
                 {{#each slide.badges as |badge|}}
