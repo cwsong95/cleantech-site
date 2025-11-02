@@ -59,28 +59,11 @@ const CONTENT = {
     buttonLabel: 'View original',
     certificates: [
       {
-        id: 'quality',
-        title: 'Aqua-Crete Quality Certificate',
-        summary: 'KS compliance test report issued by certified labs',
-        image: '/images/아쿠아크리트-품질-인증서.jpg',
-      },
-      {
-        id: 'eco',
-        title: 'Aqua-Crete Eco Label Certificate',
-        summary: 'Approved for low emissions and eco-friendly materials',
-        image: '/images/아쿠아크리트-환경표지-인증서.jpg',
-      },
-      {
-        id: 'ks',
-        title: 'Aqua-Crete KS Certification',
-        summary: 'Certified as an inorganic ceramic non-combustible flooring system',
-        image: '/images/아쿠아크리트-KS-인증서.jpg',
-      },
-      {
-        id: 'green-tech',
-        title: 'Aqua-Crete Green Technology Certificate',
-        summary: 'Recognized for energy-saving and sustainability performance',
-        image: '/images/아쿠아크리트-녹색기술-인증서.jpg',
+        id: 'iso-en',
+        title: 'ISO Certification (English)',
+        summary: 'Official ISO certificate translated into English for international documentation.',
+        image: '/images/ISO 인증서 영문.jpeg',
+        language: 'en',
       },
     ],
   },
@@ -93,7 +76,41 @@ export default class CertificationsController extends Controller {
     return CONTENT[this.locale.current] ?? CONTENT.ko;
   }
 
+  get displayCertificates() {
+    const certificates = this.copy.certificates ?? [];
+    if (!certificates.length) {
+      return certificates;
+    }
+
+    const englishCertificates = certificates.filter((certificate) =>
+      this._isEnglishVariant(certificate)
+    );
+
+    if (this.locale.isKorean) {
+      return englishCertificates.length
+        ? certificates.filter((certificate) => !englishCertificates.includes(certificate))
+        : certificates;
+    }
+
+    return englishCertificates.length ? englishCertificates : certificates;
+  }
+
   get certificateCount() {
-    return this.copy.certificates.length;
+    return this.displayCertificates.length;
+  }
+
+  _isEnglishVariant(certificate = {}) {
+    const { language, isEnglish, title = '', summary = '', image = '' } = certificate;
+
+    if (language) {
+      return language === 'en';
+    }
+
+    if (typeof isEnglish === 'boolean') {
+      return isEnglish;
+    }
+
+    const textBlob = `${title} ${summary} ${image}`.toLowerCase();
+    return textBlob.includes('영문') || textBlob.includes('english');
   }
 }
