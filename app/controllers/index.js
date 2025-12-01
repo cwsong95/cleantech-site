@@ -155,7 +155,7 @@ const SECTIONS = {
         {
           id: 'anti-slip-thermal',
           title: 'Anti-Slip & Thermal Shock Safe',
-          description: 'Built for wet sanitizing, steam, and cold storage without losing footing or bond.',
+          description: ' Built for wet sanitizing, steam, and cold storage without losing footing or bond.',
         },
       ],
       slides: SKY_FLOOR_SLIDES,
