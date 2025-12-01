@@ -28,7 +28,11 @@ const MESSAGES = {
       },
       certifications: {
         title: 'Certifications',
-        items: ['HACCP (in progress)', 'ECO-Friendly', 'New Excellent Product(NEP)'],
+        items: [
+          'HACCP (in progress)',
+          'ECO-Friendly',
+          'New Excellent Product(NEP)',
+        ],
       },
       downloads: {
         title: 'Downloads',

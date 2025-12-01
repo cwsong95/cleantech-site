@@ -21,7 +21,8 @@ const COPY = {
     },
     preview: {
       heading: '아쿠아크리트 자료',
-      description: '세라믹 무기불연 바닥 시스템의 핵심 정보와 시공 사례를 담았습니다.',
+      description:
+        '세라믹 무기불연 바닥 시스템의 핵심 정보와 시공 사례를 담았습니다.',
       fileInfo: 'PDF · 1.34MB',
     },
     cards: [

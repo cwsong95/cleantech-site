@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
-import { scheduleOnce } from '@ember/runloop';
 import { guidFor } from '@ember/object/internals';
+import { registerDestructor } from '@ember/destroyable';
 
 const SLIDES = [
   {
@@ -33,7 +33,20 @@ export default class GallerySliderComponent extends Component {
 
   constructor() {
     super(...arguments);
-    scheduleOnce('afterRender', this, this._init);
+    this._rafId = requestAnimationFrame(() => this._init());
+
+    registerDestructor(this, () => {
+      if (this._rafId) {
+        cancelAnimationFrame(this._rafId);
+      }
+
+      const el = document.getElementById(this.sliderId);
+
+      if (el?._swiper) {
+        el._swiper.destroy?.(true, true);
+        el._swiper = null;
+      }
+    });
   }
 
   get slides() {

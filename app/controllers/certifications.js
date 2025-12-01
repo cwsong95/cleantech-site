@@ -65,7 +65,8 @@ const CONTENT = {
       {
         id: 'iso-en',
         title: 'ISO Certification (English)',
-        summary: 'Official ISO certificate translated into English for international documentation.',
+        summary:
+          'Official ISO certificate translated into English for international documentation.',
         image: '/images/cert-iso-en.jpeg',
         original: '/images/cert-iso-en.jpeg',
         language: 'en',
@@ -88,12 +89,14 @@ export default class CertificationsController extends Controller {
     }
 
     const englishCertificates = certificates.filter((certificate) =>
-      this._isEnglishVariant(certificate)
+      this._isEnglishVariant(certificate),
     );
 
     if (this.locale.isKorean) {
       return englishCertificates.length
-        ? certificates.filter((certificate) => !englishCertificates.includes(certificate))
+        ? certificates.filter(
+            (certificate) => !englishCertificates.includes(certificate),
+          )
         : certificates;
     }
 
@@ -105,7 +108,13 @@ export default class CertificationsController extends Controller {
   }
 
   _isEnglishVariant(certificate = {}) {
-    const { language, isEnglish, title = '', summary = '', image = '' } = certificate;
+    const {
+      language,
+      isEnglish,
+      title = '',
+      summary = '',
+      image = '',
+    } = certificate;
 
     if (language) {
       return language === 'en';

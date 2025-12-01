@@ -1,6 +1,10 @@
 <header class="site-header">
   <div class="container-app site-header__bar">
-    <LinkTo @route="index" class="brand"><img src="/images/cleantech-logo.jpg" alt="Polished Aqua-Crete floor" class="clean-tech-img"></LinkTo>
+    <LinkTo @route="index" class="brand"><img
+        src="/images/cleantech-logo.jpg"
+        alt="Polished Aqua-Crete floor"
+        class="clean-tech-img"
+      /></LinkTo>
 
     <nav
       id="primary-navigation"
@@ -23,7 +27,9 @@
           {{on "click" this.toggleProductsDropdown}}
         >
           {{this.locale.t "nav.products"}}
-          <svg class="caret" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg>
+          <svg class="caret" viewBox="0 0 24 24"><path
+              d="M6 9l6 6 6-6"
+            ></path></svg>
         </button>
         <div class="dropdown-menu" id="products-menu">
           <LinkTo
@@ -54,10 +60,22 @@
           </LinkTo>
         </div>
       </div>
-      <LinkTo @route="company" class="nav-link" {{on "click" this.closeMobileNav}}>{{this.locale.t "nav.company"}}</LinkTo>
+      <LinkTo
+        @route="company"
+        class="nav-link"
+        {{on "click" this.closeMobileNav}}
+      >{{this.locale.t "nav.company"}}</LinkTo>
 
-      <LinkTo @route="certifications" class="nav-link" {{on "click" this.closeMobileNav}}>{{this.locale.t "nav.certifications"}}</LinkTo>
-      <LinkTo @route="contact" class="nav-link" {{on "click" this.closeMobileNav}}>{{this.locale.t "nav.contact"}}</LinkTo>
+      <LinkTo
+        @route="certifications"
+        class="nav-link"
+        {{on "click" this.closeMobileNav}}
+      >{{this.locale.t "nav.certifications"}}</LinkTo>
+      <LinkTo
+        @route="contact"
+        class="nav-link"
+        {{on "click" this.closeMobileNav}}
+      >{{this.locale.t "nav.contact"}}</LinkTo>
 
       <button
         type="button"
@@ -84,13 +102,21 @@
         class="menu-toggle md:hidden"
         aria-expanded={{if this.mobileNavOpen "true" "false"}}
         aria-controls="primary-navigation"
-        aria-label={{if this.mobileNavOpen (if this.locale.isKorean "메뉴 닫기" "Close menu") (if this.locale.isKorean "메뉴 열기" "Open menu")}}
+        aria-label={{if
+          this.mobileNavOpen
+          (if this.locale.isKorean "메뉴 닫기" "Close menu")
+          (if this.locale.isKorean "메뉴 열기" "Open menu")
+        }}
         {{on "click" this.toggleMobileNav}}
       >
         {{#if this.mobileNavOpen}}
-          <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5"><path d="M6.2 5.8a1 1 0 0 0-1.4 1.4L10.6 13l-5.8 5.8a1 1 0 1 0 1.4 1.4L12 14.4l5.8 5.8a1 1 0 0 0 1.4-1.4L13.4 13l5.8-5.8a1 1 0 0 0-1.4-1.4L12 11.6Z" /></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5"><path
+              d="M6.2 5.8a1 1 0 0 0-1.4 1.4L10.6 13l-5.8 5.8a1 1 0 1 0 1.4 1.4L12 14.4l5.8 5.8a1 1 0 0 0 1.4-1.4L13.4 13l5.8-5.8a1 1 0 0 0-1.4-1.4L12 11.6Z"
+            /></svg>
         {{else}}
-          <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5"><path d="M4 6a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H4Zm0 5a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H4Zm0 5a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H4Z" /></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5"><path
+              d="M4 6a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H4Zm0 5a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H4Zm0 5a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H4Z"
+            /></svg>
         {{/if}}
       </button>
     </div>
@@ -116,7 +142,12 @@
   <div class="footer-wrap">
     <div>
       <div class="font-semibold flex items-center gap-2">
-        <img src="/images/cleantech-icon.jpg" alt="" aria-hidden="true" class="h-5 w-auto object-contain">
+        <img
+          src="/images/cleantech-icon.jpg"
+          alt=""
+          aria-hidden="true"
+          class="h-5 w-auto object-contain"
+        />
         {{this.locale.t "footer.company.name"}}
       </div>
       <div class="text-white/80 mt-2">
@@ -143,7 +174,10 @@
       <div class="font-semibold">
         {{this.locale.t "footer.downloads.title"}}
       </div>
-      <LinkTo @route="downloads" class="mt-2 flex items-center gap-2 text-white/80 catalog">
+      <LinkTo
+        @route="downloads"
+        class="mt-2 flex items-center gap-2 text-white/80 catalog"
+      >
         {{this.locale.t "footer.downloads.link"}}
       </LinkTo>
     </div>

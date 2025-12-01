@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
-import { scheduleOnce } from '@ember/runloop';
 import { service } from '@ember/service';
+import { registerDestructor } from '@ember/destroyable';
 
 const SLIDES = {
   en: [
@@ -24,7 +24,8 @@ const SLIDES = {
       kicker: 'INDUSTRIAL FLOORING',
       titleLead: 'Durable & Hygienic —',
       product: 'SKY FLOOR',
-      subtitle: 'High-strength resin floor for warehouses and logistics centers.',
+      subtitle:
+        'High-strength resin floor for warehouses and logistics centers.',
       route: 'product.sky-floor',
       ctas: [],
       badges: ['Heavy-duty loading', 'Chemical-resistant'],
@@ -48,7 +49,8 @@ const SLIDES = {
       kicker: 'NATURAL TOUCH',
       titleLead: 'Warm & Sustainable —',
       product: 'Wood Preservative',
-      subtitle: 'Advanced eco-friendly protection that preserves the natural beauty of wood while enhancing durability and preventing decay. Perfect for architectural finishes that demand both performance and elegance.',
+      subtitle:
+        'Advanced eco-friendly protection that preserves the natural beauty of wood while enhancing durability and preventing decay. Perfect for architectural finishes that demand both performance and elegance.',
       route: 'product.wood',
       ctas: [],
       badges: ['Sustainable sourcing', 'Premium finish'],
@@ -62,7 +64,8 @@ const SLIDES = {
       kicker: '식품안전 폴리싱 바닥재',
       titleLead: '안전·신속·고강도 —',
       product: '아쿠아크리트',
-      subtitle: '냉·온이 반복되는 위생 구역을 위한 Cleantech 대표 폴리싱 바닥 솔루션.',
+      subtitle:
+        '냉·온이 반복되는 위생 구역을 위한 Cleantech 대표 폴리싱 바닥 솔루션.',
       route: 'product.aqua-crete',
       ctas: [
         { route: 'contact', label: '시공 상담 문의', className: 'btn-ghost' },
@@ -100,7 +103,8 @@ const SLIDES = {
       kicker: '자연을 지키는 첨단 기술',
       titleLead: '오래도록 아름다운 —',
       product: '목재 보존재',
-      subtitle: '자연 목재의 질감을 그대로 살리면서도 부패와 변색을 방지하는 친환경 방부 기술로 내구성과 디자인을 모두 만족시키는 차세대 건축 자재입니다.',
+      subtitle:
+        '자연 목재의 질감을 그대로 살리면서도 부패와 변색을 방지하는 친환경 방부 기술로 내구성과 디자인을 모두 만족시키는 차세대 건축 자재입니다.',
       route: 'product.wood',
       ctas: [],
       badges: ['친환경 인증', '우수한 내구성', '자연 질감 유지'],
@@ -116,7 +120,19 @@ export default class HeroCarouselComponent extends Component {
 
   constructor() {
     super(...arguments);
-    scheduleOnce('afterRender', this, this._init);
+    this._rafId = requestAnimationFrame(() => this._init());
+
+    registerDestructor(this, () => {
+      if (this._rafId) {
+        cancelAnimationFrame(this._rafId);
+      }
+
+      const el = document.querySelector('.hero-swiper');
+      if (el?._swiper) {
+        el._swiper.destroy?.(true, true);
+        el._swiper = null;
+      }
+    });
   }
 
   get slides() {
@@ -132,7 +148,10 @@ export default class HeroCarouselComponent extends Component {
       loop: true,
       speed: 700,
       autoplay: { delay: 500000, disableOnInteraction: false },
-      pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
+      pagination: {
+        el: el.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
       navigation: {
         nextEl: el.querySelector('.swiper-button-next'),
         prevEl: el.querySelector('.swiper-button-prev'),

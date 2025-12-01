@@ -18,7 +18,8 @@ const COPY = {
     supportTitle: '직접 연락하기',
     responseTime: '평일 기준 24시간 이내 회신',
     successMessage: '문의가 접수되었습니다. 담당자가 빠르게 연락드리겠습니다.',
-    errorFallback: '전송 중 문제가 발생했습니다. 잠시 후 다시 시도하거나 메일로 직접 연락해 주세요.',
+    errorFallback:
+      '전송 중 문제가 발생했습니다. 잠시 후 다시 시도하거나 메일로 직접 연락해 주세요.',
     submitLabel: '문의 보내기',
     submittingLabel: '보내는 중…',
     nameLabel: '이름',
@@ -43,7 +44,8 @@ const COPY = {
     supportTitle: 'Direct line',
     responseTime: 'We respond within one business day',
     successMessage: 'Thanks for reaching out! We will follow up shortly.',
-    errorFallback: 'Something went wrong. Please try again or email us directly.',
+    errorFallback:
+      'Something went wrong. Please try again or email us directly.',
     submitLabel: 'Send message',
     submittingLabel: 'Sending…',
     nameLabel: 'Name',
@@ -52,7 +54,8 @@ const COPY = {
     companyLabel: 'Company (optional)',
     messageLabel: 'Project details',
     messagePlaceholder: 'Tell us about the space, expectations, and timeline.',
-    privacyNote: 'We only use the submitted details to respond to your inquiry.',
+    privacyNote:
+      'We only use the submitted details to respond to your inquiry.',
   },
 };
 
@@ -93,7 +96,9 @@ export default class ContactController extends Controller {
   }
 
   get buttonLabel() {
-    return this.isSubmitting ? this.copy.submittingLabel : this.copy.submitLabel;
+    return this.isSubmitting
+      ? this.copy.submittingLabel
+      : this.copy.submitLabel;
   }
 
   @action
@@ -120,22 +125,25 @@ export default class ContactController extends Controller {
     this.errorMessage = '';
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/ct4138605@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
+      const response = await fetch(
+        'https://formsubmit.co/ajax/ct4138605@gmail.com',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name: this.name,
+            email: this.email,
+            phone: this.phone,
+            company: this.company,
+            message: this.message,
+            _subject: 'Cleantech Contact Inquiry',
+            _captcha: 'false',
+          }),
         },
-        body: JSON.stringify({
-          name: this.name,
-          email: this.email,
-          phone: this.phone,
-          company: this.company,
-          message: this.message,
-          _subject: 'Cleantech Contact Inquiry',
-          _captcha: 'false',
-        }),
-      });
+      );
 
       if (!response.ok) {
         const data = await response.json().catch(() => ({}));
@@ -152,7 +160,10 @@ export default class ContactController extends Controller {
       this.status = 'error';
       const fallback = this.copy.errorFallback;
       const detail = error instanceof Error ? error.message : undefined;
-      this.errorMessage = detail && detail !== 'Request failed' ? `${fallback} (${detail})` : fallback;
+      this.errorMessage =
+        detail && detail !== 'Request failed'
+          ? `${fallback} (${detail})`
+          : fallback;
       // keep message content for retry unless submission succeeded
     }
   }

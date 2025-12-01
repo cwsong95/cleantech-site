@@ -10,7 +10,11 @@ const DATA = {
         '2000년 설립 이후, 우리는 고위생·고내구성 바닥재와 단열 방수 시스템을 선도해 왔습니다. 특허 기술과 현장 경험을 바탕으로 식품, 제약, 물류 시설에 맞춤형 솔루션을 제공합니다.',
       highlight: {
         label: '핵심 키워드',
-        items: ['무기질 세라믹 바닥재', '친환경·고내화 공법', '공공/산업 시설 검증'],
+        items: [
+          '무기질 세라믹 바닥재',
+          '친환경·고내화 공법',
+          '공공/산업 시설 검증',
+        ],
       },
     },
     timelineTitle: '연도별 주요 성과',
@@ -24,7 +28,9 @@ const DATA = {
       },
       {
         year: '2001',
-        entries: ['05월 한국수자원공사 · 삼성산업개발 · 삼성정밀화학 협력업체 등록'],
+        entries: [
+          '05월 한국수자원공사 · 삼성산업개발 · 삼성정밀화학 협력업체 등록',
+        ],
       },
       {
         year: '2008',
@@ -127,7 +133,11 @@ const DATA = {
         'Cleantech began as a specialist contractor and grew into a materials developer trusted by food, pharma, and logistics facilities. We combine inorganic ceramic flooring with advanced waterproofing to deliver hygienic, durable environments.',
       highlight: {
         label: 'Focus',
-        items: ['Inorganic ceramic flooring', 'Fire-safe thermal systems', 'Public & industrial references'],
+        items: [
+          'Inorganic ceramic flooring',
+          'Fire-safe thermal systems',
+          'Public & industrial references',
+        ],
       },
     },
     timelineTitle: 'Milestones',
@@ -141,11 +151,15 @@ const DATA = {
       },
       {
         year: '2001',
-        entries: ['Registered as partner with K-Water, Samsung C&T, and Samsung Fine Chemicals'],
+        entries: [
+          'Registered as partner with K-Water, Samsung C&T, and Samsung Fine Chemicals',
+        ],
       },
       {
         year: '2008',
-        entries: ['Signed agency agreement with SILIKAL Germany for Korea operations'],
+        entries: [
+          'Signed agency agreement with SILIKAL Germany for Korea operations',
+        ],
       },
       {
         year: '2010',
