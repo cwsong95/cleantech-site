@@ -149,7 +149,7 @@ const SECTIONS = {
         },
         {
           id: 'low-voc',
-          title: 'Low-VOC & Odor Safe',
+          title: 'Low-VOC & Odor Safe ',
           description: 'Eco polyol resin keeps HACCP, public, and wellness projects odor-safe and compliant.',
         },
         {
