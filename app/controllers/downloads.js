@@ -37,7 +37,9 @@ const COPY = {
         id: 'sky-floor',
         name: 'SKY-Floor',
         summary: '대형 상업 공간용 하드 플로어',
-        available: false,
+        href: '/downloads/sky-floor-catalog.pdf',
+        available: true,
+        fileInfo: 'PDF · 3.3MB',
       },
       {
         id: 'sky-flex',
@@ -89,8 +91,10 @@ const COPY = {
       {
         id: 'sky-flex',
         name: 'SKY-Flex',
+        href: '/downloads/sky-floor-catalog.pdf',
+        available: true,
+        fileInfo: 'PDF · 3.3MB',
         summary: 'Flexible waterproof system',
-        available: false,
       },
       {
         id: 'sky-floor',

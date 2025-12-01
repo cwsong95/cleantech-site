@@ -242,4 +242,9 @@ export default class CompanyController extends Controller {
   get copy() {
     return DATA[this.locale.current] ?? DATA.ko;
   }
+
+  get timeline() {
+    const timeline = this.copy.timeline ?? [];
+    return [...timeline].sort((a, b) => Number(b.year) - Number(a.year));
+  }
 }

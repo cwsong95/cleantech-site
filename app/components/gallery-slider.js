@@ -37,7 +37,7 @@ export default class GallerySliderComponent extends Component {
   }
 
   get slides() {
-    return SLIDES;
+    return this.args.slides ?? SLIDES;
   }
 
   _init() {

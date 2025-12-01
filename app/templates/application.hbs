@@ -3,7 +3,6 @@
     <LinkTo @route="index" class="brand"><img src="/images/cleantech-logo.jpg" alt="Polished Aqua-Crete floor" class="clean-tech-img"></LinkTo>
 
     <nav class="nav">
-      <LinkTo @route="company" class="nav-link">{{this.locale.t "nav.company"}}</LinkTo>
       <div
         class="dropdown {{if this.productsOpen 'is-open'}}"
         {{on "mouseenter" this.openProductsDropdown}}
@@ -37,14 +36,21 @@
             @route="product.sky-flex"
             class="dropdown-item"
             {{on "click" this.closeProductsDropdown}}
-          >{{this.locale.t "dropdown.skyFlex"}}</LinkTo>
+          >
+            <span>{{this.locale.t "dropdown.skyFlex"}}</span>
+            <span class="dropdown-badge">준비중</span>
+          </LinkTo>
           <LinkTo
             @route="product.wood"
             class="dropdown-item"
             {{on "click" this.closeProductsDropdown}}
-          >{{this.locale.t "dropdown.wood"}}</LinkTo>
+          >
+            <span>{{this.locale.t "dropdown.wood"}}</span>
+            <span class="dropdown-badge">준비중</span>
+          </LinkTo>
         </div>
       </div>
+      <LinkTo @route="company" class="nav-link">{{this.locale.t "nav.company"}}</LinkTo>
 
       <LinkTo @route="certifications" class="nav-link">{{this.locale.t "nav.certifications"}}</LinkTo>
       <LinkTo @route="contact"        class="nav-link">{{this.locale.t "nav.contact"}}</LinkTo>

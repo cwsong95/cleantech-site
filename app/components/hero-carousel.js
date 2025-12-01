@@ -40,7 +40,7 @@ const SLIDES = {
       route: 'product.sky-flex',
       ctas: [],
       badges: ['Anti-fatigue', 'Resilient surface'],
-      image: '/images/sky-flex.jpg',
+      image: '/images/sky-flex.svg',
       imageAlt: 'SKY Flex flooring',
     },
     {
@@ -92,7 +92,7 @@ const SLIDES = {
       route: 'product.sky-flex',
       ctas: [],
       badges: ['피로도 감소', '충격 흡수'],
-      image: '/images/sky-flex.jpg',
+      image: '/images/sky-flex.svg',
       imageAlt: '스카이 플렉스 바닥',
     },
     {
@@ -104,7 +104,7 @@ const SLIDES = {
       route: 'product.wood',
       ctas: [],
       badges: ['친환경 인증', '우수한 내구성', '자연 질감 유지'],
-      image: '/images/wood.jpg',
+      image: '/images/wood.svg',
       imageAlt: '우드 바닥 이미지',
     },
   ],
