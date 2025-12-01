@@ -78,8 +78,8 @@
     "stylelint": "^16.23.1",
     "stylelint-config-standard": "^36.0.1",
     "tailwindcss": "3.4.13",
-    "typescript": "5.9.3",
     "tracked-built-ins": "^3.4.0",
+    "typescript": "5.9.3",
     "webpack": "^5.101.3"
   },
   "engines": {
@@ -87,5 +87,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "npm": "^11.6.4"
   }
 }
