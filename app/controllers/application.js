@@ -6,6 +6,7 @@ import { service } from '@ember/service';
 export default class ApplicationController extends Controller {
   @service locale;
   @tracked productsOpen = false;
+  @tracked mobileNavOpen = false;
 
   @action toggleProductsDropdown() {
     this.productsOpen = !this.productsOpen;
@@ -27,5 +28,14 @@ export default class ApplicationController extends Controller {
 
   @action toggleLocale() {
     this.locale.toggle();
+  }
+
+  @action toggleMobileNav() {
+    this.mobileNavOpen = !this.mobileNavOpen;
+  }
+
+  @action closeMobileNav() {
+    this.mobileNavOpen = false;
+    this.productsOpen = false;
   }
 }

@@ -1,8 +1,12 @@
 <header class="site-header">
-  <div class="container-app flex h-16 items-center justify-between">
+  <div class="container-app site-header__bar">
     <LinkTo @route="index" class="brand"><img src="/images/cleantech-logo.jpg" alt="Polished Aqua-Crete floor" class="clean-tech-img"></LinkTo>
 
-    <nav class="nav">
+    <nav
+      id="primary-navigation"
+      class="nav {{if this.mobileNavOpen 'nav--open'}}"
+      aria-label="Primary"
+    >
       <div
         class="dropdown {{if this.productsOpen 'is-open'}}"
         {{on "mouseenter" this.openProductsDropdown}}
@@ -25,17 +29,17 @@
           <LinkTo
             @route="product.aqua-crete"
             class="dropdown-item"
-            {{on "click" this.closeProductsDropdown}}
+            {{on "click" this.closeMobileNav}}
           >{{this.locale.t "dropdown.aqua"}}</LinkTo>
           <LinkTo
             @route="product.sky-floor"
             class="dropdown-item"
-            {{on "click" this.closeProductsDropdown}}
+            {{on "click" this.closeMobileNav}}
           >{{this.locale.t "dropdown.skyFloor"}}</LinkTo>
           <LinkTo
             @route="product.sky-flex"
             class="dropdown-item"
-            {{on "click" this.closeProductsDropdown}}
+            {{on "click" this.closeMobileNav}}
           >
             <span>{{this.locale.t "dropdown.skyFlex"}}</span>
             <span class="dropdown-badge">준비중</span>
@@ -43,28 +47,63 @@
           <LinkTo
             @route="product.wood"
             class="dropdown-item"
-            {{on "click" this.closeProductsDropdown}}
+            {{on "click" this.closeMobileNav}}
           >
             <span>{{this.locale.t "dropdown.wood"}}</span>
             <span class="dropdown-badge">준비중</span>
           </LinkTo>
         </div>
       </div>
-      <LinkTo @route="company" class="nav-link">{{this.locale.t "nav.company"}}</LinkTo>
+      <LinkTo @route="company" class="nav-link" {{on "click" this.closeMobileNav}}>{{this.locale.t "nav.company"}}</LinkTo>
 
-      <LinkTo @route="certifications" class="nav-link">{{this.locale.t "nav.certifications"}}</LinkTo>
-      <LinkTo @route="contact"        class="nav-link">{{this.locale.t "nav.contact"}}</LinkTo>
+      <LinkTo @route="certifications" class="nav-link" {{on "click" this.closeMobileNav}}>{{this.locale.t "nav.certifications"}}</LinkTo>
+      <LinkTo @route="contact" class="nav-link" {{on "click" this.closeMobileNav}}>{{this.locale.t "nav.contact"}}</LinkTo>
 
       <button
         type="button"
-        class="lang-toggle"
+        class="lang-toggle md:hidden"
         aria-label={{this.locale.toggleAriaLabel}}
         {{on "click" this.toggleLocale}}
       >
         {{this.locale.toggleLabel}}
       </button>
     </nav>
+
+    <div class="site-header__actions">
+      <button
+        type="button"
+        class="lang-toggle hidden md:inline-flex"
+        aria-label={{this.locale.toggleAriaLabel}}
+        {{on "click" this.toggleLocale}}
+      >
+        {{this.locale.toggleLabel}}
+      </button>
+
+      <button
+        type="button"
+        class="menu-toggle md:hidden"
+        aria-expanded={{if this.mobileNavOpen "true" "false"}}
+        aria-controls="primary-navigation"
+        aria-label={{if this.mobileNavOpen (if this.locale.isKorean "메뉴 닫기" "Close menu") (if this.locale.isKorean "메뉴 열기" "Open menu")}}
+        {{on "click" this.toggleMobileNav}}
+      >
+        {{#if this.mobileNavOpen}}
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5"><path d="M6.2 5.8a1 1 0 0 0-1.4 1.4L10.6 13l-5.8 5.8a1 1 0 1 0 1.4 1.4L12 14.4l5.8 5.8a1 1 0 0 0 1.4-1.4L13.4 13l5.8-5.8a1 1 0 0 0-1.4-1.4L12 11.6Z" /></svg>
+        {{else}}
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5"><path d="M4 6a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H4Zm0 5a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H4Zm0 5a1 1 0 1 0 0 2h16a1 1 0 1 0 0-2H4Z" /></svg>
+        {{/if}}
+      </button>
+    </div>
   </div>
+
+  {{#if this.mobileNavOpen}}
+    <button
+      type="button"
+      class="nav-backdrop md:hidden"
+      aria-label={{if this.locale.isKorean "메뉴 닫기" "Close menu"}}
+      {{on "click" this.closeMobileNav}}
+    ></button>
+  {{/if}}
 </header>
 
 <main class="page">
