@@ -47,6 +47,31 @@ const SKY_FLOOR_SLIDES = [
     src: '/images/sky-floor-wash.jpg',
     alt: 'Sky Floor performing in a wash-down area with drains',
   },
+  {
+    id: 'sky-floor-trench',
+    src: '/images/sky-floor-trench.jpg',
+    alt: 'Sky Floor trench drain reinforcement in a processing area',
+  },
+  {
+    id: 'sky-floor-corner',
+    src: '/images/sky-floor-corner.jpg',
+    alt: 'Sky Floor coved corner with stainless mesh tie-in',
+  },
+  {
+    id: 'sky-floor-quartz',
+    src: '/images/sky-floor-quartz.jpg',
+    alt: 'Sky Floor quartz broadcast texture for extra slip resistance',
+  },
+  {
+    id: 'sky-floor-solid-2',
+    src: '/images/sky-floor-solid-2.jpg',
+    alt: 'Sky Floor solid color hygienic corridor finish',
+  },
+  {
+    id: 'sky-floor-restroom',
+    src: '/images/sky-floor-restroom.jpg',
+    alt: 'Sky Floor seamless restroom installation with drains',
+  },
 ];
 
 const SECTIONS = {
@@ -194,6 +219,10 @@ export default class IndexController extends Controller {
 
   get activeSlides() {
     return this.activeSection?.slides ?? [];
+  }
+
+  get isSkyFloor() {
+    return this.activeSection?.id === 'sky-floor';
   }
 
   isSelected = (id) => id === this.activeSection?.id;
