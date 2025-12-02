@@ -85,7 +85,7 @@
           </span>
           <div class="flex flex-wrap gap-3">
             <a
-              href="/downloads/aqua-crete-catalog.pdf"
+              href={{this.preview.href}}
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:text-blue-600"
@@ -100,7 +100,7 @@
                 /></svg>
             </a>
             <a
-              href="/downloads/aqua-crete-catalog.pdf"
+              href={{this.preview.href}}
               download
               class="inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
             >
@@ -121,7 +121,7 @@
         class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg shadow-blue-500/10"
       >
         <iframe
-          src="/downloads/aqua-crete-catalog.pdf#toolbar=0&navpanes=0&scrollbar=0"
+          src={{concat this.preview.href "#toolbar=0&navpanes=0&scrollbar=0"}}
           title={{this.preview.heading}}
           loading="lazy"
           class="h-[460px] w-full md:h-full"

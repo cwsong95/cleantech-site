@@ -20,15 +20,16 @@ const COPY = {
       open: '새 창에서 보기',
     },
     preview: {
-      heading: '아쿠아크리트 자료',
+      heading: 'Aqua-Crete 자료',
       description:
         '세라믹 무기불연 바닥 시스템의 핵심 정보와 시공 사례를 담았습니다.',
       fileInfo: 'PDF · 1.34MB',
+      href: '/downloads/aqua-crete-catalog.pdf',
     },
     cards: [
       {
         id: 'aqua-crete',
-        name: '아쿠아크리트',
+        name: 'Aqua-Crete',
         summary: '세라믹 무기불연 바닥 솔루션',
         href: '/downloads/aqua-crete-catalog.pdf',
         available: true,
@@ -76,18 +77,19 @@ const COPY = {
       open: 'Open in new tab',
     },
     preview: {
-      heading: 'Aqua-Crete Pack',
+      heading: 'Aqua-Crete',
       description: 'Highlights, performance data, and installs at a glance.',
-      fileInfo: 'PDF · 1.34MB',
+      fileInfo: 'PDF · 0.8MB',
+      href: '/downloads/ac-leaflet-en.pdf',
     },
     cards: [
       {
         id: 'aqua-crete',
         name: 'Aqua-Crete',
         summary: 'Inorganic ceramic flooring system',
-        href: '/downloads/aqua-crete-catalog.pdf',
+        href: '/downloads/ac-leaflet-en.pdf',
         available: true,
-        fileInfo: 'PDF · 1.34MB',
+        fileInfo: 'PDF · 0.8MB',
       },
       {
         id: 'sky-flex',
