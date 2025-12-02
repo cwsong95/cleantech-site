@@ -147,14 +147,10 @@ export default class HeroCarouselComponent extends Component {
     el._swiper = new Swiper(el, {
       loop: true,
       speed: 700,
-      autoplay: { delay: 500000, disableOnInteraction: false },
+      autoplay: { delay: 3000, disableOnInteraction: false },
       pagination: {
         el: el.querySelector('.swiper-pagination'),
         clickable: true,
-      },
-      navigation: {
-        nextEl: el.querySelector('.swiper-button-next'),
-        prevEl: el.querySelector('.swiper-button-prev'),
       },
     });
   }
