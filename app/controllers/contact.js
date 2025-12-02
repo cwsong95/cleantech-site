@@ -103,7 +103,8 @@ export default class ContactController extends Controller {
 
   @action
   updateField(field, event) {
-    if (Object.prototype.hasOwnProperty.call(this, field)) {
+    const fields = new Set(['name', 'email', 'phone', 'company', 'message']);
+    if (fields.has(field)) {
       this[field] = event.target.value;
     }
 
@@ -145,9 +146,20 @@ export default class ContactController extends Controller {
         },
       );
 
-      if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-        throw new Error(data.message || 'Request failed');
+      // FormSubmit returns HTTP 200 even when it rejects a submission, so we
+      // need to inspect the JSON payload for a success flag.
+      const data = await response.json().catch(() => null);
+      const successFlag =
+        data === null ||
+        typeof data?.success === 'undefined' ||
+        data?.success === true ||
+        data?.success === 'true';
+
+      if (!response.ok || !successFlag) {
+        const detail =
+          (data && (data.message || data.error || data.status)) ||
+          'Request failed';
+        throw new Error(detail);
       }
 
       this.status = 'success';
