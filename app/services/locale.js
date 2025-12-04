@@ -21,7 +21,7 @@ const MESSAGES = {
     },
     footer: {
       company: {
-        name: 'CLEANTECH Inc.',
+        name: 'CLEANTECH Co., Ltd',
         address: '114 C-406, Beobwon-ro, Songpa-gu, Seoul',
         contact: 'TEL 02-420-2844~5 · FAX 02-413-8605',
         copyright: 'Copyrightⓒ--- All Rights Reserved',
@@ -59,7 +59,7 @@ const MESSAGES = {
     },
     footer: {
       company: {
-        name: 'CLEANTECH Inc.',
+        name: 'CLEANTECH Co., Ltd',
         address: '서울특별시 송파구 법원로 114 C-406',
         contact: '전화 02-420-2844~5 · 팩스 02-413-8605',
         copyright: 'Copyrightⓒ--- All Rights Reserved',
