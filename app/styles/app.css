@@ -732,7 +732,7 @@ a:hover {
   border-radius: 32px;
   background:
     linear-gradient(130deg, rgba(11, 22, 46, 0.65), rgba(11, 22, 46, 0.35)),
-    url('/images/aqua-crete-hero-white.jpg');
+    url("/images/aqua-crete-hero-white.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1053,7 +1053,7 @@ a:hover {
   border-radius: 32px;
   background:
     linear-gradient(125deg, rgba(4, 46, 22, 0.68), rgba(8, 85, 49, 0.36)),
-    url('/images/sky-floor-hero-green.jpg');
+    url("/images/sky-floor-hero-green.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

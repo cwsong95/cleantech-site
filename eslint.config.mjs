@@ -43,7 +43,14 @@ export default [
    * https://eslint.org/docs/latest/use/configure/ignore
    */
   {
-    ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
+    ignores: [
+      'dist/',
+      'public/',
+      'node_modules/',
+      'node_modules.__old__/',
+      'coverage/',
+      '!**/.*',
+    ],
   },
   /**
    * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
