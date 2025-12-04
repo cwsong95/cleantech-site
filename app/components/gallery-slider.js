@@ -66,8 +66,8 @@ export default class GallerySliderComponent extends Component {
       centeredSlides: true,
       slidesPerView: 1.08,
       spaceBetween: 36,
-      speed: 600,
-      autoplay: { delay: 4500, disableOnInteraction: false },
+      speed: 700,
+      autoplay: { delay: 7000, disableOnInteraction: false },
       watchSlidesProgress: true,
       pagination: {
         el: `#${this.paginationId}`,

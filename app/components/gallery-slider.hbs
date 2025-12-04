@@ -13,4 +13,26 @@
       </div>
     {{/each}}
   </div>
+
+  <div
+    class="gallery-pagination"
+    id={{this.paginationId}}
+    aria-label="Slide dots"
+  ></div>
+  <button
+    type="button"
+    class="gallery-nav gallery-nav--prev"
+    id={{this.prevId}}
+    aria-label="Previous slide"
+  >
+    &#8592;
+  </button>
+  <button
+    type="button"
+    class="gallery-nav gallery-nav--next"
+    id={{this.nextId}}
+    aria-label="Next slide"
+  >
+    &#8594;
+  </button>
 </div>
