@@ -853,6 +853,33 @@ a:hover {
   line-height: 1.7;
 }
 
+.aqua-crete-figure {
+  margin-top: 32px;
+  padding: 16px;
+  border-radius: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.aqua-crete-figure figure {
+  margin: 0;
+}
+
+.aqua-crete-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.aqua-crete-figure figcaption {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .aqua-crete-highlight {
   display: grid;
   gap: 32px;
