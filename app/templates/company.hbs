@@ -26,6 +26,54 @@
     </div>
   </header>
 
+  <section
+    class="space-y-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
+  >
+    <div
+      class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"
+    >
+      <div>
+        <p
+          class="text-xs font-semibold uppercase tracking-[0.35em] text-blue-600"
+        >
+          {{if this.locale.isKorean "위치" "Location"}}
+        </p>
+        <h2
+          class="text-2xl font-bold text-slate-900"
+        >{{this.copy.map.title}}</h2>
+        <p class="text-sm text-slate-600">{{this.copy.map.description}}</p>
+      </div>
+      <a
+        href="https://map.naver.com/v5/search/%EB%B2%95%EC%9B%90%EB%A1%9C%20114"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm transition hover:bg-blue-100"
+      >
+        {{this.copy.map.linkLabel}}
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          class="h-4 w-4 fill-current"
+        >
+          <path
+            d="M13 5a1 1 0 0 0 0 2h3.59l-9.3 9.29a1 1 0 1 0 1.42 1.42L18 8.41V12a1 1 0 0 0 2 0V6a1 1 0 0 0-1-1h-6Z"
+          />
+        </svg>
+      </a>
+    </div>
+    <div
+      class="company-map relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50"
+    >
+      <iframe
+        title={{if this.locale.isKorean "회사 위치 지도" "Company map"}}
+        src="https://www.openstreetmap.org/export/embed.html?bbox=127.1154659%2C37.4807086%2C127.1254659%2C37.4907086&layer=mapnik&marker=37.4857086%2C127.1204659"
+        class="absolute inset-0 h-full w-full"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+
   <section class="space-y-10">
     <div class="flex items-center justify-between gap-4">
       <h2
