@@ -3,232 +3,321 @@ import { action } from '@ember/object';
 import { service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 
-const AQUA_SLIDES = [
-  {
-    id: 'aquacrete-1',
-    src: '/images/aquacrete-1.jpg',
-    alt: 'Aqua-Crete polished flooring close-up shot',
+const HERO_COPY = {
+  ko: {
+    eyebrow: 'CLEANTECH INDUSTRIAL FLOORING',
+    title: '크린텍개발',
+    lead: '식품, 물류, 연구시설을 위한 맞춤형 바닥 시스템을 설계·시공합니다. 빠른 재가동, 위생, 내구성을 동시에 충족합니다.',
+    highlights: [
+      '24시간 내 라인 재가동',
+      '습윤·저온 시공 경험',
+      '열충격 · 화학 세정 대응',
+    ],
+    ctaPrimary: '제품 한눈에 보기',
+    ctaSecondary: '상담 남기기',
   },
-  {
-    id: 'aquacrete-2',
-    src: '/images/aquacrete-2.jpg',
-    alt: 'Aqua-Crete flooring across a food production facility',
+  en: {
+    eyebrow: 'CLEANTECH INDUSTRIAL FLOORING',
+    title: 'Cleantech Co., Ltd.',
+    lead: 'Floor systems engineered for hygiene, speed, and durability across food, logistics, and R&D sites.',
+    highlights: [
+      'Return to service in ~24h',
+      'Works on damp or cold slabs',
+      'Built for thermal & chemical shock',
+    ],
+    ctaPrimary: 'View products',
+    ctaSecondary: 'Request advice',
   },
-  {
-    id: 'aquacrete-3',
-    src: '/images/aquacrete-3.jpg',
-    alt: 'Workers installing Aqua-Crete system on site',
-  },
-  {
-    id: 'aquacrete-4',
-    src: '/images/aquacrete-4.jpg',
-    alt: 'Completed Aqua-Crete floor with reflective finish',
-  },
-];
+};
 
-const SKY_FLOOR_SLIDES = [
-  {
-    id: 'sky-floor-mono',
-    src: '/images/sky-floor-mono.jpg',
-    alt: 'Sky Floor seamless monochrome finish reinforced with stainless mesh',
-  },
-  {
-    id: 'sky-floor-flake',
-    src: '/images/sky-floor-flake.jpg',
-    alt: 'Sky Floor color flakes finish in a production corridor',
-  },
-  {
-    id: 'sky-floor-cove',
-    src: '/images/sky-floor-cove.jpg',
-    alt: 'Coved Sky Floor transition tying wall panels and slab together',
-  },
-  {
-    id: 'sky-floor-wash',
-    src: '/images/sky-floor-wash.jpg',
-    alt: 'Sky Floor performing in a wash-down area with drains',
-  },
-  {
-    id: 'sky-floor-trench',
-    src: '/images/sky-floor-trench.jpg',
-    alt: 'Sky Floor trench drain reinforcement in a processing area',
-  },
-  {
-    id: 'sky-floor-corner',
-    src: '/images/sky-floor-corner.jpg',
-    alt: 'Sky Floor coved corner with stainless mesh tie-in',
-  },
-  {
-    id: 'sky-floor-quartz',
-    src: '/images/sky-floor-quartz.jpg',
-    alt: 'Sky Floor quartz broadcast texture for extra slip resistance',
-  },
-  {
-    id: 'sky-floor-solid-2',
-    src: '/images/sky-floor-solid-2.jpg',
-    alt: 'Sky Floor solid color hygienic corridor finish',
-  },
-  {
-    id: 'sky-floor-restroom',
-    src: '/images/sky-floor-restroom.jpg',
-    alt: 'Sky Floor seamless restroom installation with drains',
-  },
-];
-
-const SECTIONS = {
+const PRODUCT_CARDS = {
   ko: [
     {
       id: 'aqua-crete',
-      eyebrow: 'AQUA-CRETE',
       title: '아쿠아크리트',
-      description:
-        '세라믹 무기불연 바닥 시스템으로 습윤 바탕에서도 24시간 내 재가동이 가능합니다.',
-      galleryLabel: '아쿠아크리트 현장 갤러리',
-      ctaLabel: '제품 보기',
-      cards: [
-        {
-          id: 'rapid-install',
-          title: '초속경 · 저온 시공',
-          description: '하절기·동절기 모두 24시간 내 라인 재가동이 가능합니다.',
-        },
-        {
-          id: 'breathable-system',
-          title: '투습형 방수 시스템',
-          description: '하부 습기는 배출하고 화학 세정제에도 견딥니다.',
-        },
-        {
-          id: 'polished-finish',
-          title: '고경도 폴리싱 마감',
-          description: '미끄럼 조정, 내마모 및 위생성을 동시에 충족합니다.',
-        },
-      ],
-      slides: AQUA_SLIDES,
+      description: '세라믹 무기불연 시스템으로 식품 공장 위생구역에 최적화.',
+      image: '/images/aquacrete-1.jpg',
+      imageAlt: '아쿠아크리트 시공 이미지',
+      badge: '식품 · 위생',
+      points: ['24시간 내 재가동', '습윤 슬라브 시공', '고경도 폴리싱 마감'],
+      linkLabel: '자세히 보기',
       route: 'product.aqua-crete',
     },
     {
       id: 'sky-floor',
-      eyebrow: 'SKY-FLOOR',
-      title: '스카이플로어',
-      description:
-        'Stainless Mesh와 Sky Resin이 결합된 위생 바닥으로 균열·열충격·화학 세정에 강합니다.',
-      galleryLabel: '스카이플로어 현장 갤러리',
-      ctaLabel: '제품 보기',
-      cards: [
-        {
-          id: 'mesh-reinforced',
-          title: 'Stainless Mesh 보강',
-          description:
-            '콘크리트 균열을 차단하고 구조 변형을 흡수해 긴 수명을 확보합니다.',
-        },
-        {
-          id: 'low-voc',
-          title: 'Low VOC 위생 바닥',
-          description:
-            '저취·친환경 폴리올 레진으로 HACCP, 공공·친환경 프로젝트에 적합합니다.',
-        },
-        {
-          id: 'anti-slip-thermal',
-          title: '미끄럼 · 열충격 대응',
-          description:
-            '습윤 세척, 스팀 소독, 냉동·저온 환경에서도 표면 안정성과 접착을 유지합니다.',
-        },
-      ],
-      slides: SKY_FLOOR_SLIDES,
+      title: '스카이 플로어',
+      description: 'Stainless Mesh가 균열을 잡아주는 고강도 에폭시 바닥.',
+      image: '/images/sky-floor-mono.jpg',
+      imageAlt: '스카이 플로어 시공 이미지',
+      badge: '물류 · 중량',
+      points: ['중량 하중 대응', '균열 차단 구조', '내약품 · 내마모'],
+      linkLabel: '자세히 보기',
       route: 'product.sky-floor',
+    },
+    {
+      id: 'sky-flex',
+      title: '스카이 플렉스',
+      description: '장시간 서는 작업자를 위한 탄성 위생 바닥 솔루션.',
+      image: '/images/sky-flex.svg',
+      imageAlt: '스카이 플렉스 아이콘',
+      badge: '탄성 · 편안함',
+      points: ['충격 흡수', '저취 레진', '미끄럼 저감'],
+      linkLabel: '자세히 보기',
+      route: 'product.sky-flex',
+    },
+    {
+      id: 'wood',
+      title: '목재 보존재',
+      description:
+        '자연 질감을 살리면서 부패와 변색을 막는 친환경 방부 솔루션.',
+      image: '/images/wood.svg',
+      imageAlt: '목재 보존재 아이콘',
+      badge: '친환경 마감',
+      points: ['친환경 인증', '자연 질감 유지', '내구성 향상'],
+      linkLabel: '자세히 보기',
+      route: 'product.wood',
     },
   ],
   en: [
     {
       id: 'aqua-crete',
-      eyebrow: 'AQUA-CRETE',
       title: 'Aqua-Crete',
       description:
-        'Ceramic-based inorganic flooring that reopens lines in ~24h even on damp slabs.',
-      galleryLabel: 'Aqua-Crete Gallery',
-      ctaLabel: 'View product',
-      cards: [
-        {
-          id: 'rapid-install',
-          title: 'Rapid & Cold Installation',
-          description:
-            'Return to service fast, regardless of hot or cold seasons.',
-        },
-        {
-          id: 'breathable-system',
-          title: 'Breathable Waterproof System',
-          description:
-            'Vents moisture while resisting aggressive sanitation chemicals.',
-        },
-        {
-          id: 'polished-finish',
-          title: 'High-Hardness Polished Finish',
-          description:
-            'Dialed slip resistance with abrasion resistance and hygiene.',
-        },
+        'Inorganic, non-combustible flooring tuned for hygienic food and beverage zones.',
+      image: '/images/aquacrete-1.jpg',
+      imageAlt: 'Aqua-Crete floor installation',
+      badge: 'Food & hygiene',
+      points: [
+        'Return to service in 24h',
+        'Installs on damp slabs',
+        'Polished, high-hardness finish',
       ],
-      slides: AQUA_SLIDES,
+      linkLabel: 'See details',
       route: 'product.aqua-crete',
     },
     {
       id: 'sky-floor',
-      eyebrow: 'SKY-FLOOR',
-      title: 'Sky Floor',
+      title: 'SKY Floor',
       description:
-        'Mesh-reinforced hygienic flooring that handles cracks, thermal shock, and wash-down cycles.',
-      galleryLabel: 'Sky Floor Gallery',
-      ctaLabel: 'View product',
-      cards: [
-        {
-          id: 'mesh-reinforced',
-          title: 'Mesh-Reinforced Structure',
-          description:
-            'Stainless mesh blocks crack transmission and absorbs movement for long-term adhesion.',
-        },
-        {
-          id: 'low-voc',
-          title: 'Low-VOC & Odor Safe ',
-          description:
-            'Eco polyol resin keeps HACCP, public, and wellness projects odor-safe and compliant.',
-        },
-        {
-          id: 'anti-slip-thermal',
-          title: 'Anti-Slip & Thermal Shock Safe',
-          description:
-            'Built for wet sanitizing, steam, and cold storage without losing footing or bond.',
-        },
+        'Mesh-reinforced epoxy that blocks cracking for heavy-duty logistics spaces.',
+      image: '/images/sky-floor-mono.jpg',
+      imageAlt: 'SKY Floor installation',
+      badge: 'Logistics & heavy load',
+      points: [
+        'Handles heavy loads',
+        'Crack-bridging mesh',
+        'Chemical & abrasion resistant',
       ],
-      slides: SKY_FLOOR_SLIDES,
+      linkLabel: 'See details',
       route: 'product.sky-floor',
+    },
+    {
+      id: 'sky-flex',
+      title: 'SKY Flex',
+      description:
+        'Elastic hygienic flooring that keeps crews comfortable on long shifts.',
+      image: '/images/sky-flex.svg',
+      imageAlt: 'SKY Flex mark',
+      badge: 'Elastic comfort',
+      points: ['Impact cushioning', 'Low-odor resin', 'Slip attenuation'],
+      linkLabel: 'See details',
+      route: 'product.sky-flex',
+    },
+    {
+      id: 'wood',
+      title: 'Wood Preservative',
+      description:
+        'Protects natural wood aesthetics while resisting rot, discoloration, and moisture.',
+      image: '/images/wood.svg',
+      imageAlt: 'Wood preservative mark',
+      badge: 'Sustainable finish',
+      points: [
+        'Eco-friendly certified',
+        'Keeps natural grain',
+        'Boosts durability',
+      ],
+      linkLabel: 'See details',
+      route: 'product.wood',
     },
   ],
 };
 
+const CONTACT_COPY = {
+  ko: {
+    eyebrow: 'CONTACT',
+    title: '현장에 맞는 바닥 솔루션을 상담해 보세요',
+    description:
+      '업종, 용도, 일정, 예산을 알려주시면 가장 적합한 시스템을 제안해 드립니다.',
+    bullets: [
+      '업종과 사용 용도',
+      '현재 바닥 상태와 문제점',
+      '희망 일정과 요구 성능',
+    ],
+    directTitle: '바로 전화 · 이메일',
+    directDesc: '평일 기준 24시간 이내 담당자가 회신드립니다.',
+    nameLabel: '이름',
+    emailLabel: '이메일',
+    phoneLabel: '연락처 (선택)',
+    companyLabel: '회사/기관명 (선택)',
+    messageLabel: '문의 내용',
+    messagePlaceholder: '현장 정보와 궁금한 내용을 남겨 주세요.',
+    submitLabel: '상담 요청 보내기',
+    submittingLabel: '보내는 중...',
+    successMessage: '접수되었습니다. 빠르게 연락드리겠습니다.',
+    errorFallback:
+      '전송에 실패했습니다. 잠시 후 다시 시도하거나 메일로 직접 연락해 주세요.',
+    privacyNote: '입력한 정보는 상담 응대 목적 외에는 사용하지 않습니다.',
+  },
+  en: {
+    eyebrow: 'CONTACT',
+    title: 'Tell us about your floor project',
+    description:
+      'Share the site type, issues, and schedule. We will return with a tailored system recommendation.',
+    bullets: [
+      'Industry and usage',
+      'Current floor condition',
+      'Target timeline and performance',
+    ],
+    directTitle: 'Direct line',
+    directDesc: 'We respond within one business day.',
+    nameLabel: 'Name',
+    emailLabel: 'Email',
+    phoneLabel: 'Phone (optional)',
+    companyLabel: 'Company (optional)',
+    messageLabel: 'Project details',
+    messagePlaceholder: 'How is the floor used and what do you need from it?',
+    submitLabel: 'Send request',
+    submittingLabel: 'Sending...',
+    successMessage: 'Thanks! We will follow up shortly.',
+    errorFallback:
+      'Unable to send right now. Please try again or email us directly.',
+    privacyNote: 'We only use these details to respond to your inquiry.',
+  },
+};
+
 export default class IndexController extends Controller {
   @service locale;
-  @tracked selectedSectionId = 'aqua-crete';
 
-  get sections() {
-    return SECTIONS[this.locale.current] ?? SECTIONS.ko;
+  @tracked name = '';
+  @tracked email = '';
+  @tracked phone = '';
+  @tracked company = '';
+  @tracked message = '';
+  @tracked status = 'idle';
+  @tracked errorMessage = '';
+
+  get heroCopy() {
+    return HERO_COPY[this.locale.current] ?? HERO_COPY.ko;
   }
 
-  get activeSection() {
-    const list = this.sections ?? [];
+  get products() {
+    return PRODUCT_CARDS[this.locale.current] ?? PRODUCT_CARDS.ko;
+  }
+
+  get contactCopy() {
+    return CONTACT_COPY[this.locale.current] ?? CONTACT_COPY.ko;
+  }
+
+  get isSubmitting() {
+    return this.status === 'sending';
+  }
+
+  get isSuccess() {
+    return this.status === 'success';
+  }
+
+  get isError() {
+    return this.status === 'error';
+  }
+
+  get submitDisabled() {
     return (
-      list.find((section) => section.id === this.selectedSectionId) ?? list[0]
+      this.isSubmitting ||
+      !this.name.trim() ||
+      !this.email.trim() ||
+      !this.message.trim()
     );
   }
 
-  get activeSlides() {
-    return this.activeSection?.slides ?? [];
+  get buttonLabel() {
+    return this.isSubmitting
+      ? this.contactCopy.submittingLabel
+      : this.contactCopy.submitLabel;
   }
-
-  get isSkyFloor() {
-    return this.activeSection?.id === 'sky-floor';
-  }
-
-  isSelected = (id) => id === this.activeSection?.id;
 
   @action
-  selectSection(id) {
-    this.selectedSectionId = id;
+  updateField(field, event) {
+    const fields = new Set(['name', 'email', 'phone', 'company', 'message']);
+    if (fields.has(field)) {
+      this[field] = event.target.value;
+    }
+
+    if (this.status !== 'idle') {
+      this.status = 'idle';
+      this.errorMessage = '';
+    }
+  }
+
+  @action
+  async submitForm(event) {
+    event.preventDefault();
+
+    if (this.submitDisabled) {
+      return;
+    }
+
+    this.status = 'sending';
+    this.errorMessage = '';
+
+    try {
+      const response = await fetch(
+        'https://formsubmit.co/ajax/ct4138605@gmail.com',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name: this.name,
+            email: this.email,
+            phone: this.phone,
+            company: this.company,
+            message: this.message,
+            _subject: 'Cleantech Homepage Inquiry',
+            _captcha: 'false',
+          }),
+        },
+      );
+
+      const data = await response.json().catch(() => null);
+      const successFlag =
+        data === null ||
+        typeof data?.success === 'undefined' ||
+        data?.success === true ||
+        data?.success === 'true';
+
+      if (!response.ok || !successFlag) {
+        const detail =
+          (data && (data.message || data.error || data.status)) ||
+          'Request failed';
+        throw new Error(detail);
+      }
+
+      this.status = 'success';
+      this.name = '';
+      this.email = '';
+      this.phone = '';
+      this.company = '';
+      this.message = '';
+    } catch (error) {
+      this.status = 'error';
+      const fallback = this.contactCopy.errorFallback;
+      const detail = error instanceof Error ? error.message : undefined;
+      this.errorMessage =
+        detail && detail !== 'Request failed'
+          ? `${fallback} (${detail})`
+          : fallback;
+    }
   }
 }
