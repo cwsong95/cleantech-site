@@ -11,6 +11,7 @@
   --border: #e5e7eb;
   --primary: #2563eb;
   --primary-strong: #1d4ed8;
+  --header-height: 72px;
 }
 
 html,
@@ -26,6 +27,7 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
+  padding-top: var(--header-height);
   overflow-x: hidden;
 }
 
@@ -92,8 +94,11 @@ a:hover {
 
 /* ========= Header / Nav ========= */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 40;
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(8px);
@@ -1512,14 +1517,9 @@ a:hover {
 
 /* ========= Footer ========= */
 .site-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   background: #0f1a2d;
   color: #fff;
   padding: 24px;
-  z-index: 60;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 .site-footer.is-hidden {
@@ -1534,24 +1534,6 @@ a:hover {
 @media (min-width: 768px) {
   .footer-wrap {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* footer 높이에 맞춰 본문 여백 확보 */
-main,
-.page,
-.section {
-  padding-bottom: 120px; /* footer height */
-}
-
-@media (max-width: 767px) {
-  .site-footer {
-    display: none;
-  }
-  main,
-  .page,
-  .section {
-    padding-bottom: 32px;
   }
 }
 
