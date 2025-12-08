@@ -21,7 +21,7 @@ const DATA = {
       title: '찾아오시는 길',
       description:
         '서울특별시 송파구 법원로 114 C-406 (문정동 가든파이브 · 법조타운 인근)',
-      linkLabel: '네이버 지도 열기',
+      linkLabel: '구글 지도 열기',
     },
     timelineTitle: '연도별 주요 성과',
     timeline: [
@@ -150,7 +150,7 @@ const DATA = {
       title: 'Visit us',
       description:
         '114 Beobwon-ro, Songpa-gu, Seoul (Garden Five / Legal Town area), Suite C-406',
-      linkLabel: 'Open in Naver Map',
+      linkLabel: 'Open in Google Maps',
     },
     timelineTitle: 'Milestones',
     timeline: [
