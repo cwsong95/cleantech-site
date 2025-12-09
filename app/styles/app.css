@@ -540,6 +540,20 @@ a:hover {
   background: var(--primary);
 }
 
+.hero-bg-swiper {
+  height: 100%;
+  width: 100%;
+}
+.hero-bg-swiper .swiper-slide {
+  height: 100%;
+}
+.hero-bg-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.72) saturate(1.1);
+}
+
 .gallery-section {
   overflow: visible;
 }
