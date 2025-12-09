@@ -847,7 +847,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-width: 62rem;
 }
 
 .aqua-crete-section__head h2 {
@@ -1006,6 +1005,21 @@ a:hover {
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.aqua-crete-application-card__media {
+  margin: 0 0 14px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 76, 129, 0.08);
+  box-shadow: 0 14px 30px rgba(15, 30, 61, 0.06);
+}
+
+.aqua-crete-application-card__media img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .aqua-crete-application-grid article {
