@@ -115,9 +115,12 @@
       <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {{#each this.products as |product|}}
           <div
-            class="group relative overflow-hidden rounded-3xl bg-white shadow-lg shadow-emerald-100 ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-emerald-200"
+            class="group product-card relative overflow-hidden rounded-3xl bg-white shadow-lg shadow-emerald-100 ring-1 ring-slate-100 transition hover:-translate-y-1 hover:shadow-emerald-200
+              {{if product.comingSoon 'product-card--coming-soon'}}"
           >
-            <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
+            <div
+              class="product-card__media relative aspect-[4/3] overflow-hidden bg-slate-100"
+            >
               <img
                 src={{product.image}}
                 alt={{product.imageAlt}}
@@ -128,6 +131,13 @@
               >
                 {{product.badge}}
               </span>
+              {{#if product.comingSoon}}
+                <div class="product-card__overlay" aria-hidden="true">
+                  <span
+                    class="product-card__overlay-text"
+                  >{{product.comingSoonLabel}}</span>
+                </div>
+              {{/if}}
             </div>
             <div class="space-y-3 px-5 py-5">
               <div class="space-y-1">
@@ -148,21 +158,40 @@
                   </li>
                 {{/each}}
               </ul>
-              <LinkTo
-                @route={{product.route}}
-                class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 transition hover:text-emerald-600"
-              >
-                {{product.linkLabel}}
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  class="h-4 w-4 fill-current"
+              {{#if product.comingSoon}}
+                <div
+                  class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-500 ring-1 ring-slate-200"
+                  role="status"
+                  aria-label={{product.comingSoonLabel}}
                 >
-                  <path
-                    d="M13 5a1 1 0 1 0 0 2h3.59l-9.3 9.29a1 1 0 0 0 1.42 1.42L18 8.41V12a1 1 0 0 0 2 0V6a1 1 0 0 0-1-1h-6Z"
-                  />
-                </svg>
-              </LinkTo>
+                  {{product.comingSoonLabel}}
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    class="h-4 w-4 fill-current"
+                  >
+                    <path
+                      d="M12 4a8 8 0 1 0 8 8 8.01 8.01 0 0 0-8-8Zm1 4a1 1 0 1 0-2 0v3.2a1 1 0 0 0 .45.83l2.4 1.6a1 1 0 0 0 1.1-1.66L13 11.7Z"
+                    />
+                  </svg>
+                </div>
+              {{else}}
+                <LinkTo
+                  @route={{product.route}}
+                  class="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 transition hover:text-emerald-600"
+                >
+                  {{product.linkLabel}}
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    class="h-4 w-4 fill-current"
+                  >
+                    <path
+                      d="M13 5a1 1 0 1 0 0 2h3.59l-9.3 9.29a1 1 0 0 0 1.42 1.42L18 8.41V12a1 1 0 0 0 2 0V6a1 1 0 0 0-1-1h-6Z"
+                    />
+                  </svg>
+                </LinkTo>
+              {{/if}}
             </div>
           </div>
         {{/each}}
