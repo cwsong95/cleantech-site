@@ -12,9 +12,9 @@
     <h1
       class="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl"
     >{{this.copy.hero.title}}</h1>
-    <p
-      class="max-w-3xl text-lg leading-relaxed text-slate-600"
-    >{{this.copy.hero.description}}</p>
+    <p class="max-w-3xl text-lg leading-relaxed text-slate-600">{{break-lines
+        this.copy.hero.description
+      }}</p>
     <div class="flex flex-wrap gap-3">
       {{#each this.copy.hero.highlight.items as |item|}}
         <span
@@ -115,15 +115,17 @@
                 class="text-sm font-medium uppercase tracking-[0.2em] text-slate-400"
               >{{if this.locale.isKorean "연혁" "Milestone"}}</div>
             </div>
-            <ul class="space-y-3 text-slate-700">
+            <ul class="space-y-3 text-slate-700 list-none p-0">
               {{#each block.entries as |entry|}}
-                <li class="leading-relaxed">{{entry}}</li>
+                <li class="flex items-start gap-3 leading-relaxed">
+                  <span
+                    class="mt-2 h-2 w-2 flex-none rounded-full bg-blue-600"
+                    aria-hidden="true"
+                  ></span>
+                  <span>{{entry}}</span>
+                </li>
               {{/each}}
             </ul>
-            <span
-              class="absolute left-2 top-6 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-white bg-blue-500 shadow"
-              aria-hidden="true"
-            ></span>
           </article>
         {{/each}}
       </div>
@@ -140,9 +142,9 @@
       <h2
         class="text-3xl font-semibold leading-snug"
       >{{this.copy.closing.title}}</h2>
-      <p
-        class="text-base leading-relaxed text-white/80"
-      >{{this.copy.closing.description}}</p>
+      <p class="text-base leading-relaxed text-white/80">{{break-lines
+          this.copy.closing.description
+        }}</p>
     </div>
     <div class="flex items-end justify-end">
       <LinkTo

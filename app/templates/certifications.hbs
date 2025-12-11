@@ -4,7 +4,7 @@
 
 <section class="space-y-16 margin-page">
   <header
-    class="space-y-6 rounded-3xl border border-slate-200 bg-white/90 p-10 shadow-xl shadow-blue-500/10 backdrop-blur"
+    class="space-y-6 rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-xl shadow-blue-500/10 backdrop-blur"
   >
     <p
       class="text-sm font-semibold uppercase tracking-[0.35em] text-blue-600"
@@ -12,9 +12,9 @@
     <h1
       class="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl"
     >{{this.copy.hero.title}}</h1>
-    <p
-      class="max-w-3xl text-lg leading-relaxed text-slate-600"
-    >{{this.copy.hero.description}}</p>
+    <p class="max-w-4xl text-lg leading-relaxed text-slate-600">{{break-lines
+        this.copy.hero.description
+      }}</p>
 
     <div class="flex flex-wrap items-center gap-6 text-sm text-slate-500">
       <div

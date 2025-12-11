@@ -6,7 +6,9 @@
   )
 }}
 
-<section class="home-hero relative isolate overflow-hidden text-white">
+<section
+  class="home-hero relative isolate overflow-hidden text-white full-bleed"
+>
   <div class="absolute inset-0">
     <HeroBgSlider />
     <div
@@ -33,7 +35,7 @@
         <p
           class="max-w-3xl text-lg leading-relaxed text-emerald-50/90 sm:text-xl"
         >
-          {{this.heroCopy.lead}}
+          {{break-lines this.heroCopy.lead}}
         </p>
         <div class="flex flex-wrap gap-3">
           <LinkTo
@@ -104,10 +106,12 @@
           }}
         </h2>
         <p class="mx-auto max-w-3xl text-lg leading-relaxed text-slate-600">
-          {{if
-            this.locale.isKorean
-            "현장 조건과 요구 성능에 맞춰 선택할 수 있도록 대표 솔루션을 모았습니다."
-            "Pick the right system for your site — fast turnarounds, heavy loads, or warm natural finishes."
+          {{break-lines
+            (if
+              this.locale.isKorean
+              "현장 조건과 요구 성능에 맞춰 선택할 수 있도록 대표 솔루션을 모았습니다."
+              "Pick the right system for your site — fast turnarounds, heavy loads, or warm natural finishes."
+            )
           }}
         </p>
       </div>
@@ -243,7 +247,7 @@
               {{this.contactCopy.title}}
             </h2>
             <p class="text-lg leading-relaxed text-slate-600">
-              {{this.contactCopy.description}}
+              {{break-lines this.contactCopy.description}}
             </p>
 
             <div class="grid gap-3 sm:grid-cols-2">

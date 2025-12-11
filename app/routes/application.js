@@ -7,6 +7,13 @@ export default class ApplicationRoute extends Route {
 
   constructor() {
     super(...arguments);
+    if (
+      typeof window !== 'undefined' &&
+      'scrollRestoration' in window.history
+    ) {
+      // Prevent browser from restoring the previous scroll position on SPA navigations.
+      window.history.scrollRestoration = 'manual';
+    }
     this.router.on('routeDidChange', this.handleRouteChange);
   }
 
@@ -18,7 +25,13 @@ export default class ApplicationRoute extends Route {
   @action
   handleRouteChange() {
     if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'auto' });
+      window.requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        // Reset any scrollable main container just in case.
+        document
+          .querySelector('main')
+          ?.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      });
     }
   }
 }
