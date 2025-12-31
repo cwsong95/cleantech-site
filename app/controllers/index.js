@@ -18,7 +18,7 @@ const HERO_COPY = {
   },
   en: {
     eyebrow: 'CLEANTECH INDUSTRIAL FLOORING',
-    title: 'Cleantech Co., Ltd.',
+    title: 'CleanTech',
     lead: 'Floor systems engineered for hygiene, speed, and durability across food, logistics, and R&D sites.',
     highlights: [
       'Return to service in ~24h',
@@ -293,7 +293,7 @@ export default class IndexController extends Controller {
             phone: this.phone,
             company: this.company,
             message: this.message,
-            _subject: 'Cleantech Homepage Inquiry',
+            _subject: 'CleanTech Homepage Inquiry',
             _captcha: 'false',
           }),
         },

@@ -7,7 +7,7 @@ const CONTENT = {
       eyebrow: 'CERTIFICATIONS',
       title: '품질 · 친환경 · 안전을 증명하는 인증',
       description:
-        'Cleantech는 공공기관과 글로벌 시험기관의 엄격한 평가를 통해 바닥재 성능과 친환경성을 검증받았습니다. 각 인증서를 확인해 보세요.',
+        'CleanTech는 공공기관과 글로벌 시험기관의 엄격한 평가를 통해 바닥재 성능과 친환경성을 검증받았습니다. 각 인증서를 확인해 보세요.',
     },
     metrics: {
       totalLabel: '총',
@@ -66,7 +66,7 @@ const CONTENT = {
       eyebrow: 'CERTIFICATIONS',
       title: 'Proven quality and environmental compliance',
       description:
-        'Cleantech flooring systems are qualified by Korean national procurement tests and eco-label programs. Explore the key certificates below.',
+        'CleanTech flooring systems are qualified by Korean national procurement tests and eco-label programs. Explore the key certificates below.',
     },
     metrics: {
       totalLabel: 'Total',

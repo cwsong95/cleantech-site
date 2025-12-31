@@ -3,7 +3,7 @@ import { service } from '@ember/service';
 
 const COPY = {
   ko: {
-    metaTitle: '자료실 | Cleantech',
+    metaTitle: '자료실 | CleanTech',
     hero: {
       eyebrow: 'DOWNLOADS',
       title: '브로슈어 & 자료',
@@ -60,7 +60,7 @@ const COPY = {
     comingSoonNote: '업로드 예정입니다.',
   },
   en: {
-    metaTitle: 'Downloads | Cleantech',
+    metaTitle: 'Downloads | CleanTech',
     hero: {
       eyebrow: 'DOWNLOADS',
       title: 'Product Downloads',

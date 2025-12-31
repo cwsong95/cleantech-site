@@ -55,7 +55,7 @@ const SLIDES = {
       ctas: [],
       badges: ['Sustainable sourcing', 'Premium finish'],
       image: '/images/wood.jpg',
-      imageAlt: 'Cleantech wood flooring',
+      imageAlt: 'CleanTech wood flooring',
     },
   ],
   ko: [
@@ -65,7 +65,7 @@ const SLIDES = {
       titleLead: '안전·신속·고강도 —',
       product: '아쿠아크리트',
       subtitle:
-        '냉·온이 반복되는 위생 구역을 위한 Cleantech 대표 폴리싱 바닥 솔루션.',
+        '냉·온이 반복되는 위생 구역을 위한 CleanTech 대표 폴리싱 바닥 솔루션.',
       route: 'product.aqua-crete',
       ctas: [
         { route: 'contact', label: '시공 상담 문의', className: 'btn-ghost' },

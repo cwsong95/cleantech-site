@@ -140,7 +140,7 @@ export default class ContactController extends Controller {
             phone: this.phone,
             company: this.company,
             message: this.message,
-            _subject: 'Cleantech Contact Inquiry',
+            _subject: 'CleanTech Contact Inquiry',
             _captcha: 'false',
           }),
         },

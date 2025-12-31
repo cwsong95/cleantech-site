@@ -125,7 +125,7 @@ const DATA = {
     closing: {
       title: '지금 필요한 솔루션을 함께 설계합니다',
       description:
-        '위생, 안전, 단열 등 현안이 무엇인지 알려 주세요. Cleantech의 엔지니어가 현장을 직접 진단하고, 최적의 바닥 및 방수 시스템을 제안해 드립니다.',
+        '위생, 안전, 단열 등 현안이 무엇인지 알려 주세요. CleanTech의 엔지니어가 현장을 직접 진단하고, 최적의 바닥 및 방수 시스템을 제안해 드립니다.',
       cta: '문의 페이지로 이동',
     },
   },
@@ -134,7 +134,7 @@ const DATA = {
       eyebrow: 'ABOUT CLEANTECH',
       title: 'Flooring innovators since 2000',
       description:
-        'Cleantech began as a specialist contractor and grew into a materials developer trusted by food, pharma, and logistics facilities. We combine inorganic ceramic flooring with advanced waterproofing to deliver hygienic, durable environments.',
+        'CleanTech began as a specialist contractor and grew into a materials developer trusted by food, pharma, and logistics facilities. We combine inorganic ceramic flooring with advanced waterproofing to deliver hygienic, durable environments.',
       highlight: {
         label: 'Focus',
         items: [
@@ -155,7 +155,7 @@ const DATA = {
       {
         year: '2000',
         entries: [
-          'Incorporated Cleantech Development Co., Ltd.',
+          'Incorporated CleanTech Development Co., Ltd.',
           'Licensed as a specialized contractor for waterproofing and coating works',
         ],
       },
