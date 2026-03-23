@@ -45,6 +45,18 @@ const PRODUCT_CARDS = {
       readyToView: true,
     },
     {
+      id: 'aqua-crete-eifs',
+      title: 'Aqua-Crete 외단열',
+      description: 'NEP 인증 불연재 외단열시스템으로 외벽의 화재 안전과 방수·단열을 동시에 확보.',
+      image: '/images/외벽.jpg',
+      imageAlt: '아쿠아크리트 외단열 시공 이미지',
+      badge: '외벽 · 불연',
+      points: ['실물화재시험 KS F 8414', '고어텍스 통기 기능', '내진 성능'],
+      linkLabel: '자세히 보기',
+      route: 'product.aqua-crete-eifs',
+      readyToView: true,
+    },
+    {
       id: 'sky-floor',
       title: 'Sky-Floor',
       description: 'Stainless Mesh가 균열을 잡아주는 고강도 에폭시 바닥.',
@@ -101,6 +113,23 @@ const PRODUCT_CARDS = {
       ],
       linkLabel: 'See details',
       route: 'product.aqua-crete',
+      readyToView: true,
+    },
+    {
+      id: 'aqua-crete-eifs',
+      title: 'Aqua-Crete EIFS',
+      description:
+        'NEP-certified non-combustible exterior insulation system for fire-safe, waterproof, and insulated facades.',
+      image: '/images/외벽.jpg',
+      imageAlt: 'Aqua-Crete EIFS installation',
+      badge: 'Facade & fire safety',
+      points: [
+        'KS F 8414 full-scale fire test',
+        'GORE-TEX breathability',
+        'Seismic performance',
+      ],
+      linkLabel: 'See details',
+      route: 'product.aqua-crete-eifs',
       readyToView: true,
     },
     {

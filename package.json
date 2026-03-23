@@ -37,6 +37,7 @@
     "@glimmer/component": "^2.0.0",
     "@glimmer/tracking": "^1.1.2",
     "autoprefixer": "10.4.20",
+    "baseline-browser-mapping": "^2.10.10",
     "broccoli-asset-rev": "^3.0.0",
     "can-symlink": "^1.0.0",
     "concurrently": "^9.2.1",

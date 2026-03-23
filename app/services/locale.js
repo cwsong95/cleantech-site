@@ -11,6 +11,7 @@ const MESSAGES = {
     },
     dropdown: {
       aqua: 'Aqua-Crete',
+      aquaEifs: 'Aqua-Crete EIFS',
       skyFloor: 'SKY Floor',
       skyFlex: 'SKY Flex',
       wood: 'Wood Preservative',
@@ -49,6 +50,7 @@ const MESSAGES = {
     },
     dropdown: {
       aqua: '아쿠아크리트',
+      aquaEifs: '아쿠아크리트-외단열',
       skyFloor: '스카이 플로어',
       skyFlex: '스카이 플렉스',
       wood: '목재 방부재',
@@ -66,7 +68,7 @@ const MESSAGES = {
       },
       certifications: {
         title: '인증 현황',
-        items: ['HACCP', '친환경', '신제품'],
+        items: ['실물화재시험', '친환경', '신제품'],
       },
       downloads: {
         title: '자료실',

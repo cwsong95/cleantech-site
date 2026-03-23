@@ -10,6 +10,7 @@ Router.map(function () {
   this.route('company');
   this.route('product', function () {
     this.route('aqua-crete');
+    this.route('aqua-crete-eifs');
     this.route('sky-floor');
     this.route('sky-flex');
     this.route('wood');
