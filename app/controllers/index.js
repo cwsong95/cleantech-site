@@ -47,7 +47,8 @@ const PRODUCT_CARDS = {
     {
       id: 'aqua-crete-eifs',
       title: 'Aqua-Crete 외단열',
-      description: 'NEP 인증 불연재 외단열시스템으로 외벽의 화재 안전과 방수·단열을 동시에 확보.',
+      description:
+        'NEP 인증 불연재 외단열시스템으로 외벽의 화재 안전과 방수·단열을 동시에 확보.',
       image: '/images/외벽.jpg',
       imageAlt: '아쿠아크리트 외단열 시공 이미지',
       badge: '외벽 · 불연',
