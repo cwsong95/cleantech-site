@@ -13,7 +13,8 @@ Router.map(function () {
     this.route('aqua-crete-eifs');
     this.route('sky-floor');
     this.route('sky-flex');
-    this.route('wood');
+    this.route('polyaspartic-waterproof');
+    this.route('polyaspartic-primer');
   });
   this.route('applications');
   this.route('projects');

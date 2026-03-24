@@ -32,16 +32,20 @@
             ></path></svg>
         </button>
         <div class="dropdown-menu" id="products-menu">
+          <div class="dropdown-group-header">AQUA-CRETE</div>
           <LinkTo
             @route="product.aqua-crete"
             class="dropdown-item"
             {{on "click" this.closeMobileNav}}
-          >{{this.locale.t "dropdown.aqua"}}</LinkTo>
+          >{{this.locale.t "dropdown.aquaFloor"}}</LinkTo>
           <LinkTo
             @route="product.aqua-crete-eifs"
             class="dropdown-item"
             {{on "click" this.closeMobileNav}}
-          >{{this.locale.t "dropdown.aquaEifs"}}</LinkTo>
+          >{{this.locale.t "dropdown.aquaWall"}}</LinkTo>
+
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-group-header">SKY</div>
           <LinkTo
             @route="product.sky-floor"
             class="dropdown-item"
@@ -53,16 +57,24 @@
             {{on "click" this.closeMobileNav}}
           >
             <span>{{this.locale.t "dropdown.skyFlex"}}</span>
-            <span class="dropdown-badge">준비중</span>
+            <span class="dropdown-badge">{{this.locale.t "dropdown.comingSoon"}}</span>
           </LinkTo>
+
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-group-header">
+            <span>{{this.locale.t "dropdown.polyaspartic"}}</span>
+            <span class="dropdown-badge">{{this.locale.t "dropdown.comingSoon"}}</span>
+          </div>
           <LinkTo
-            @route="product.wood"
+            @route="product.polyaspartic-waterproof"
             class="dropdown-item"
             {{on "click" this.closeMobileNav}}
-          >
-            <span>{{this.locale.t "dropdown.wood"}}</span>
-            <span class="dropdown-badge">준비중</span>
-          </LinkTo>
+          >{{this.locale.t "dropdown.polyWaterproof"}}</LinkTo>
+          <LinkTo
+            @route="product.polyaspartic-primer"
+            class="dropdown-item"
+            {{on "click" this.closeMobileNav}}
+          >{{this.locale.t "dropdown.polyPrimer"}}</LinkTo>
         </div>
       </div>
       <LinkTo
