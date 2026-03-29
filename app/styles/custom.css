@@ -117,6 +117,17 @@ a:hover {
   background: #f3f4f6;
 }
 
+.dropdown-item--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  font-weight: 500;
+  padding: 8px 12px;
+}
+
+.dropdown-item--disabled:hover {
+  background: transparent;
+}
+
 .dropdown-item span:first-child {
   flex: 1;
 }

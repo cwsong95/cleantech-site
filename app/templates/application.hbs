@@ -51,30 +51,27 @@
             class="dropdown-item"
             {{on "click" this.closeMobileNav}}
           >{{this.locale.t "dropdown.skyFloor"}}</LinkTo>
-          <LinkTo
-            @route="product.sky-flex"
-            class="dropdown-item"
-            {{on "click" this.closeMobileNav}}
+          <span
+            class="dropdown-item dropdown-item--disabled"
+            title="준비중"
           >
             <span>{{this.locale.t "dropdown.skyFlex"}}</span>
             <span class="dropdown-badge">{{this.locale.t "dropdown.comingSoon"}}</span>
-          </LinkTo>
+          </span>
 
           <div class="dropdown-divider"></div>
           <div class="dropdown-group-header">
             <span>{{this.locale.t "dropdown.polyaspartic"}}</span>
             <span class="dropdown-badge">{{this.locale.t "dropdown.comingSoon"}}</span>
           </div>
-          <LinkTo
-            @route="product.polyaspartic-waterproof"
-            class="dropdown-item"
-            {{on "click" this.closeMobileNav}}
-          >{{this.locale.t "dropdown.polyWaterproof"}}</LinkTo>
-          <LinkTo
-            @route="product.polyaspartic-primer"
-            class="dropdown-item"
-            {{on "click" this.closeMobileNav}}
-          >{{this.locale.t "dropdown.polyPrimer"}}</LinkTo>
+          <span
+            class="dropdown-item dropdown-item--disabled"
+            title="준비중"
+          >{{this.locale.t "dropdown.polyWaterproof"}}</span>
+          <span
+            class="dropdown-item dropdown-item--disabled"
+            title="준비중"
+          >{{this.locale.t "dropdown.polyPrimer"}}</span>
         </div>
       </div>
       <LinkTo
