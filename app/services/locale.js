@@ -15,6 +15,9 @@ const MESSAGES = {
       skyFloor: 'SKY Floor',
       skyFlex: 'SKY Flex',
       skyAu: 'SKY-AU',
+      polyaspartic: 'Polyaspartic',
+      polyWaterproof: 'Waterproofing',
+      polyPrimer: 'Primer',
       comingSoon: 'Coming Soon',
     },
     localeToggle: {
@@ -55,6 +58,9 @@ const MESSAGES = {
       skyFloor: '스카이 플로어',
       skyFlex: '스카이 플렉스',
       skyAu: '스카이 AU',
+      polyaspartic: '폴리아스파틱',
+      polyWaterproof: '방수재',
+      polyPrimer: '프라이머',
       comingSoon: '준비중',
     },
     localeToggle: {
