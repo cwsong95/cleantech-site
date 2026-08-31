@@ -14,9 +14,7 @@ const MESSAGES = {
       aquaWall: 'EIFS (Exterior Wall)',
       skyFloor: 'SKY Floor',
       skyFlex: 'SKY Flex',
-      polyaspartic: 'Polyaspartic',
-      polyWaterproof: 'Waterproofing',
-      polyPrimer: 'Primer',
+      skyAu: 'SKY-AU',
       comingSoon: 'Coming Soon',
     },
     localeToggle: {
@@ -56,9 +54,7 @@ const MESSAGES = {
       aquaWall: '외벽 공법',
       skyFloor: '스카이 플로어',
       skyFlex: '스카이 플렉스',
-      polyaspartic: '폴리아스파틱',
-      polyWaterproof: '방수재',
-      polyPrimer: '프라이머',
+      skyAu: '스카이 AU',
       comingSoon: '준비중',
     },
     localeToggle: {
