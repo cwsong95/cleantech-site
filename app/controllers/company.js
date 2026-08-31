@@ -142,6 +142,14 @@ const DATA = {
     timelineTitle: 'Milestones',
     timeline: [
       {
+        year: '2000',
+        entries: [
+          'Incorporated CleanTech Development Co., Ltd.',
+          'Registered plastering and waterproofing works',
+          'Registered painting works',
+        ],
+      },
+      {
         year: '2012',
         entries: ['Developed polyurea elastic composite waterproofing method'],
       },
@@ -272,5 +280,17 @@ export default class CompanyController extends Controller {
   get timeline() {
     const timeline = this.copy.timeline ?? [];
     return [...timeline].sort((a, b) => Number(b.year) - Number(a.year));
+  }
+
+  get timelineRange() {
+    const years = this.timeline.map(({ year }) => Number(year));
+    const firstYear = Math.min(...years);
+    const lastYear = Math.max(...years);
+
+    if (this.locale.isKorean) {
+      return `${firstYear}년부터 ${lastYear}년까지`;
+    }
+
+    return `${firstYear} to ${lastYear}`;
   }
 }
