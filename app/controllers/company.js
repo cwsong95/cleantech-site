@@ -3,20 +3,6 @@ import { service } from '@ember/service';
 
 const DATA = {
   ko: {
-    hero: {
-      eyebrow: 'ABOUT CLEANTECH',
-      title: '현장을 혁신하는 바닥 솔루션 파트너',
-      description:
-        '2000년 설립 이후, 우리는 고위생·고내구성 바닥재와 단열 방수 시스템을 선도해 왔습니다. 특허 기술과 현장 경험을 바탕으로 식품, 제약, 물류 시설에 맞춤형 솔루션을 제공합니다.',
-      highlight: {
-        label: '핵심 키워드',
-        items: [
-          '무기질 세라믹 바닥재',
-          '친환경·고내화 공법',
-          '공공/산업 시설 검증',
-        ],
-      },
-    },
     map: {
       title: '찾아오시는 길',
       description:
@@ -137,28 +123,8 @@ const DATA = {
         ],
       },
     ],
-    closing: {
-      title: '지금 필요한 솔루션을 함께 설계합니다',
-      description:
-        '위생, 안전, 단열 등 현안이 무엇인지 알려 주세요. CleanTech의 엔지니어가 현장을 직접 진단하고, 최적의 바닥 및 방수 시스템을 제안해 드립니다.',
-      cta: '문의 페이지로 이동',
-    },
   },
   en: {
-    hero: {
-      eyebrow: 'ABOUT CLEANTECH',
-      title: 'Flooring innovators since 2000',
-      description:
-        'CleanTech began as a specialist contractor and grew into a materials developer trusted by food, pharma, and logistics facilities. We combine inorganic ceramic flooring with advanced waterproofing to deliver hygienic, durable environments.',
-      highlight: {
-        label: 'Focus',
-        items: [
-          'Inorganic ceramic flooring',
-          'Fire-safe thermal systems',
-          'Public & industrial references',
-        ],
-      },
-    },
     map: {
       title: 'Visit us',
       description:
@@ -285,12 +251,6 @@ const DATA = {
         ],
       },
     ],
-    closing: {
-      title: 'Let’s plan your next resilient floor',
-      description:
-        'Share the operational risks you face—hygiene, thermal cycling, heavy loads—and we will respond with a tailored Aqua-Crete or SKY FLOOR specification.',
-      cta: 'Go to contact page',
-    },
   },
 };
 
