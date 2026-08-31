@@ -34,6 +34,15 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+[id^="company-"],
+[id^="history-"] {
+  scroll-margin-top: calc(var(--header-height) + 48px);
+}
+
 a {
   color: inherit;
   text-decoration: none;

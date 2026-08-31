@@ -3,7 +3,60 @@
 }}
 
 <section class="space-y-16 margin-page">
+  <nav
+    class="rounded-3xl border border-slate-200 bg-white/90 p-5 shadow-lg shadow-blue-500/10 backdrop-blur"
+    aria-label={{if
+      this.locale.isKorean
+      "회사 페이지 빠른 이동"
+      "Company page quick access"
+    }}
+  >
+    <div class="flex flex-col gap-5 lg:flex-row lg:items-center">
+      <div class="flex flex-none items-center gap-4">
+        <div
+          class="flex h-12 w-12 flex-col justify-center gap-2 rounded-2xl bg-slate-50 px-3"
+          aria-hidden="true"
+        >
+          <span class="h-0.5 w-7 rounded-full bg-slate-900"></span>
+          <span class="h-0.5 w-5 rounded-full bg-slate-300"></span>
+          <span class="h-0.5 w-6 rounded-full bg-slate-300"></span>
+        </div>
+        <div>
+          <p
+            class="text-xs font-semibold uppercase tracking-[0.35em] text-blue-600"
+          >Quick Access</p>
+          <h2 class="text-xl font-bold text-slate-900">
+            {{if this.locale.isKorean "빠른 이동" "Quick links"}}
+          </h2>
+        </div>
+      </div>
+      <div class="flex flex-1 flex-wrap gap-2">
+        <a
+          href="#company-location"
+          class="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm transition hover:bg-blue-100"
+        >
+          {{if this.locale.isKorean "찾아오시는 길" "Location"}}
+        </a>
+        <a
+          href="#company-timeline"
+          class="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm transition hover:bg-blue-100"
+        >
+          {{this.copy.timelineTitle}}
+        </a>
+        {{#each this.timeline as |block|}}
+          <a
+            href={{concat "#history-" block.year}}
+            class="inline-flex min-w-16 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+          >
+            {{block.year}}
+          </a>
+        {{/each}}
+      </div>
+    </div>
+  </nav>
+
   <section
+    id="company-location"
     class="space-y-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
   >
     <div
@@ -51,7 +104,7 @@
     </div>
   </section>
 
-  <section class="space-y-10">
+  <section id="company-timeline" class="space-y-10">
     <div class="flex items-center justify-between gap-4">
       <h2
         class="text-2xl font-semibold text-slate-900"
@@ -80,6 +133,7 @@
       <div class="space-y-10">
         {{#each this.timeline as |block|}}
           <article
+            id={{concat "history-" block.year}}
             class="relative grid gap-6 rounded-3xl border border-slate-200/80 bg-white/80 p-6 shadow-sm backdrop-blur"
           >
             <div class="flex items-center gap-3">
