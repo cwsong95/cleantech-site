@@ -1,729 +1,720 @@
 {{#if this.locale.isKorean}}
-  <article class="sky-floor-page page">
-    <section class="sky-floor-hero full-bleed">
-      <div class="sky-floor-hero__inner">
-        <div class="sky-floor-hero__content">
-          <p class="sky-floor-hero__kicker">Stainless Mesh &amp; Sky Resin 복합
-            위생 바닥재</p>
-          <h1 class="sky-floor-hero__title">Sky Floor</h1>
-          <p class="sky-floor-hero__lead">
+  <article class="sky-floor-page page ac-page full-bleed" {{aqua-reveal}}>
+    <section class="ac-hero">
+      <div class="ac-hero__bg" aria-hidden="true">
+        <img src="/images/sky-floor-hero-green.jpg" alt="" />
+      </div>
+      <div class="ac-inner ac-hero__grid">
+        <div class="ac-hero__content">
+          <p class="ac-hero__eyebrow">SKY FLOOR
+            <span>Mesh Reinforced · Hygienic · Durable</span></p>
+          <p class="ac-hero__kicker">Stainless Mesh &amp; Sky Resin 복합 위생
+            바닥재</p>
+          <h1 class="ac-hero__title">Sky Floor</h1>
+          <p class="ac-hero__lead">
             {{break-lines
               "Sky Floor는 Stainless Wire Glass Mesh Sheet와 Sky Resin의 복합 구조가 균열과 온도 변화를 견디며 Low VOC 처방으로 위생·산업 시설 모두에서 믿을 수 있는 프리미엄 바닥 솔루션을 제공합니다."
             }}
           </p>
-          <ul class="sky-floor-hero__tags" aria-label="핵심 슬로건">
+          <ul class="ac-hero__tags" aria-label="핵심 슬로건">
             <li>스테인리스 메쉬 보강</li>
             <li>Low VOC &amp; 무자극</li>
             <li>Anti-Slip 마감</li>
           </ul>
-          <div class="sky-floor-hero__cta">
-            <LinkTo @route="contact" class="btn">도입 상담 요청</LinkTo>
-            <LinkTo @route="downloads" class="btn-ghost">브로슈어 / SDS 보기</LinkTo>
+          <div class="ac-hero__cta">
+            <LinkTo @route="contact" class="ac-btn ac-btn--primary">도입 상담
+              요청
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </LinkTo>
+            <LinkTo @route="downloads" class="ac-btn ac-btn--ghost">브로슈어 /
+              SDS 보기</LinkTo>
           </div>
         </div>
-        <div class="sky-floor-hero__visual" aria-hidden="true">
-          <img
-            src="/images/sky-floor-logo.jpg"
-            alt=""
-            class="sky-floor-hero__logo"
-          />
-          <div class="sky-floor-hero__badge-group">
-            <span class="sky-floor-hero__badge">Low VOC</span>
-            <span class="sky-floor-hero__badge">HACCP Ready</span>
-            <span class="sky-floor-hero__badge">Thermal-Shock Safe</span>
+        <aside class="ac-hero__panel" aria-label="핵심 성능">
+          <div class="ac-hero__sfh"><span>Mesh</span><i>·</i><span
+            >Hygienic</span><i>·</i><span>Durable</span></div>
+          <div class="ac-badges">
+            <div class="ac-badge">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ><path
+                  d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"
+                /><path d="M2 21c0-3 1.85-5.36 5.08-6" /></svg>
+              <span><b>Low VOC</b></span>
+            </div>
+            <div class="ac-badge">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ><path d="M9 11l3 3L22 4" /><path
+                  d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                /></svg>
+              <span><b>HACCP Ready</b></span>
+            </div>
+            <div class="ac-badge">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ><path d="M10 13.5V5a2 2 0 1 1 4 0v8.5a4 4 0 1 1-4 0z" /></svg>
+              <span><b>Thermal-Shock Safe</b></span>
+            </div>
           </div>
+        </aside>
+      </div>
+      <div class="ac-metrics">
+        <div class="ac-inner ac-metrics__grid">
+          <div class="ac-metric"><div class="ac-metric__n">메쉬</div><div
+              class="ac-metric__l"
+            >스테인리스 메쉬 보강</div></div>
+          <div class="ac-metric"><div class="ac-metric__n">Low VOC</div><div
+              class="ac-metric__l"
+            >친환경 무자극</div></div>
+          <div class="ac-metric"><div class="ac-metric__n">내진</div><div
+              class="ac-metric__l"
+            >내진 성능</div></div>
+          <div class="ac-metric"><div class="ac-metric__n">열충격</div><div
+              class="ac-metric__l"
+            >열충격 저항성</div></div>
         </div>
       </div>
     </section>
 
     <div class="margin-page">
-      <div class="container-app">
-        <section class="sky-floor-section">
-          <div class="sky-floor-section__head">
-            <h2>Sky Floor 소개</h2>
-          </div>
-          <div class="sky-floor-intro-grid">
-            <article class="sky-floor-intro-card">
-              <h3>물질형태</h3>
-              <p>
-                Sky Floor 바닥재는 내향균성 성능을 발현하는 바닥재 전용 수지에 소성 가공한 무기 재료로
-                구성된 파우더를 첨가 혼합하여 고밀도 비흡수성 불침투성 미끄럼방지 성능의 바닥재를
-                형성합니다. 또한 저휘발성유기화합물(Low VOC) 함량의 친환경 제품입니다.
-              </p>
-            </article>
-            <article class="sky-floor-intro-card">
-              <h3>구조형태</h3>
-              <p>
-                Sky Floor 바닥재는 Stainless Wire Glass Mesh Sheet와 Sky Resin과의 강력한
-                결합구조로 콘크리트 구조체에서 발생하는 균열에 대한 저항성능으로 바닥재를 보호하며
-                바닥재의 탈락 현상을 방지하는 효과를 통하여 바닥재로서의 장기적인 내구성을
-                발현하는 바닥재 솔루션입니다.
-              </p>
-            </article>
-            <article class="sky-floor-intro-card">
-              <h3>마감형태</h3>
-              <p>
-                Sky Floor 바닥재는 현장요구조건 및 현장상황에 따라서 제품의 사양을
-                달리 적용하여 시공두께 및 표면 마감상태를 다양하게 표현이 가능합니다.
-                이음매가 없는 단색마감, 미끄럼방지성능을 발현하는 마감, 인테리어 미관
-                성능을 발현하는 표면 형태로 마감이 가능합니다.
-              </p>
-            </article>
-          </div>
-          {{!--
-        <section class="sky-floor-section gallery-section">
-          <div class="sky-floor-section__head">
-            <h2>시공 종류</h2>
-            <p>
-              컬러 쿼츠/플레이크/단색, 아쿠아크리트 보강, 코빙, 트렌치 보강까지
-              다양한 마감 사례를 확인하세요.
-            </p>
-          </div>
+      <section class="ac-sec ac-concept" id="about">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Overview</span>
+          <h2>Sky Floor 소개</h2>
+        </div>
+        <div class="ac-cardgrid ac-cardgrid--3">
+          <article class="ac-infocard ac-reveal" data-d="1">
+            <h3>물질형태</h3>
+            <p>Sky Floor 바닥재는 내향균성 성능을 발현하는 바닥재 전용 수지에
+              소성 가공한 무기 재료로 구성된 파우더를 첨가 혼합하여 고밀도
+              비흡수성 불침투성 미끄럼방지 성능의 바닥재를 형성합니다. 또한
+              저휘발성유기화합물(Low VOC) 함량의 친환경 제품입니다.</p>
+          </article>
+          <article class="ac-infocard ac-reveal" data-d="2">
+            <h3>구조형태</h3>
+            <p>Sky Floor 바닥재는 Stainless Wire Glass Mesh Sheet와 Sky
+              Resin과의 강력한 결합구조로 콘크리트 구조체에서 발생하는 균열에
+              대한 저항성능으로 바닥재를 보호하며 바닥재의 탈락 현상을 방지하는
+              효과를 통하여 바닥재로서의 장기적인 내구성을 발현하는 바닥재
+              솔루션입니다.</p>
+          </article>
+          <article class="ac-infocard ac-reveal" data-d="3">
+            <h3>마감형태</h3>
+            <p>Sky Floor 바닥재는 현장요구조건 및 현장상황에 따라서 제품의
+              사양을 달리 적용하여 시공두께 및 표면 마감상태를 다양하게 표현이
+              가능합니다. 이음매가 없는 단색마감, 미끄럼방지성능을 발현하는
+              마감, 인테리어 미관 성능을 발현하는 표면 형태로 마감이 가능합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ac-sec ac-gallery" id="gallery">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Gallery</span>
+          <h2>시공 종류</h2>
+          <p>컬러 쿼츠/플레이크/단색, 아쿠아크리트 보강, 코빙, 트렌치 보강까지
+            다양한 마감 사례를 확인하세요.</p>
+        </div>
+        <div class="ac-gallery__panel ac-reveal" data-d="1">
           <GallerySlider @slides={{this.skyFloorSlides}} />
-        </section>
-        --}}
-        </section>
+        </div>
+      </section>
 
-        <section class="sky-floor-section">
-          <div class="sky-floor-section__head">
-            <h2>Sky Floor 특징</h2>
+      <section class="ac-sec ac-features" id="properties">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Properties</span>
+          <h2>Sky Floor 특징</h2>
+        </div>
+        <div class="ac-plist">
+          <div class="ac-plist-card ac-reveal" data-d="1">
+            <h3>물리적 특성</h3>
+            <ul>
+              <li><strong>균열 저항성</strong><p>Stainless Wire Glass Mesh
+                  Sheet와 Sky Resin의 강력한 결합력으로 구조체에서 발생하는
+                  균열로부터 바닥재를 보호하는 균열저항성능을 발현합니다.</p></li>
+              <li><strong>내진 성능</strong><p>강력한 결합구조(Sheet+Resin)로
+                  형성되어 바닥 균열 및 건물 움직임에 대응하여 바닥재의 박리,
+                  탈락현상을 방지하여 장기적인 내구성을 발현합니다.</p></li>
+              <li><strong>비흡수 성능</strong><p>치밀한 구조로 형성되어 세제나
+                  화학물질의 침투를 차단합니다.</p></li>
+              <li><strong>내충격성</strong><p>고강도바닥재로서 우수한 압축강도를
+                  발현합니다.</p></li>
+              <li><strong>열충격 저항성</strong><p>시공 두께와 사양에 따라 고온
+                  살균과 저온 환경의 급격한 온도 변화에도 견딥니다.</p></li>
+            </ul>
           </div>
-          <div class="sky-floor-property-grid">
-            <article>
-              <h3>물리적 특성</h3>
-              <ul>
-                <li>
-                  <strong>균열 저항성</strong>
-                  <p>Stainless Wire Glass Mesh Sheet와 Sky Resin의 강력한 결합력으로
-                    구조체에서 발생하는 균열로부터 바닥재를 보호하는 균열저항성능을 발현합니다.</p>
-                </li>
-                <li>
-                  <strong>내진 성능</strong>
-                  <p>강력한 결합구조(Sheet+Resin)로 형성되어 바닥 균열 및 건물 움직임에 대응하여
-                    바닥재의 박리, 탈락현상을 방지하여 장기적인 내구성을 발현합니다.</p>
-                </li>
-                <li>
-                  <strong>비흡수 성능</strong>
-                  <p>치밀한 구조로 형성되어 세제나 화학물질의 침투를 차단합니다.</p>
-                </li>
-                <li>
-                  <strong>내충격성</strong>
-                  <p>고강도바닥재로서 우수한 압축강도를 발현합니다.</p>
-                </li>
-                <li>
-                  <strong>열충격 저항성</strong>
-                  <p>시공 두께와 사양에 따라 고온 살균과 저온 환경의 급격한 온도
-                    변화에도 견딥니다.</p>
-                </li>
-              </ul>
-            </article>
-            <article>
-              <h3>화학적 특성</h3>
-              <ul>
-                <li>
-                  <strong>친환경 제품</strong>
-                  <p>저휘발성 유기화합물(Low VOC)을 함유한 친환경 제품입니다.</p>
-                </li>
-                <li>
-                  <strong>내화학성</strong>
-                  <p>산,알칼리,용제 등 산업용 세정제에도 저항성능을 발현합니다.</p>
-                </li>
-                <li>
-                  <strong>내항균성</strong>
-                  <p>제품 시공 후 바닥 표면으로부터 곰팡이세균 및 미생물 번식을 차단합니다.</p>
-                </li>
-                <li>
-                  <strong>인체무해성</strong>
-                  <p>VACs,벤젠,톨루앤큐맨,자일렌 등 인체유해한 화합물 발생이 없습니다.</p>
-                </li>
-              </ul>
-            </article>
-            <article>
-              <h3>위생 &amp; 유지관리</h3>
-              <ul>
-                <li>
-                  <strong>비취오염성</strong>
-                  <p>신너 등의 희석제를 사용하지 않아 자극적인 냄새발생이 없으며
-                    Haccp 식품 가공 사업장에 냄새나 맛을 오염시키지 않습니다.</p>
-                </li>
-                <li>
-                  <strong>청결 &amp; 안전성</strong>
-                  <p>시공 후 청소 및 유지관리가 용이하며 안전한 작업 환경을 제공합니다.</p>
-                </li>
-                <li>
-                  <strong>미끄럼방지</strong>
-                  <p> 최적의 미끄럼방지 성능을 구현합니다.</p>
-                </li>
-              </ul>
-            </article>
+          <div class="ac-plist-card ac-reveal" data-d="2">
+            <h3>화학적 특성</h3>
+            <ul>
+              <li><strong>친환경 제품</strong><p>저휘발성 유기화합물(Low VOC)을
+                  함유한 친환경 제품입니다.</p></li>
+              <li><strong>내화학성</strong><p>산,알칼리,용제 등 산업용
+                  세정제에도 저항성능을 발현합니다.</p></li>
+              <li><strong>내항균성</strong><p>제품 시공 후 바닥 표면으로부터
+                  곰팡이세균 및 미생물 번식을 차단합니다.</p></li>
+              <li><strong>인체무해성</strong><p>VACs,벤젠,톨루앤큐맨,자일렌 등
+                  인체유해한 화합물 발생이 없습니다.</p></li>
+            </ul>
           </div>
-        </section>
+          <div class="ac-plist-card ac-reveal" data-d="3">
+            <h3>위생 &amp; 유지관리</h3>
+            <ul>
+              <li><strong>비취오염성</strong><p>신너 등의 희석제를 사용하지 않아
+                  자극적인 냄새발생이 없으며 Haccp 식품 가공 사업장에 냄새나
+                  맛을 오염시키지 않습니다.</p></li>
+              <li><strong>청결 &amp; 안전성</strong><p>시공 후 청소 및
+                  유지관리가 용이하며 안전한 작업 환경을 제공합니다.</p></li>
+              <li><strong>미끄럼방지</strong><p>최적의 미끄럼방지 성능을
+                  구현합니다.</p></li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <section class="sky-floor-section">
-          <div class="sky-floor-section__head">
-            <h2>제품 종류</h2>
-            <p>Color Quartz, Color Flakes, Color Seamless, Aquacrete, Coving,
-              Reinforce Systems 구성으로 현장별 요구를 충족합니다.</p>
-          </div>
-          <div class="sky-floor-product-grid">
-            <article class="sky-floor-product-card">
-              <figure class="sky-floor-product-card__media">
-                <img
-                  src="/sky-floor/퀄츠마감/20190309_112133.jpg"
-                  alt="컬러 쿼츠 마감 바닥"
-                  loading="lazy"
-                />
-              </figure>
-              <div>
-                <h3>Color Quartz</h3>
-                <p>
-                  컬러 쿼츠 집합체를 두껍게 살포해 미끄럼을 억제하고 고급스러운
-                  패턴을 더합니다. 스팀 세정과 중량 하중이 반복되는 습식
-                  라인에서도 균일한 색상과 강도를 유지합니다.
-                </p>
-              </div>
-            </article>
-            <article class="sky-floor-product-card">
-              <figure class="sky-floor-product-card__media">
-                <img
-                  src="/sky-floor/플레이크마감/20190314_095550.jpg"
-                  alt="컬러 플레이크 마감 바닥"
-                  loading="lazy"
-                />
-              </figure>
-              <div>
-                <h3>Color Flakes</h3>
-                <p>
-                  다채로운 플레이크를 살포하여 공간 브랜딩과 시각적 안전선을
-                  표현합니다. 표면 보호 탑코트가 청소 흔적을 줄이고 오염 복원을
-                  쉽게 해줍니다.
-                </p>
-              </div>
-            </article>
-            <article class="sky-floor-product-card">
-              <figure class="sky-floor-product-card__media">
-                <img
-                  src="/sky-floor/단색마감/Products_Ucrete02.jpg"
-                  alt="단색 시공 Sky Floor"
-                  loading="lazy"
-                />
-              </figure>
-              <div>
-                <h3>Color Seamless</h3>
-                <p>
-                  단색 폴리우레탄 몰탈로 이음매 없이 시공해 먼지와 박테리아가
-                  머무를 틈을 없앱니다. 의료·제약·공공 시설에서 선호하는 깨끗한
-                  톤을 구현합니다.
-                </p>
-              </div>
-            </article>
-            <article class="sky-floor-product-card">
-              <figure class="sky-floor-product-card__media">
-                <img
-                  src="/sky-floor/아쿠아크리트보강/20220809_080656.jpg"
-                  alt="아쿠아크리트 보강 구간"
-                  loading="lazy"
-                />
-              </figure>
-              <div>
-                <h3>Aqua-Crete</h3>
-                <p>
-                  Sky Floor 상부에 Aquacrete를 조합해 수분이 많은 구간과 재가동
-                  속도가 중요한 현장에서 고강도 보강층을 더합니다.
-                </p>
-              </div>
-            </article>
-            <article class="sky-floor-product-card">
-              <figure class="sky-floor-product-card__media">
-                <img
-                  src="/sky-floor/코너보강/20200826_170253.jpg"
-                  alt="Sky Floor Coving 시공"
-                  loading="lazy"
-                />
-              </figure>
-              <div>
-                <h3>Coving</h3>
-                <p>
-                  바닥과 벽을 곡선으로 연결해 세척수가 모이지 않도록 하고,
-                  충격과 청소 장비 마찰로부터 벽체를 보호합니다.
-                </p>
-              </div>
-            </article>
-            <article class="sky-floor-product-card">
-              <figure class="sky-floor-product-card__media">
-                <img
-                  src="/sky-floor/트랜치보강/KakaoTalk_20250423_165637166_14.jpg"
-                  alt="트렌치 보강과 배수 커버"
-                  loading="lazy"
-                />
-              </figure>
-              <div>
-                <h3>Trench / Reinforce Systems</h3>
-                <p>
-                  배수 트렌치, 드레인, 장비 베이스를 추가 보강해 열충격과 충격
-                  하중으로부터 구조물을 보호합니다. 커스텀 스테인리스 커버와
-                  일체형으로 마감됩니다.
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
+      <section class="ac-sec ac-apps" id="products">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Portfolio</span>
+          <h2>제품 종류</h2>
+          <p>Color Quartz, Color Flakes, Color Seamless, Aquacrete, Coving,
+            Reinforce Systems 구성으로 현장별 요구를 충족합니다.</p>
+        </div>
+        <div class="ac-appgrid">
+          <article class="ac-app ac-reveal" data-d="1">
+            <div class="ac-app__media"><img
+                src="/sky-floor/퀄츠마감/20190309_112133.jpg"
+                alt="컬러 쿼츠 마감 바닥"
+                loading="lazy"
+              /></div>
+            <div class="ac-app__in"><h3>Color Quartz</h3><p>컬러 쿼츠 집합체를
+                두껍게 살포해 미끄럼을 억제하고 고급스러운 패턴을 더합니다. 스팀
+                세정과 중량 하중이 반복되는 습식 라인에서도 균일한 색상과 강도를
+                유지합니다.</p></div>
+          </article>
+          <article class="ac-app ac-reveal" data-d="2">
+            <div class="ac-app__media"><img
+                src="/sky-floor/플레이크마감/20190314_095550.jpg"
+                alt="컬러 플레이크 마감 바닥"
+                loading="lazy"
+              /></div>
+            <div class="ac-app__in"><h3>Color Flakes</h3><p>다채로운 플레이크를
+                살포하여 공간 브랜딩과 시각적 안전선을 표현합니다. 표면 보호
+                탑코트가 청소 흔적을 줄이고 오염 복원을 쉽게 해줍니다.</p></div>
+          </article>
+          <article class="ac-app ac-reveal" data-d="3">
+            <div class="ac-app__media"><img
+                src="/sky-floor/단색마감/Products_Ucrete02.jpg"
+                alt="단색 시공 Sky Floor"
+                loading="lazy"
+              /></div>
+            <div class="ac-app__in"><h3>Color Seamless</h3><p>단색 폴리우레탄
+                몰탈로 이음매 없이 시공해 먼지와 박테리아가 머무를 틈을
+                없앱니다. 의료·제약·공공 시설에서 선호하는 깨끗한 톤을
+                구현합니다.</p></div>
+          </article>
+          <article class="ac-app ac-reveal" data-d="1">
+            <div class="ac-app__media"><img
+                src="/sky-floor/아쿠아크리트보강/20220809_080656.jpg"
+                alt="아쿠아크리트 보강 구간"
+                loading="lazy"
+              /></div>
+            <div class="ac-app__in"><h3>Aqua-Crete</h3><p>Sky Floor 상부에
+                Aquacrete를 조합해 수분이 많은 구간과 재가동 속도가 중요한
+                현장에서 고강도 보강층을 더합니다.</p></div>
+          </article>
+          <article class="ac-app ac-reveal" data-d="2">
+            <div class="ac-app__media"><img
+                src="/sky-floor/코너보강/20200826_170253.jpg"
+                alt="Sky Floor Coving 시공"
+                loading="lazy"
+              /></div>
+            <div class="ac-app__in"><h3>Coving</h3><p>바닥과 벽을 곡선으로
+                연결해 세척수가 모이지 않도록 하고, 충격과 청소 장비 마찰로부터
+                벽체를 보호합니다.</p></div>
+          </article>
+          <article class="ac-app ac-reveal" data-d="3">
+            <div class="ac-app__media"><img
+                src="/sky-floor/트랜치보강/KakaoTalk_20250423_165637166_14.jpg"
+                alt="트렌치 보강과 배수 커버"
+                loading="lazy"
+              /></div>
+            <div class="ac-app__in"><h3>Trench / Reinforce Systems</h3><p>배수
+                트렌치, 드레인, 장비 베이스를 추가 보강해 열충격과 충격
+                하중으로부터 구조물을 보호합니다. 커스텀 스테인리스 커버와
+                일체형으로 마감됩니다.</p></div>
+          </article>
+        </div>
+      </section>
 
-        <section class="sky-floor-section">
-          <div class="sky-floor-section__head">
-            <h2>Sky Floor 시공 프로세스</h2>
-            <p>전문 시공팀이 현장 진단부터 검수까지 전 과정을 책임집니다.</p>
-          </div>
-          <ol class="sky-floor-stepper">
-            <li>
-              <h3>현장 진단 &amp; 바탕면 준비</h3>
-              <p>균열·습도·배수 조건을 점검하고 그라인딩 및 쇼트 처리를 통해
-                접착 환경을 마련합니다.</p>
-            </li>
-            <li>
-              <h3>프라이머 &amp; 메쉬 보강</h3>
-              <p>Sky Primer를 도포하고 Stainless Wire Glass Mesh Sheet를
-                삽입하여 구조적 안정성을 확보합니다.</p>
-            </li>
-            <li>
-              <h3>Sky Resin 몰탈 시공</h3>
-              <p>정량 배합한 Sky Resin과 충전재를 레벨링하여 고밀도 몰탈층을
-                형성합니다.</p>
-            </li>
-            <li>
-              <h3>미끄럼 패턴 &amp; 실러 마감</h3>
-              <p>현장 요구에 맞게 텍스처를 조절하고 위생 실러로 마감하여 오염과
-                수분을 차단합니다.</p>
-            </li>
-            <li>
-              <h3>검사 &amp; 유지관리 이관</h3>
-              <p>경도, 평활도, 미끄럼 계수를 측정한 후 유지관리 매뉴얼과 함께
-                현장을 인계합니다.</p>
-            </li>
-          </ol>
-        </section>
+      <section class="ac-sec ac-process" id="process">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Process</span>
+          <h2>Sky Floor 시공 프로세스</h2>
+          <p>전문 시공팀이 현장 진단부터 검수까지 전 과정을 책임집니다.</p>
+        </div>
+        <div class="ac-steps">
+          <div class="ac-step ac-reveal" data-d="1"><span
+              class="ac-step__line"
+            ></span><div class="ac-step__n"></div>
+            <h3>현장 진단 &amp; 바탕면 준비</h3><p>균열·습도·배수 조건을
+              점검하고 그라인딩 및 쇼트 처리를 통해 접착 환경을 마련합니다.</p></div>
+          <div class="ac-step ac-reveal" data-d="1"><span
+              class="ac-step__line"
+            ></span><div class="ac-step__n"></div>
+            <h3>프라이머 &amp; 메쉬 보강</h3><p>Sky Primer를 도포하고 Stainless
+              Wire Glass Mesh Sheet를 삽입하여 구조적 안정성을 확보합니다.</p></div>
+          <div class="ac-step ac-reveal" data-d="2"><span
+              class="ac-step__line"
+            ></span><div class="ac-step__n"></div>
+            <h3>Sky Resin 몰탈 시공</h3><p>정량 배합한 Sky Resin과 충전재를
+              레벨링하여 고밀도 몰탈층을 형성합니다.</p></div>
+          <div class="ac-step ac-reveal" data-d="3"><span
+              class="ac-step__line"
+            ></span><div class="ac-step__n"></div>
+            <h3>미끄럼 패턴 &amp; 실러 마감</h3><p>현장 요구에 맞게 텍스처를
+              조절하고 위생 실러로 마감하여 오염과 수분을 차단합니다.</p></div>
+          <div class="ac-step ac-reveal" data-d="4"><span
+              class="ac-step__line"
+            ></span><div class="ac-step__n"></div>
+            <h3>검사 &amp; 유지관리 이관</h3><p>경도, 평활도, 미끄럼 계수를
+              측정한 후 유지관리 매뉴얼과 함께 현장을 인계합니다.</p></div>
+        </div>
+      </section>
 
-        <section class="sky-floor-section">
-          <div class="sky-floor-section__head">
-            <h2>주요 적용 산업</h2>
-            <p>위생 관리가 중요한 다양한 산업 현장에서 Sky Floor가 선택되고
-              있습니다.</p>
-          </div>
-          <div class="sky-floor-application-grid">
-            <article>
-              <h3>HACCP 식품 &amp; 음료</h3>
-              <p>음료, 유제품, 제과, 물류 세척 구간 등 습윤·고온 살균 라인의
-                바닥 마감.</p>
-            </article>
-            <article>
-              <h3>육가공·중앙 주방</h3>
-              <p>육가공장, 중앙 조리시설, 급식소 후방 공간의 위생·안전 강화를
-                위한 솔루션.</p>
-            </article>
-            <article>
-              <h3>제약 &amp; 바이오</h3>
-              <p>GMP 생산라인, 클린룸, R&amp;D 실험동 등 화학 세정이 잦은 공간.</p>
-            </article>
-            <article>
-              <h3>냉동 &amp; 물류 인프라</h3>
-              <p>영하 창고, 저온 물류센터, 하역장 등 온도 변화와 중량 하중이 큰
-                환경.</p>
-            </article>
-            <article>
-              <h3>친환경·공공 프로젝트</h3>
-              <p>공공 급식소, 학교·병원 시설, 친환경 인증이 요구되는 프로젝트.</p>
-            </article>
-            <article>
-              <h3>프리미엄 인테리어 &amp; 특수 시설</h3>
-              <p>쇼룸, 체험관, 스마트팜 등 기능과 디자인을 동시에 요구하는 현장.</p>
-            </article>
-          </div>
-        </section>
+      <section class="ac-sec ac-certgrid-sec" id="industries">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Applications</span>
+          <h2>주요 적용 산업</h2>
+          <p>위생 관리가 중요한 다양한 산업 현장에서 Sky Floor가 선택되고
+            있습니다.</p>
+        </div>
+        <div class="ac-cardgrid ac-cardgrid--3">
+          <article class="ac-infocard ac-reveal" data-d="1"><h3>HACCP 식품 &amp;
+              음료</h3><p>음료, 유제품, 제과, 물류 세척 구간 등 습윤·고온 살균
+              라인의 바닥 마감.</p></article>
+          <article class="ac-infocard ac-reveal" data-d="2"><h3>육가공·중앙 주방</h3><p
+            >육가공장, 중앙 조리시설, 급식소 후방 공간의 위생·안전 강화를 위한
+              솔루션.</p></article>
+          <article class="ac-infocard ac-reveal" data-d="3"><h3>제약 &amp;
+              바이오</h3><p>GMP 생산라인, 클린룸, R&amp;D 실험동 등 화학 세정이
+              잦은 공간.</p></article>
+          <article class="ac-infocard ac-reveal" data-d="1"><h3>냉동 &amp; 물류
+              인프라</h3><p>영하 창고, 저온 물류센터, 하역장 등 온도 변화와 중량
+              하중이 큰 환경.</p></article>
+          <article class="ac-infocard ac-reveal" data-d="2"><h3>친환경·공공
+              프로젝트</h3><p>공공 급식소, 학교·병원 시설, 친환경 인증이
+              요구되는 프로젝트.</p></article>
+          <article class="ac-infocard ac-reveal" data-d="3"><h3>프리미엄
+              인테리어 &amp; 특수 시설</h3><p>쇼룸, 체험관, 스마트팜 등 기능과
+              디자인을 동시에 요구하는 현장.</p></article>
+        </div>
+      </section>
 
-        <section class="sky-floor-section sky-floor-callout">
-          <div class="sky-floor-callout__content">
+      <section class="ac-sec ac-callout" id="callout">
+        <div class="ac-callout__box ac-reveal">
+          <div>
             <h2>Mesh Reinforced · Hygienic · Durable</h2>
             <p>크린텍 Sky Floor 팀이 현장 맞춤 진단, 시공, 유지관리 교육까지
               원스톱으로 제공합니다.</p>
           </div>
-          <div class="sky-floor-callout__cta">
-            <LinkTo @route="contact" class="btn">현장 컨설팅 신청</LinkTo>
+          <div class="ac-callout__cta">
+            <LinkTo @route="contact" class="ac-btn ac-btn--primary">현장 컨설팅
+              신청
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </LinkTo>
+            <LinkTo @route="downloads" class="ac-btn ac-btn--ghost">브로슈어 /
+              SDS 보기</LinkTo>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   </article>
 {{else}}
-  <article class="sky-floor-page page">
-    <section class="sky-floor-hero full-bleed">
-      <div class="sky-floor-hero__inner">
-        <div class="sky-floor-hero__content">
-          <p class="sky-floor-hero__kicker">Stainless Mesh Reinforced Hygienic
-            Flooring</p>
-          <h1 class="sky-floor-hero__title">Sky Floor</h1>
-          <p class="sky-floor-hero__lead">
+  <article class="sky-floor-page page ac-page full-bleed" {{aqua-reveal}}>
+    <section class="ac-hero">
+      <div class="ac-hero__bg" aria-hidden="true">
+        <img src="/images/sky-floor-hero-green.jpg" alt="" />
+      </div>
+      <div class="ac-inner ac-hero__grid">
+        <div class="ac-hero__content">
+          <p class="ac-hero__eyebrow">SKY FLOOR
+            <span>Mesh Reinforced · Hygienic · Durable</span></p>
+          <p class="ac-hero__kicker">Stainless Mesh Reinforced Hygienic Flooring</p>
+          <h1 class="ac-hero__title">Sky Floor</h1>
+          <p class="ac-hero__lead">
             {{break-lines
               "Sky Floor couples a Stainless Wire Glass Mesh Sheet with Sky Resin to resist cracking, thermal shock, and chemical attacks while keeping HACCP zones odor-free through a Low-VOC polyurethane build."
             }}
           </p>
-          <ul class="sky-floor-hero__tags" aria-label="Key statements">
+          <ul class="ac-hero__tags" aria-label="Key statements">
             <li>Mesh Reinforcement</li>
             <li>Low VOC</li>
             <li>Anti-Slip Finish</li>
           </ul>
-          <div class="sky-floor-hero__cta">
-            <LinkTo @route="contact" class="btn">Request Consultation</LinkTo>
-            <LinkTo @route="downloads" class="btn-ghost">Brochure / SDS</LinkTo>
+          <div class="ac-hero__cta">
+            <LinkTo @route="contact" class="ac-btn ac-btn--primary">Request
+              Consultation
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </LinkTo>
+            <LinkTo @route="downloads" class="ac-btn ac-btn--ghost">Brochure /
+              SDS</LinkTo>
           </div>
         </div>
-        <div class="sky-floor-hero__visual" aria-hidden="true">
-          <img
-            src="/images/sky-floor-logo.jpg"
-            alt=""
-            class="sky-floor-hero__logo"
-          />
-          <div class="sky-floor-hero__badge-group">
-            <span class="sky-floor-hero__badge">Low VOC</span>
-            <span class="sky-floor-hero__badge">HACCP Ready</span>
-            <span class="sky-floor-hero__badge">Thermal-Shock Safe</span>
+        <aside class="ac-hero__panel" aria-label="Key performance">
+          <div class="ac-hero__sfh"><span>Mesh</span><i>·</i><span
+            >Hygienic</span><i>·</i><span>Durable</span></div>
+          <div class="ac-badges">
+            <div class="ac-badge">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ><path
+                  d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"
+                /><path d="M2 21c0-3 1.85-5.36 5.08-6" /></svg>
+              <span><b>Low VOC</b></span>
+            </div>
+            <div class="ac-badge">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ><path d="M9 11l3 3L22 4" /><path
+                  d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                /></svg>
+              <span><b>HACCP Ready</b></span>
+            </div>
+            <div class="ac-badge">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ><path d="M10 13.5V5a2 2 0 1 1 4 0v8.5a4 4 0 1 1-4 0z" /></svg>
+              <span><b>Thermal-Shock Safe</b></span>
+            </div>
           </div>
+        </aside>
+      </div>
+      <div class="ac-metrics">
+        <div class="ac-inner ac-metrics__grid">
+          <div class="ac-metric"><div class="ac-metric__n">Mesh</div><div
+              class="ac-metric__l"
+            >Stainless mesh reinforced</div></div>
+          <div class="ac-metric"><div class="ac-metric__n">Low VOC</div><div
+              class="ac-metric__l"
+            >Eco &amp; non-irritant</div></div>
+          <div class="ac-metric"><div class="ac-metric__n">Seismic</div><div
+              class="ac-metric__l"
+            >Seismic performance</div></div>
+          <div class="ac-metric"><div class="ac-metric__n">Thermal</div><div
+              class="ac-metric__l"
+            >Thermal-shock resistant</div></div>
         </div>
       </div>
     </section>
 
     <div class="margin-page">
-      <div class="container-app">
-        <section class="sky-floor-section">
-          <div class="sky-floor-section__head">
-            <h2>About Sky Floor</h2>
-            <p>Sky Floor is a long-life hygienic floor system that blends eco
-              polyols, ceramic fillers, and stainless mesh.</p>
-          </div>
-          <div class="sky-floor-intro-grid">
-            <article class="sky-floor-intro-card">
-              <h3>Material Form</h3>
-              <p>
-                Plant-based polyol polyurethane resin mixes with kiln-fired
-                inorganic powder to achieve a dense, non-absorptive,
-                impermeable, slip-resistant surface. The formulation remains Low
-                VOC to protect people and product.
-              </p>
-            </article>
-            <article class="sky-floor-intro-card">
-              <h3>Structural Form</h3>
-              <p>
-                A Stainless Wire Glass Mesh Sheet interlocks with Sky Resin to
-                block crack transmission from concrete and prevent debonding,
-                delivering long-term durability.
-              </p>
-            </article>
-            <article class="sky-floor-intro-card">
-              <h3>Finish Form</h3>
-              <p>
-                Thickness and surface texture are tailored to each site, ranging
-                from seamless solid colors to aggressive anti-slip and
-                design-forward finishes.
-              </p>
-            </article>
-          </div>
-          <figure class="sky-floor-product">
-            <img
-              src="/images/sky-floor-logo.jpg"
-              alt="Sky Floor product packaging"
-            />
-            <figcaption>Sky Floor product packaging</figcaption>
-          </figure>
-          {{!--
-        <section class="sky-floor-section gallery-section">
-          <div class="sky-floor-section__head">
-            <h2>Project Types</h2>
-            <p>
-              See Sky Floor in quartz, flake, seamless finishes plus Aquacrete
-              reinforcement, coving, and trench details.
-            </p>
-          </div>
+      <section class="ac-sec ac-concept" id="about">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Overview</span>
+          <h2>About Sky Floor</h2>
+          <p>Sky Floor is a long-life hygienic floor system that blends eco
+            polyols, ceramic fillers, and stainless mesh.</p>
+        </div>
+        <div class="ac-cardgrid ac-cardgrid--3">
+          <article class="ac-infocard ac-reveal" data-d="1">
+            <h3>Material Form</h3>
+            <p>Plant-based polyol polyurethane resin mixes with kiln-fired
+              inorganic powder to achieve a dense, non-absorptive, impermeable,
+              slip-resistant surface. The formulation remains Low VOC to protect
+              people and product.</p>
+          </article>
+          <article class="ac-infocard ac-reveal" data-d="2">
+            <h3>Structural Form</h3>
+            <p>A Stainless Wire Glass Mesh Sheet interlocks with Sky Resin to
+              block crack transmission from concrete and prevent debonding,
+              delivering long-term durability.</p>
+          </article>
+          <article class="ac-infocard ac-reveal" data-d="3">
+            <h3>Finish Form</h3>
+            <p>Thickness and surface texture are tailored to each site, ranging
+              from seamless solid colors to aggressive anti-slip and
+              design-forward finishes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ac-sec ac-gallery" id="gallery">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Gallery</span>
+          <h2>Project Types</h2>
+          <p>See Sky Floor in quartz, flake, seamless finishes plus Aquacrete
+            reinforcement, coving, and trench details.</p>
+        </div>
+        <div class="ac-gallery__panel ac-reveal" data-d="1">
           <GallerySlider @slides={{this.skyFloorSlides}} />
-        </section>
-        --}}
-        </section>
+        </div>
+      </section>
 
-        <section class="sky-floor-section">
-          <div class="sky-floor-section__head">
-            <h2>Product Portfolio</h2>
-            <p>Choose from Color Quartz, Color Flakes, Color Seamless,
-              Aquacrete, Coving, and Reinforce Systems to fit any site.</p>
+      <section class="ac-sec ac-features" id="properties">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Properties</span>
+          <h2>Key Properties</h2>
+          <p>Three performance pillars minimize risk in high-hygiene
+            environments.</p>
+        </div>
+        <div class="ac-plist">
+          <div class="ac-plist-card ac-reveal" data-d="1">
+            <h3>Physical Properties</h3>
+            <ul>
+              <li><strong>Crack Resistance</strong><p>The Stainless Mesh and Sky
+                  Resin composite shields the topping from substrate cracking.</p></li>
+              <li><strong>Seismic Performance</strong><p>The sheet-plus-resin
+                  build flexes with building movement and temperature swings.</p></li>
+              <li><strong>Impermeability</strong><p>A dense matrix blocks
+                  bacteria, moisture, and chemical intrusion.</p></li>
+              <li><strong>Impact Resistance</strong><p>High compressive strength
+                  delivers superior impact and load-bearing capability.</p></li>
+              <li><strong>Thermal-Shock Resistance</strong><p>Specified
+                  thickness handles hot sanitizing cycles and freezer floors
+                  alike.</p></li>
+            </ul>
           </div>
-          <div class="sky-floor-product-grid">
-            <article class="sky-floor-product-card">
-              <figure class="sky-floor-product-card__media">
-                <img
-                  src="/sky-floor/퀄츠마감/20190309_112133.jpg"
-                  alt="Color Quartz finish in a food plant"
-                  loading="lazy"
-                />
-              </figure>
-              <div>
-                <h3>Color Quartz System</h3>
-                <p>
-                  Broadcast natural color quartz aggregates for premium slip
-                  resistance and a vibrant look. Ideal for wet HACCP corridors
-                  that see hot washes and heavy carts.
-                </p>
-              </div>
-            </article>
-            <article class="sky-floor-product-card">
-              <figure class="sky-floor-product-card__media">
-                <img
-                  src="/sky-floor/플레이크마감/20190314_095550.jpg"
-                  alt="Color Flakes system in progress"
-                  loading="lazy"
-                />
-              </figure>
-              <div>
-                <h3>Color Flakes System</h3>
-                <p>
-                  Multi-color flakes communicate zones and brand identity while
-                  a clear topcoat resists staining and simplifies maintenance.
-                </p>
-              </div>
-            </article>
-            <article class="sky-floor-product-card">
-              <figure class="sky-floor-product-card__media">
-                <img
-                  src="/sky-floor/단색마감/Products_Ucrete02.jpg"
-                  alt="Monochromatic seamless Sky Floor"
-                  loading="lazy"
-                />
-              </figure>
-              <div>
-                <h3>Color Seamless System</h3>
-                <p>
-                  Seamless polyurethane mortar eliminates joints where dust or
-                  bacteria hide. Favored by healthcare, pharma, and civic
-                  facilities that demand a calm monochrome palette.
-                </p>
-              </div>
-            </article>
-            <article class="sky-floor-product-card">
-              <figure class="sky-floor-product-card__media">
-                <img
-                  src="/sky-floor/아쿠아크리트보강/20220809_080656.jpg"
-                  alt="Aquacrete reinforced area"
-                  loading="lazy"
-                />
-              </figure>
-              <div>
-                <h3>Aqua-Crete Reinforcement</h3>
-                <p>
-                  Combine Sky Floor with Aquacrete where moisture, impact, or
-                  rapid turnaround requires an extra-dense hybrid finish.
-                </p>
-              </div>
-            </article>
-            <article class="sky-floor-product-card">
-              <figure class="sky-floor-product-card__media">
-                <img
-                  src="/sky-floor/코너보강/20200826_170253.jpg"
-                  alt="Coved transition protecting wall bases"
-                  loading="lazy"
-                />
-              </figure>
-              <div>
-                <h3>Coving / Corner Protection</h3>
-                <p>
-                  Radius transitions tie floors into walls to keep wash water
-                  from pooling and safeguard wall panels from cart impact.
-                </p>
-              </div>
-            </article>
-            <article class="sky-floor-product-card">
-              <figure class="sky-floor-product-card__media">
-                <img
-                  src="/sky-floor/트랜치보강/KakaoTalk_20250423_165637166_14.jpg"
-                  alt="Reinforced trench and drain detail"
-                  loading="lazy"
-                />
-              </figure>
-              <div>
-                <h3>Trench / Drain Reinforcement</h3>
-                <p>
-                  Heavy-duty detailing around drains, trenches, and equipment
-                  bases protects concrete from thermal shock and impact while
-                  integrating with stainless covers.
-                </p>
-              </div>
-            </article>
+          <div class="ac-plist-card ac-reveal" data-d="2">
+            <h3>Chemical Properties</h3>
+            <ul>
+              <li><strong>Eco-friendly</strong><p>Low-VOC formulation keeps
+                  operators, food, and indoor air safe.</p></li>
+              <li><strong>Chemical Resistance</strong><p>Resists acids, alkalis,
+                  solvents, and aggressive sanitation chemicals.</p></li>
+              <li><strong>Anti-microbial</strong><p>Discourages mold, bacteria,
+                  and microbial growth on the surface.</p></li>
+              <li><strong>Human-Safe</strong><p>Free from harmful VOCs including
+                  benzene, toluene, and xylene.</p></li>
+            </ul>
           </div>
-        </section>
+          <div class="ac-plist-card ac-reveal" data-d="3">
+            <h3>Hygienic &amp; Maintenance</h3>
+            <ul>
+              <li><strong>Non-Tainting</strong><p>No thinner or harsh diluent is
+                  used, so there is no lingering odor around HACCP lines.</p></li>
+              <li><strong>Clean &amp; Safe</strong><p>Smooth maintenance
+                  routines and safer footing for staff.</p></li>
+              <li><strong>Anti-Slip</strong><p>Optimized slip resistance keeps
+                  wet zones secure.</p></li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <section class="sky-floor-section">
-          <div class="sky-floor-section__head">
-            <h2>Key Properties</h2>
-            <p>Three performance pillars minimize risk in high-hygiene
-              environments.</p>
-          </div>
-          <div class="sky-floor-property-grid">
-            <article>
-              <h3>Physical Properties</h3>
-              <ul>
-                <li>
-                  <strong>Crack Resistance</strong>
-                  <p>The Stainless Mesh and Sky Resin composite shields the
-                    topping from substrate cracking.</p>
-                </li>
-                <li>
-                  <strong>Seismic Performance</strong>
-                  <p>The sheet-plus-resin build flexes with building movement
-                    and temperature swings.</p>
-                </li>
-                <li>
-                  <strong>Impermeability</strong>
-                  <p>A dense matrix blocks bacteria, moisture, and chemical
-                    intrusion.</p>
-                </li>
-                <li>
-                  <strong>Impact Resistance</strong>
-                  <p>High compressive strength delivers superior impact and
-                    load-bearing capability.</p>
-                </li>
-                <li>
-                  <strong>Thermal-Shock Resistance</strong>
-                  <p>Specified thickness handles hot sanitizing cycles and
-                    freezer floors alike.</p>
-                </li>
-              </ul>
-            </article>
-            <article>
-              <h3>Chemical Properties</h3>
-              <ul>
-                <li>
-                  <strong>Eco-friendly</strong>
-                  <p>Low-VOC formulation keeps operators, food, and indoor air
-                    safe.</p>
-                </li>
-                <li>
-                  <strong>Chemical Resistance</strong>
-                  <p>Resists acids, alkalis, solvents, and aggressive sanitation
-                    chemicals.</p>
-                </li>
-                <li>
-                  <strong>Anti-microbial</strong>
-                  <p>Discourages mold, bacteria, and microbial growth on the
-                    surface.</p>
-                </li>
-                <li>
-                  <strong>Human-Safe</strong>
-                  <p>Free from harmful VOCs including benzene, toluene, and
-                    xylene.</p>
-                </li>
-              </ul>
-            </article>
-            <article>
-              <h3>Hygienic &amp; Maintenance</h3>
-              <ul>
-                <li>
-                  <strong>Non-Tainting</strong>
-                  <p>No thinner or harsh diluent is used, so there is no
-                    lingering odor around HACCP lines.</p>
-                </li>
-                <li>
-                  <strong>Clean &amp; Safe</strong>
-                  <p>Smooth maintenance routines and safer footing for staff.</p>
-                </li>
-                <li>
-                  <strong>Anti-Slip</strong>
-                  <p>Optimized slip resistance keeps wet zones secure.</p>
-                </li>
-              </ul>
-            </article>
-          </div>
-        </section>
+      <section class="ac-sec ac-apps" id="products">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Portfolio</span>
+          <h2>Product Portfolio</h2>
+          <p>Choose from Color Quartz, Color Flakes, Color Seamless, Aquacrete,
+            Coving, and Reinforce Systems to fit any site.</p>
+        </div>
+        <div class="ac-appgrid">
+          <article class="ac-app ac-reveal" data-d="1">
+            <div class="ac-app__media"><img
+                src="/sky-floor/퀄츠마감/20190309_112133.jpg"
+                alt="Color Quartz finish in a food plant"
+                loading="lazy"
+              /></div>
+            <div class="ac-app__in"><h3>Color Quartz System</h3><p>Broadcast
+                natural color quartz aggregates for premium slip resistance and
+                a vibrant look. Ideal for wet HACCP corridors that see hot
+                washes and heavy carts.</p></div>
+          </article>
+          <article class="ac-app ac-reveal" data-d="2">
+            <div class="ac-app__media"><img
+                src="/sky-floor/플레이크마감/20190314_095550.jpg"
+                alt="Color Flakes system in progress"
+                loading="lazy"
+              /></div>
+            <div class="ac-app__in"><h3>Color Flakes System</h3><p>Multi-color
+                flakes communicate zones and brand identity while a clear
+                topcoat resists staining and simplifies maintenance.</p></div>
+          </article>
+          <article class="ac-app ac-reveal" data-d="3">
+            <div class="ac-app__media"><img
+                src="/sky-floor/단색마감/Products_Ucrete02.jpg"
+                alt="Monochromatic seamless Sky Floor"
+                loading="lazy"
+              /></div>
+            <div class="ac-app__in"><h3>Color Seamless System</h3><p>Seamless
+                polyurethane mortar eliminates joints where dust or bacteria
+                hide. Favored by healthcare, pharma, and civic facilities that
+                demand a calm monochrome palette.</p></div>
+          </article>
+          <article class="ac-app ac-reveal" data-d="1">
+            <div class="ac-app__media"><img
+                src="/sky-floor/아쿠아크리트보강/20220809_080656.jpg"
+                alt="Aquacrete reinforced area"
+                loading="lazy"
+              /></div>
+            <div class="ac-app__in"><h3>Aqua-Crete Reinforcement</h3><p>Combine
+                Sky Floor with Aquacrete where moisture, impact, or rapid
+                turnaround requires an extra-dense hybrid finish.</p></div>
+          </article>
+          <article class="ac-app ac-reveal" data-d="2">
+            <div class="ac-app__media"><img
+                src="/sky-floor/코너보강/20200826_170253.jpg"
+                alt="Coved transition protecting wall bases"
+                loading="lazy"
+              /></div>
+            <div class="ac-app__in"><h3>Coving / Corner Protection</h3><p>Radius
+                transitions tie floors into walls to keep wash water from
+                pooling and safeguard wall panels from cart impact.</p></div>
+          </article>
+          <article class="ac-app ac-reveal" data-d="3">
+            <div class="ac-app__media"><img
+                src="/sky-floor/트랜치보강/KakaoTalk_20250423_165637166_14.jpg"
+                alt="Reinforced trench and drain detail"
+                loading="lazy"
+              /></div>
+            <div class="ac-app__in"><h3>Trench / Drain Reinforcement</h3><p
+              >Heavy-duty detailing around drains, trenches, and equipment bases
+                protects concrete from thermal shock and impact while
+                integrating with stainless covers.</p></div>
+          </article>
+        </div>
+      </section>
 
-        <section class="sky-floor-section">
-          <div class="sky-floor-section__head">
-            <h2>Installation Process</h2>
-            <p>CleanTech technicians manage every stage from diagnosis to
-              handover.</p>
-          </div>
-          <ol class="sky-floor-stepper">
-            <li>
-              <h3>Site Audit &amp; Substrate Prep</h3>
-              <p>Survey cracks, humidity, and drainage, then grind or shot-blast
-                to create a clean profile.</p>
-            </li>
-            <li>
-              <h3>Primer &amp; Mesh Reinforcement</h3>
-              <p>Apply Sky Primer and embed the Stainless Wire Glass Mesh Sheet
-                to lock in structural strength.</p>
-            </li>
-            <li>
-              <h3>Sky Resin Mortar Placement</h3>
-              <p>Batch Sky Resin with fillers, spread, and level it to build a
-                dense mortar layer.</p>
-            </li>
-            <li>
-              <h3>Texture &amp; Sealer Finish</h3>
-              <p>Tune slip texture as needed and seal the surface to block
-                contamination.</p>
-            </li>
-            <li>
-              <h3>Inspection &amp; Handover</h3>
-              <p>Verify hardness, flatness, and slip ratings before delivering
-                maintenance guidance.</p>
-            </li>
-          </ol>
-        </section>
+      <section class="ac-sec ac-process" id="process">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Process</span>
+          <h2>Installation Process</h2>
+          <p>CleanTech technicians manage every stage from diagnosis to
+            handover.</p>
+        </div>
+        <div class="ac-steps">
+          <div class="ac-step ac-reveal" data-d="1"><span
+              class="ac-step__line"
+            ></span><div class="ac-step__n"></div>
+            <h3>Site Audit &amp; Substrate Prep</h3><p>Survey cracks, humidity,
+              and drainage, then grind or shot-blast to create a clean profile.</p></div>
+          <div class="ac-step ac-reveal" data-d="1"><span
+              class="ac-step__line"
+            ></span><div class="ac-step__n"></div>
+            <h3>Primer &amp; Mesh Reinforcement</h3><p>Apply Sky Primer and
+              embed the Stainless Wire Glass Mesh Sheet to lock in structural
+              strength.</p></div>
+          <div class="ac-step ac-reveal" data-d="2"><span
+              class="ac-step__line"
+            ></span><div class="ac-step__n"></div>
+            <h3>Sky Resin Mortar Placement</h3><p>Batch Sky Resin with fillers,
+              spread, and level it to build a dense mortar layer.</p></div>
+          <div class="ac-step ac-reveal" data-d="3"><span
+              class="ac-step__line"
+            ></span><div class="ac-step__n"></div>
+            <h3>Texture &amp; Sealer Finish</h3><p>Tune slip texture as needed
+              and seal the surface to block contamination.</p></div>
+          <div class="ac-step ac-reveal" data-d="4"><span
+              class="ac-step__line"
+            ></span><div class="ac-step__n"></div>
+            <h3>Inspection &amp; Handover</h3><p>Verify hardness, flatness, and
+              slip ratings before delivering maintenance guidance.</p></div>
+        </div>
+      </section>
 
-        <section class="sky-floor-section">
-          <div class="sky-floor-section__head">
-            <h2>Where Sky Floor Excels</h2>
-            <p>Trusted in mission-critical hygienic spaces.</p>
-          </div>
-          <div class="sky-floor-application-grid">
-            <article>
-              <h3>HACCP Food &amp; Beverage</h3>
-              <p>Beverage, dairy, confectionery, and sanitation corridors that
-                face constant washdowns.</p>
-            </article>
-            <article>
-              <h3>Protein &amp; Central Kitchens</h3>
-              <p>Meat processing, commissaries, and institutional kitchen
-                back-of-house zones.</p>
-            </article>
-            <article>
-              <h3>Pharma &amp; Bio</h3>
-              <p>GMP production suites, cleanrooms, and R&amp;D labs requiring
-                chemical resistance.</p>
-            </article>
-            <article>
-              <h3>Cold Storage &amp; Logistics</h3>
-              <p>Freezer docks, low-temp warehouses, and loading areas with
-                heavy traffic.</p>
-            </article>
-            <article>
-              <h3>Eco &amp; Public Projects</h3>
-              <p>Schools, hospitals, and public kitchens targeting green
-                certifications.</p>
-            </article>
-            <article>
-              <h3>Premium Interiors &amp; Specialty</h3>
-              <p>Showrooms, experience centers, and smart farms that value both
-                function and aesthetics.</p>
-            </article>
-          </div>
-        </section>
+      <section class="ac-sec ac-certgrid-sec" id="industries">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Applications</span>
+          <h2>Where Sky Floor Excels</h2>
+          <p>Trusted in mission-critical hygienic spaces.</p>
+        </div>
+        <div class="ac-cardgrid ac-cardgrid--3">
+          <article class="ac-infocard ac-reveal" data-d="1"><h3>HACCP Food &amp;
+              Beverage</h3><p>Beverage, dairy, confectionery, and sanitation
+              corridors that face constant washdowns.</p></article>
+          <article class="ac-infocard ac-reveal" data-d="2"><h3>Protein &amp;
+              Central Kitchens</h3><p>Meat processing, commissaries, and
+              institutional kitchen back-of-house zones.</p></article>
+          <article class="ac-infocard ac-reveal" data-d="3"><h3>Pharma &amp; Bio</h3><p
+            >GMP production suites, cleanrooms, and R&amp;D labs requiring
+              chemical resistance.</p></article>
+          <article class="ac-infocard ac-reveal" data-d="1"><h3>Cold Storage
+              &amp; Logistics</h3><p>Freezer docks, low-temp warehouses, and
+              loading areas with heavy traffic.</p></article>
+          <article class="ac-infocard ac-reveal" data-d="2"><h3>Eco &amp; Public
+              Projects</h3><p>Schools, hospitals, and public kitchens targeting
+              green certifications.</p></article>
+          <article class="ac-infocard ac-reveal" data-d="3"><h3>Premium
+              Interiors &amp; Specialty</h3><p>Showrooms, experience centers,
+              and smart farms that value both function and aesthetics.</p></article>
+        </div>
+      </section>
 
-        <section class="sky-floor-section sky-floor-callout">
-          <div class="sky-floor-callout__content">
+      <section class="ac-sec ac-callout" id="callout">
+        <div class="ac-callout__box ac-reveal">
+          <div>
             <h2>Mesh Reinforced · Hygienic · Durable</h2>
             <p>The CleanTech Sky Floor team delivers diagnostics, installation,
               and maintenance coaching in one workflow.</p>
           </div>
-          <div class="sky-floor-callout__cta">
-            <LinkTo @route="contact" class="btn">Book a Site Visit</LinkTo>
+          <div class="ac-callout__cta">
+            <LinkTo @route="contact" class="ac-btn ac-btn--primary">Book a Site
+              Visit
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </LinkTo>
+            <LinkTo @route="downloads" class="ac-btn ac-btn--ghost">Brochure /
+              SDS</LinkTo>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   </article>
 {{/if}}
