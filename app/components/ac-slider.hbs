@@ -1,0 +1,57 @@
+<div
+  class="ac-slider"
+  id={{this.rootId}}
+  aria-roledescription="carousel"
+  aria-label="시공 현장 사진"
+>
+  <div class="ac-slider__frame" data-ac-frame>
+    <div class="ac-slides" data-ac-track>
+      {{#each this.slides as |slide|}}
+        <div class="ac-slide">
+          <img src={{slide.src}} alt={{slide.alt}} loading="lazy" />
+        </div>
+      {{/each}}
+    </div>
+    <button
+      type="button"
+      class="ac-slider__arrow ac-slider__arrow--prev"
+      data-ac-prev
+      aria-label="이전 사진"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ><path d="M15 18l-6-6 6-6" /></svg>
+    </button>
+    <button
+      type="button"
+      class="ac-slider__arrow ac-slider__arrow--next"
+      data-ac-next
+      aria-label="다음 사진"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ><path d="M9 6l6 6-6 6" /></svg>
+    </button>
+  </div>
+  <div class="ac-slider__bar">
+    <div class="ac-slider__count"><em data-ac-cur>01</em>
+      /
+      <span data-ac-tot>01</span></div>
+    <div
+      class="ac-slider__dots"
+      data-ac-dots
+      role="tablist"
+      aria-label="슬라이드 선택"
+    ></div>
+  </div>
+</div>

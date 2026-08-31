@@ -8,44 +8,54 @@ export default class ProductSkyFloorController extends Controller {
     const isKo = this.locale.isKorean;
     return [
       {
-        id: 'sky-quartz',
-        src: '/images/skyfloor-quartz.jpg',
+        id: 'sky-1',
+        src: '/images/sky-gallery/01.jpg',
         alt: isKo
-          ? '스카이 플로어 쿼츠 마감 시공 사진'
-          : 'Sky Floor color quartz finish',
+          ? '대형 시설 Sky Floor 심리스 바닥 시공'
+          : 'Seamless Sky Floor in a large facility',
       },
       {
-        id: 'sky-flakes',
-        src: '/images/skyfloor-flakes.jpg',
+        id: 'sky-2',
+        src: '/images/sky-gallery/02.jpg',
         alt: isKo
-          ? '스카이 플로어 플레이크 마감 시공 사진'
-          : 'Sky Floor color flakes finish',
+          ? '복도 Sky Floor 심리스 마감'
+          : 'Seamless Sky Floor corridor',
       },
       {
-        id: 'sky-seamless',
-        src: '/images/skyfloor-seamless.jpg',
+        id: 'sky-3',
+        src: '/images/sky-gallery/03.jpg',
         alt: isKo
-          ? '스카이 플로어 단색 시공 사진'
-          : 'Sky Floor seamless finish',
+          ? '주방 Sky Floor 논슬립 바닥'
+          : 'Non-slip Sky Floor in a kitchen',
       },
       {
-        id: 'sky-aquacrete',
-        src: '/images/skyfloor-aquacrete.jpg',
-        alt: isKo
-          ? '스카이 플로어 아쿠아크리트 보강 시공'
-          : 'Sky Floor aquacrete reinforcement',
+        id: 'sky-4',
+        src: '/images/sky-gallery/04.jpg',
+        alt: isKo ? 'Sky Floor 코빙 마감 상세' : 'Sky Floor coving detail',
       },
       {
-        id: 'sky-coving',
-        src: '/images/skyfloor-coving.jpg',
-        alt: isKo ? '스카이 플로어 코빙 시공 사진' : 'Sky Floor coving detail',
+        id: 'sky-5',
+        src: '/images/sky-gallery/05.jpg',
+        alt: isKo
+          ? '화장실 컬러 쿼츠 Sky Floor 바닥'
+          : 'Color-quartz Sky Floor restroom',
       },
       {
-        id: 'sky-trench',
-        src: '/images/skyfloor-trench.jpg',
+        id: 'sky-6',
+        src: '/images/sky-gallery/06.jpg',
+        alt: isKo ? '화장실 쿼츠 Sky Floor 바닥' : 'Quartz Sky Floor restroom',
+      },
+      {
+        id: 'sky-7',
+        src: '/images/sky-gallery/07.jpg',
+        alt: isKo ? '학교 복도 Sky Floor 바닥' : 'School corridor Sky Floor',
+      },
+      {
+        id: 'sky-8',
+        src: '/images/sky-gallery/08.jpg',
         alt: isKo
-          ? '스카이 플로어 트렌치 보강 시공 사진'
-          : 'Sky Floor trench reinforcement',
+          ? '체육시설 Sky Floor 탄성 바닥'
+          : 'Resilient Sky Floor in a sports facility',
       },
     ];
   }
