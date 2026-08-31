@@ -26,100 +26,115 @@ const DATA = {
     timelineTitle: '연도별 주요 성과',
     timeline: [
       {
-        year: '2000',
-        entries: [
-          '㈜크린텍개발 법인 설립',
-          '미장방수공사업 · 도장공사업 전문건설업 면허 취득',
-        ],
-      },
-      {
-        year: '2001',
-        entries: ['한국수자원공사 · 삼성산업개발 · 삼성정밀화학 협력업체 등록'],
-      },
-      {
-        year: '2008',
-        entries: ['독일 SILIKAL 바닥재 한국지사 시공 대리점 계약'],
-      },
-      {
-        year: '2010',
-        entries: [
-          '탄성포장재 및 우레탄 바닥재 조달청 종합쇼핑몰 등록',
-          '독일 실리칼 바닥재 조달청 종합쇼핑몰 등록',
-        ],
-      },
-      {
-        year: '2011',
-        entries: ['환경친화형 하이브리드 크린플로어링 개발'],
-      },
-      {
         year: '2012',
-        entries: ['우레탄 탄성복합 하수방수 공법 개발'],
+        entries: ['폴리우레아 탄성복합방수공법 개발'],
+      },
+      {
+        year: '2013',
+        entries: [
+          '와이어가 함유된 유리섬유섬유메쉬공법 개발',
+          '도막형바닥재 독일 실리칼 제품 도입',
+        ],
       },
       {
         year: '2014',
-        entries: [
-          '무기물 연성 세라믹 아쿠아크리트 개발 착수',
-          '매쉬섬유 복합공법 특허 취득',
-        ],
+        entries: ['무기 불연 아쿠아크리트 제품개발 착수'],
       },
       {
         year: '2015',
-        entries: [
-          '외부 투명 도막재 마감 공법 고도화',
-          '아쿠아크리트 시제품 개발 및 현장 적용',
-        ],
+        entries: ['무기 불연 바닥마감재 아쿠아크리트 시제품 현장적용'],
       },
       {
         year: '2016',
-        entries: [
-          '무기물 연성 아쿠아크리트 바닥재 개발',
-          'PVC SHEET 신기술(NET) 806호 공법 협약 체결',
-        ],
+        entries: ['무기 불연 외벽마감재 아쿠아크리트 제품개발'],
       },
       {
         year: '2017',
         entries: [
-          '시설 구조물 세정 복원 공법 도입',
-          '아쿠아크리트 국내 다수 현장 적용',
-          '아쿠아크리트 해외 프로젝트 적용',
+          '시설 구조물 복원 공법 개발',
+          '무기 불연 외벽마감재 아쿠아크리트 시제품 현장적용',
         ],
       },
       {
         year: '2018',
         entries: [
-          '표준 공장 설립',
-          '아쿠아크리트 바닥 및 벽체 마감재 특허',
-          '친환경 복원 공법 조성물 특허',
-          '외단열 불연 마감재 현장 적용',
+          '도막형바닥재 독일 실리칼 제품 친환경 인증 획득',
+          '무기 불연재 아쿠아크리트 제품 생산공장설립',
+          '세라믹 제품 친환경 인증 획득',
+          '외부벽체 투명방수재 제품 공법개발',
+          '불연재 아쿠아쿠아크리트 제품 생산 및 현장적용',
         ],
       },
       {
         year: '2019',
         entries: [
-          '아쿠아크리트 및 외단열 불연 마감재 연간 시공',
-          '정부 신기술·신제품(NEP) 인증',
+          'ISO 9001 인증 획득',
+          '불연재 아쿠아크리트 제품 정부 신기술·신제품(NEP) 인증 획득',
+          '도막형바닥재(SKY-Floor) 제품 개발착수',
+          '물을 이용한 수경화도막방수재(SKY Flex) 제품개발착수',
         ],
       },
       {
         year: '2020',
         entries: [
-          '신제품(NEP) 협회 등록 및 한국도로공사 기술마켓 등록',
-          '폴리우레아 단열 복합 방수 공법 특허',
-          '외단열 시공 방법 특허(고정철물 활용)',
-          '방수 시공용 앵커 패스 시트 특허',
+          '기업부설연구소 연구전담부서 설립',
+          '한국도로공사 기술마켓 등록',
+          '불연재 아쿠아크리트 친환경 인증 획득',
+          '불연재 아쿠아크리트 녹색기술인증 획득',
+          '불연재 아쿠아크리트 Q-Mark인증획득',
+          '불연재 아쿠아크리트 내진성능 인증시험 확인',
+          '불연재 아쿠아크리트 외단열시스템 고정철물보강공법개발',
+          '도막형바닥재(SKY-Floor) 시제품 현장적용',
         ],
       },
       {
         year: '2021',
         entries: [
-          '실리콘계 이주젤 단열 복합 방수 시공 방법 특허',
-          '단열 복합 방수 시트 조성물 · 시공 공법 특허',
-          '아쿠아크리트 단열 복합 방수 조성물 및 시공 방법 특허',
+          '에어로젤을 이용한단열복합방수공법 개발',
+          '불연재 아쿠아크리트를 이용한 방수공법개발',
+          '불연재 아쿠아크리트 위생안전기준(kc)인증 획득',
         ],
       },
       {
         year: '2022',
-        entries: ['SKY FLOOR 도장형 바닥재 개발'],
+        entries: [
+          '물을 이용한 도막방수제(SKY FLEX) 시제품 현장적용',
+          '외부벽체 도막방수재 제품 개발',
+          '도막형바닥재(SKY-Floor) 제품 현장적용',
+          '한국벤처기업 인증획득',
+        ],
+      },
+      {
+        year: '2023',
+        entries: [
+          '폴리아스파틱을 이용한 폴리우레아 제품(SKY AU)개발',
+          '폴리우레아 도막방수재 조달청 쇼핑몰 등록',
+        ],
+      },
+      {
+        year: '2024',
+        entries: [
+          '금속지붕창호건축물조립공사업면허등록',
+          '폴리아스파틱을 이용한 폴리우레아 다용도 프라이머 제품(SKY AU)개발',
+          '외부벽체 창호주위 누수방지를 위한 슬로프 후레싱 공법 도입',
+          '외부벽체 치장벽돌 균열보강 및 내진성능을 위한 공법 도입',
+        ],
+      },
+      {
+        year: '2025',
+        entries: [
+          '도막형바닥재(SKY-Floor) 제품 단체표준 인증 획득',
+          '도막형바닥재(SKY-Floor) 제품 친환경 인증 획득',
+          '불연재 아쿠아크리트 외단열시스템 국토해양부고시 실물모형시험인증성능획득',
+          '폴리아스파틱을 이용한 폴리우레아 바닥재 제품(SKY AU)개발',
+        ],
+      },
+      {
+        year: '2026',
+        entries: [
+          '도막형바닥재(SKY-Floor) 제품 조달청 쇼핑몰 등록',
+          '폴리아스파틱을 이용한 폴리우레아 방수재 제품(SKY AU) 개발',
+        ],
       },
     ],
     closing: {
@@ -153,102 +168,121 @@ const DATA = {
     timelineTitle: 'Milestones',
     timeline: [
       {
-        year: '2000',
-        entries: [
-          'Incorporated CleanTech Development Co., Ltd.',
-          'Licensed as a specialized contractor for waterproofing and coating works',
-        ],
-      },
-      {
-        year: '2001',
-        entries: [
-          'Registered as partner with K-Water, Samsung C&T, and Samsung Fine Chemicals',
-        ],
-      },
-      {
-        year: '2008',
-        entries: [
-          'Signed agency agreement with SILIKAL Germany for Korea operations',
-        ],
-      },
-      {
-        year: '2010',
-        entries: [
-          'Registered elastic and urethane flooring in the Korean Public Procurement Service',
-          'Added SILIKAL flooring to the national procurement catalog',
-        ],
-      },
-      {
-        year: '2011',
-        entries: ['Developed hybrid eco-friendly “Clean Flooring” system'],
-      },
-      {
         year: '2012',
-        entries: ['Invented urethane-elastic sewer waterproofing method'],
+        entries: ['Developed polyurea elastic composite waterproofing method'],
+      },
+      {
+        year: '2013',
+        entries: [
+          'Developed wire-reinforced fiberglass mesh method',
+          'Introduced SILIKAL Germany coating-type flooring products',
+        ],
       },
       {
         year: '2014',
         entries: [
-          'Initiated Aqua-Crete inorganic ceramic flooring development',
-          'Secured patent for mesh fiber composite method',
+          'Began development of Aqua-Crete inorganic non-combustible product',
         ],
       },
       {
         year: '2015',
         entries: [
-          'Enhanced transparent coating finish methodology',
-          'Delivered first field applications of Aqua-Crete prototypes',
+          'Field-applied prototype Aqua-Crete inorganic non-combustible floor finish',
         ],
       },
       {
         year: '2016',
         entries: [
-          'Completed Aqua-Crete inorganic flooring formulation',
-          'Signed NET-806 PVC sheet technology partnership',
+          'Developed Aqua-Crete inorganic non-combustible exterior wall finish',
         ],
       },
       {
         year: '2017',
         entries: [
-          'Introduced facility refurbishment cleaning system',
-          'Rolled out Aqua-Crete across domestic projects',
-          'Applied Aqua-Crete to overseas sites',
+          'Developed facility structure restoration method',
+          'Field-applied prototype Aqua-Crete inorganic non-combustible exterior wall finish',
         ],
       },
       {
         year: '2018',
         entries: [
-          'Established standardized manufacturing plant',
-          'Filed patents for Aqua-Crete wall & floor finishes and eco restoration materials',
-          'Executed non-combustible exterior insulation projects',
+          'Obtained eco-friendly certification for SILIKAL Germany coating-type flooring products',
+          'Established production plant for Aqua-Crete inorganic non-combustible materials',
+          'Obtained eco-friendly certification for ceramic products',
+          'Developed exterior wall transparent waterproofing material and method',
+          'Produced and field-applied Aqua-Crete non-combustible products',
         ],
       },
       {
         year: '2019',
         entries: [
-          'Delivered annual portfolio of Aqua-Crete and fire-safe exterior works',
-          'Received Korea NEP (New Excellent Product) certification',
+          'Obtained ISO 9001 certification',
+          'Obtained government new technology and New Excellent Product (NEP) certification for Aqua-Crete non-combustible products',
+          'Began development of SKY-Floor coating-type flooring',
+          'Began development of SKY Flex water-curing coating waterproofing material',
         ],
       },
       {
         year: '2020',
         entries: [
-          'Registered NEP products and joined Korea Expressway Corporation tech market',
-          'Awarded patents for polyurethane hybrid waterproofing and exterior fixing systems',
-          'Secured patent for anchoring waterproof sheet',
+          'Established a dedicated R&D department under the corporate research institute',
+          'Registered with Korea Expressway Corporation Technology Market',
+          'Obtained eco-friendly certification for Aqua-Crete non-combustible material',
+          'Obtained Green Technology certification for Aqua-Crete non-combustible material',
+          'Obtained Q-Mark certification for Aqua-Crete non-combustible material',
+          'Verified seismic performance test results for Aqua-Crete non-combustible material',
+          'Developed fixed-hardware reinforcement method for Aqua-Crete exterior insulation system',
+          'Field-applied SKY-Floor prototypes',
         ],
       },
       {
         year: '2021',
         entries: [
-          'Patented silicone-gel thermal waterproofing method',
-          'Expanded IP portfolio for composite waterproof sheets and application methods',
-          'Registered patents for Aqua-Crete thermal waterproof compositions',
+          'Developed aerogel-based thermal insulation composite waterproofing method',
+          'Developed waterproofing method using Aqua-Crete non-combustible material',
+          'Obtained KC hygiene safety standard certification for Aqua-Crete non-combustible material',
         ],
       },
       {
         year: '2022',
-        entries: ['Launched SKY FLOOR resinous flooring line'],
+        entries: [
+          'Field-applied prototype SKY FLEX water-based coating waterproofing material',
+          'Developed exterior wall coating waterproofing material',
+          'Field-applied SKY-Floor products',
+          'Obtained Korea Venture Enterprise certification',
+        ],
+      },
+      {
+        year: '2023',
+        entries: [
+          'Developed SKY AU polyurea product using polyaspartic technology',
+          'Registered polyurea coating waterproofing material in the Korea Public Procurement Service shopping mall',
+        ],
+      },
+      {
+        year: '2024',
+        entries: [
+          'Registered license for metal roofing, windows, doors, and building assembly works',
+          'Developed SKY AU polyaspartic polyurea multipurpose primer',
+          'Introduced sloped flashing method to prevent leakage around exterior wall windows',
+          'Introduced method for crack reinforcement and seismic performance of exterior wall facing bricks',
+        ],
+      },
+      {
+        year: '2025',
+        entries: [
+          'Obtained group standard certification for SKY-Floor products',
+          'Obtained eco-friendly certification for SKY-Floor products',
+          'Obtained full-scale mock-up test performance certification under the Ministry of Land, Transport and Maritime Affairs notice for Aqua-Crete exterior insulation system',
+          'Developed SKY AU polyaspartic polyurea flooring product',
+        ],
+      },
+      {
+        year: '2026',
+        entries: [
+          'Registered SKY-Floor products in the Korea Public Procurement Service shopping mall',
+          'Developed SKY AU polyaspartic polyurea waterproofing material',
+        ],
       },
     ],
     closing: {
