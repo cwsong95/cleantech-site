@@ -1,23 +1,313 @@
-{{page-title (concat (this.locale.t "dropdown.polyaspartic") " - " (this.locale.t "dropdown.polyWaterproof") " | CleanTech")}}
+{{page-title
+  (if
+    this.locale.isKorean
+    "SKY-AU 폴리아스파틱 폴리우레아 | 크린텍개발"
+    "SKY-AU Polyaspartic Polyurea | CleanTech"
+  )
+}}
 
-<article class="page margin-page">
-  <div class="container-app">
-    <section
-      class="space-y-4 rounded-3xl border border-slate-200 bg-white/90 p-10 shadow-xl shadow-blue-500/10 backdrop-blur"
-    >
-      <p class="coming-soon-badge">{{this.locale.t "dropdown.comingSoon"}}</p>
-      <h1 class="text-3xl font-bold leading-tight text-slate-900">{{this.locale.t "dropdown.polyaspartic"}} — {{this.locale.t "dropdown.polyWaterproof"}}</h1>
-      <p class="text-base leading-relaxed text-slate-600">
-        {{#if this.locale.isKorean}}
-          폴리아스파틱 방수재 제품 페이지를 준비 중입니다. 제품 정보와 시공 자료가 업데이트되면 바로 안내드리겠습니다.
-        {{else}}
-          The polyaspartic waterproofing product page is coming soon. We will update you as soon as product information and application data are available.
-        {{/if}}
-      </p>
-      <div class="flex flex-wrap gap-3">
-        <LinkTo @route="contact" class="btn">{{this.locale.t "nav.contact"}}</LinkTo>
-        <LinkTo @route="downloads" class="btn-ghost">{{this.locale.t "footer.downloads.title"}}</LinkTo>
+{{#if this.locale.isKorean}}
+  <article class="sky-au-page page ac-page full-bleed" {{aqua-reveal}}>
+    <section class="ac-hero ac-hero--photo">
+      <div class="ac-hero__bg" aria-hidden="true">
+        <img src="/images/sky-au-hero.jpg" alt="" />
+      </div>
+      <div class="ac-inner ac-hero__grid ac-hero__grid--solo">
+        <div class="ac-hero__content">
+          <h1 class="ac-hero__titleimg">
+            <img src="/images/sky-au-hero-title.png" alt="" />
+            <span class="ac-sr-only">SKY AU 폴리아스파틱 폴리우레아 — 차세대
+              초속경 피복 수지</span>
+          </h1>
+        </div>
+      </div>
+      <div class="ac-metrics">
+        <div class="ac-inner ac-metrics__grid">
+          <div class="ac-metric"><div class="ac-metric__n"><span
+                data-count="2"
+              >0</span><em>h</em></div><div
+              class="ac-metric__l"
+            >초속경화</div></div>
+          <div class="ac-metric"><div class="ac-metric__n">UV</div><div
+              class="ac-metric__l"
+            >황변 제로</div></div>
+          <div class="ac-metric"><div class="ac-metric__n">무촉매</div><div
+              class="ac-metric__l"
+            >상온 부가반응</div></div>
+          <div class="ac-metric"><div class="ac-metric__n">저VOC</div><div
+              class="ac-metric__l"
+            >친환경 마감</div></div>
+        </div>
       </div>
     </section>
-  </div>
-</article>
+
+    <div class="margin-page">
+      <section class="ac-sec ac-concept" id="concept">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Concept</span>
+          <h2>차세대 초속경 피복 수지</h2>
+        </div>
+        <div class="ac-au-intro ac-reveal" data-d="1">
+          <p class="ac-au-lead">폴리아스파틱 폴리폴리우레아(Polyaspartic
+            Polyurea)는
+            <b>지방족(Aliphatic) 폴리이소시아네이트</b>와
+            <b>폴리아스파틱 에스테르(입체장애 2차 아민)</b>가 상온에서 무촉매로
+            부가반응하여
+            <b>우레아(Urea) 결합</b>을 형성하는 차세대 초속경 피복재입니다.
+            방향족 구조가 없는 지방족 골격 덕분에 자외선에 의한 황변이 발생하지
+            않으며, 입체장애 아민 구조가 반응 속도를 제어하여 빠른 경화와 충분한
+            가사시간을 동시에 확보합니다.</p>
+          <ol class="ac-numlist">
+            <li><span class="ac-numlist__n">1</span><div><b>2시간 초속경화</b>
+                — 시공 직후 신속한 보행 및 일상 복귀</div></li>
+            <li><span class="ac-numlist__n">2</span><div><b>UV 상시 안정성</b>
+                — 지방족 구조로 햇빛 노출 시에도 황변 제로</div></li>
+            <li><span class="ac-numlist__n">3</span><div><b>친환경 저VOC</b>
+                — 실내 공기질 기준 충족 및 저취 환경</div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="ac-sec ac-rxn-sec" id="mechanism">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Mechanism</span>
+          <h2>반응 메커니즘</h2>
+        </div>
+        <div class="ac-rxn ac-reveal" data-d="1">
+          <div class="ac-rxn__row">
+            <div class="ac-rxn__card">
+              <h3>지방족 폴리이소시아네이트</h3>
+              <p class="ac-rxn__formula">O=C=N–(CH<sub>2</sub>)<sub
+                >6</sub>–N=C=O</p>
+              <p class="ac-rxn__cap">Aliphatic Isocyanate (HDI계)</p>
+            </div>
+            <div class="ac-rxn__plus" aria-hidden="true">+</div>
+            <div class="ac-rxn__card">
+              <h3>폴리아스파틱 에스테르</h3>
+              <p class="ac-rxn__formula">ROOC–CH<sub>2</sub>–CH(COOR)–<b
+                  class="ac-rxn__red"
+                >N(H)</b>–R′</p>
+              <p class="ac-rxn__cap">입체장애 2차 아민 (Polyaspartic Ester)</p>
+            </div>
+          </div>
+          <div class="ac-rxn__arrow" aria-hidden="true"><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ><path d="M12 5v14M6 13l6 6 6-6" /></svg></div>
+          <p class="ac-rxn__arrowcap">상온 무촉매 부가반응 · 초속경화</p>
+          <div class="ac-rxn__result">
+            <h3>스카이 폴리아스파틱 폴리우레아 (Polyaspartic Urea)</h3>
+            <p class="ac-rxn__formula">···–R–<b class="ac-rxn__blue">NH</b>–<b
+                class="ac-rxn__blue"
+              >C(=O)</b>–<b class="ac-rxn__blue">N</b>(–CH(COOR)–CH<sub
+              >2</sub>–COOR)–R′–···</p>
+            <p class="ac-rxn__reslabel">우레아 결합 (Urea Linkage) 형성 → 고밀도
+              3차원 망상구조</p>
+          </div>
+          <ul class="ac-rxn__list">
+            <li><b>지방족 골격</b> → 방향족 부재로 무황변 · UV 상시 안정</li>
+            <li><b>입체장애 2차 아민</b>
+              → 반응속도 제어로 가사시간 확보 + 초속경화</li>
+            <li><b>우레아 결합의 고밀도 망상구조</b>
+              → 고강도 · 고내마모 · 고내화학성 발현</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="ac-sec ac-gallery" id="gallery">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Gallery</span>
+          <h2>SKY-AU 시공 사례</h2>
+        </div>
+        <div class="ac-gallery__panel ac-reveal" data-d="1">
+          <AcSlider @slides={{this.skyAuGallerySlides}} />
+        </div>
+      </section>
+
+      <section class="ac-sec ac-callout" id="callout">
+        <div class="ac-callout__box ac-reveal">
+          <div>
+            <h2>SKY AU · Polyaspartic Polyurea</h2>
+            <p>CleanTech (주)크린텍개발은 SKY-AU 초속경 폴리아스파틱 폴리우레아
+              전문 시공팀과 유지관리 서비스를 통해 설계부터 검수까지 지원합니다.
+              현장 진단이 필요하시다면 언제든지 연락 주세요.</p>
+          </div>
+          <div class="ac-callout__cta">
+            <LinkTo @route="contact" class="ac-btn ac-btn--primary">현장 컨설팅
+              신청
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </LinkTo>
+            <LinkTo @route="downloads" class="ac-btn ac-btn--ghost">브로슈어 /
+              카탈로그</LinkTo>
+          </div>
+        </div>
+      </section>
+    </div>
+  </article>
+{{else}}
+  <article class="sky-au-page page ac-page full-bleed" {{aqua-reveal}}>
+    <section class="ac-hero ac-hero--photo">
+      <div class="ac-hero__bg" aria-hidden="true">
+        <img src="/images/sky-au-hero.jpg" alt="" />
+      </div>
+      <div class="ac-inner ac-hero__grid ac-hero__grid--solo">
+        <div class="ac-hero__content">
+          <h1 class="ac-hero__titleimg">
+            <img src="/images/sky-au-hero-title.png" alt="" />
+            <span class="ac-sr-only">SKY AU Polyaspartic Polyurea —
+              next-generation ultra-fast-cure coating resin</span>
+          </h1>
+        </div>
+      </div>
+      <div class="ac-metrics">
+        <div class="ac-inner ac-metrics__grid">
+          <div class="ac-metric"><div class="ac-metric__n"><span
+                data-count="2"
+              >0</span><em>h</em></div><div class="ac-metric__l">Ultra-fast cure</div></div>
+          <div class="ac-metric"><div class="ac-metric__n">UV</div><div
+              class="ac-metric__l"
+            >Zero yellowing</div></div>
+          <div class="ac-metric"><div class="ac-metric__n">No cat.</div><div
+              class="ac-metric__l"
+            >Ambient reaction</div></div>
+          <div class="ac-metric"><div class="ac-metric__n">Low-VOC</div><div
+              class="ac-metric__l"
+            >Eco finish</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="margin-page">
+      <section class="ac-sec ac-concept" id="concept">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Concept</span>
+          <h2>Next-Generation Ultra-Fast-Cure Coating Resin</h2>
+        </div>
+        <div class="ac-au-intro ac-reveal" data-d="1">
+          <p class="ac-au-lead">Polyaspartic polyurea is a next-generation
+            ultra-fast-cure coating that forms
+            <b>urea bonds</b>
+            through a catalyst-free addition reaction of
+            <b>aliphatic polyisocyanate</b>
+            and
+            <b>polyaspartic ester (hindered secondary amine)</b>
+            at room temperature. Its aromatic-free aliphatic backbone prevents
+            UV-induced yellowing, while the hindered amine structure controls
+            reaction speed to secure both fast cure and ample pot life.</p>
+          <ol class="ac-numlist">
+            <li><span class="ac-numlist__n">1</span><div><b>2-Hour Ultra-Fast
+                  Cure</b>
+                — Quick return to foot traffic and normal use right after
+                installation</div></li>
+            <li><span class="ac-numlist__n">2</span><div><b>Permanent UV
+                  Stability</b>
+                — Zero yellowing even under sunlight thanks to the aliphatic
+                structure</div></li>
+            <li><span class="ac-numlist__n">3</span><div><b>Eco-Friendly Low-VOC</b>
+                — Meets indoor air-quality standards with low odor</div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="ac-sec ac-rxn-sec" id="mechanism">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Mechanism</span>
+          <h2>Reaction Mechanism</h2>
+        </div>
+        <div class="ac-rxn ac-reveal" data-d="1">
+          <div class="ac-rxn__row">
+            <div class="ac-rxn__card">
+              <h3>Aliphatic Polyisocyanate</h3>
+              <p class="ac-rxn__formula">O=C=N–(CH<sub>2</sub>)<sub
+                >6</sub>–N=C=O</p>
+              <p class="ac-rxn__cap">Aliphatic Isocyanate (HDI type)</p>
+            </div>
+            <div class="ac-rxn__plus" aria-hidden="true">+</div>
+            <div class="ac-rxn__card">
+              <h3>Polyaspartic Ester</h3>
+              <p class="ac-rxn__formula">ROOC–CH<sub>2</sub>–CH(COOR)–<b
+                  class="ac-rxn__red"
+                >N(H)</b>–R′</p>
+              <p class="ac-rxn__cap">Hindered Secondary Amine (Polyaspartic
+                Ester)</p>
+            </div>
+          </div>
+          <div class="ac-rxn__arrow" aria-hidden="true"><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ><path d="M12 5v14M6 13l6 6 6-6" /></svg></div>
+          <p class="ac-rxn__arrowcap">Catalyst-free addition at room temperature
+            · Ultra-fast cure</p>
+          <div class="ac-rxn__result">
+            <h3>SKY Polyaspartic Polyurea (Polyaspartic Urea)</h3>
+            <p class="ac-rxn__formula">···–R–<b class="ac-rxn__blue">NH</b>–<b
+                class="ac-rxn__blue"
+              >C(=O)</b>–<b class="ac-rxn__blue">N</b>(–CH(COOR)–CH<sub
+              >2</sub>–COOR)–R′–···</p>
+            <p class="ac-rxn__reslabel">Forms a urea linkage → high-density 3D
+              network</p>
+          </div>
+          <ul class="ac-rxn__list">
+            <li><b>Aliphatic backbone</b>
+              → Aromatic-free, non-yellowing · permanent UV stability</li>
+            <li><b>Hindered secondary amine</b>
+              → Controls reaction speed for pot life + ultra-fast cure</li>
+            <li><b>High-density urea network</b>
+              → High strength · abrasion · chemical resistance</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="ac-sec ac-gallery" id="gallery">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Gallery</span>
+          <h2>Project Gallery</h2>
+        </div>
+        <div class="ac-gallery__panel ac-reveal" data-d="1">
+          <AcSlider @slides={{this.skyAuGallerySlides}} />
+        </div>
+      </section>
+
+      <section class="ac-sec ac-callout" id="callout">
+        <div class="ac-callout__box ac-reveal">
+          <div>
+            <h2>SKY AU · Polyaspartic Polyurea</h2>
+            <p>CleanTech supports SKY-AU ultra-fast-cure polyaspartic polyurea
+              projects from design to inspection with a specialist installation
+              and maintenance team. Contact us anytime for a site assessment.</p>
+          </div>
+          <div class="ac-callout__cta">
+            <LinkTo @route="contact" class="ac-btn ac-btn--primary">Request
+              Consultation
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </LinkTo>
+            <LinkTo @route="downloads" class="ac-btn ac-btn--ghost">Download
+              Brochure</LinkTo>
+          </div>
+        </div>
+      </section>
+    </div>
+  </article>
+{{/if}}

@@ -6,7 +6,7 @@ const MESSAGES = {
     nav: {
       company: 'About',
       products: 'Products',
-      certifications: 'Certifications',
+      certifications: 'Resources',
       contact: 'Contact',
     },
     dropdown: {
@@ -48,8 +48,8 @@ const MESSAGES = {
   ko: {
     nav: {
       company: '회사 소개',
-      products: '제품',
-      certifications: '인증',
+      products: '제품 소개',
+      certifications: '기술자료',
       contact: '문의하기',
     },
     dropdown: {

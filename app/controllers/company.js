@@ -9,6 +9,31 @@ const DATA = {
         '서울특별시 송파구 법원로 114 C-406 (문정동 가든파이브 · 법조타운 인근)',
       linkLabel: '구글 지도 열기',
     },
+    mvc: {
+      eyebrow: '우리의 방향',
+      title: 'Mission · Vision · Core Values',
+      mission: {
+        key: 'MISSION',
+        tag: '우리는 왜 존재하는가',
+        head: '우리는 가장 낮은 곳에서 가치를 창조합니다.',
+        sub: 'We create value from the ground up.',
+        desc: '사람이 일하는 터전을 안전하게, 그 열매를 이웃에게.',
+      },
+      vision: {
+        key: 'VISION',
+        tag: '어디로 가는가',
+        head: '기술 · 신뢰 · 세계',
+        sub: 'Technology · Trust · To the World',
+        desc: '우리의 기술로 신뢰받는 제품을, 세계 고객에게.',
+      },
+      core: {
+        key: 'CORE VALUES',
+        tag: '어떻게 일하는가',
+        head: '정직 · 견고 · 청결 · 섬김 · 나눔',
+        sub: 'Sincerity · Steadfastness · Sanctification · Servanthood · Stewardship',
+        desc: '정직이 첫 번째입니다. 정직이 무너지면 나머지 넷은 마케팅 문구가 됩니다.',
+      },
+    },
     timelineTitle: '연도별 주요 성과',
     timeline: [
       {
@@ -138,6 +163,31 @@ const DATA = {
       description:
         '114 Beobwon-ro, Songpa-gu, Seoul (Garden Five / Legal Town area), Suite C-406',
       linkLabel: 'Open in Google Maps',
+    },
+    mvc: {
+      eyebrow: 'Our direction',
+      title: 'Mission · Vision · Core Values',
+      mission: {
+        key: 'MISSION',
+        tag: 'Why we exist',
+        head: 'We create value from the ground up.',
+        sub: '우리는 가장 낮은 곳에서 가치를 창조합니다.',
+        desc: 'Keeping the ground people work on safe — and passing its fruit to our neighbors.',
+      },
+      vision: {
+        key: 'VISION',
+        tag: 'Where we are headed',
+        head: 'Technology · Trust · To the World',
+        sub: '기술 · 신뢰 · 세계',
+        desc: 'Trusted products, built on our technology, for customers worldwide.',
+      },
+      core: {
+        key: 'CORE VALUES',
+        tag: 'How we work',
+        head: 'Sincerity · Steadfastness · Sanctification · Servanthood · Stewardship',
+        sub: '정직 · 견고 · 청결 · 섬김 · 나눔',
+        desc: 'Integrity comes first. Without it, the other four are just marketing.',
+      },
     },
     timelineTitle: 'Milestones',
     timeline: [
@@ -275,6 +325,10 @@ export default class CompanyController extends Controller {
 
   get copy() {
     return DATA[this.locale.current] ?? DATA.ko;
+  }
+
+  get mvc() {
+    return this.copy.mvc;
   }
 
   get timeline() {

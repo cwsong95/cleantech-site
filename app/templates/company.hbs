@@ -46,52 +46,136 @@
 </nav>
 
 <section class="space-y-16 margin-page">
-  <section
-    id="company-location"
-    class="space-y-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
-  >
-    <div
-      class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"
-    >
-      <div>
-        <p
-          class="text-xs font-semibold uppercase tracking-[0.35em] text-blue-600"
-        >
-          {{if this.locale.isKorean "위치" "Location"}}
-        </p>
-        <h2
-          class="text-2xl font-bold text-slate-900"
-        >{{this.copy.map.title}}</h2>
-        <p class="text-sm text-slate-600">{{this.copy.map.description}}</p>
-      </div>
-      <a
-        href="https://www.google.com/maps/search/?api=1&query=37.4857086%2C127.1204659"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm transition hover:bg-blue-100"
-      >
-        {{this.copy.map.linkLabel}}
-        <svg
-          aria-hidden="true"
-          viewBox="0 0 24 24"
-          class="h-4 w-4 fill-current"
-        >
-          <path
-            d="M13 5a1 1 0 0 0 0 2h3.59l-9.3 9.29a1 1 0 1 0 1.42 1.42L18 8.41V12a1 1 0 0 0 2 0V6a1 1 0 0 0-1-1h-6Z"
-          />
-        </svg>
-      </a>
+  {{! ============ MISSION / VISION / CORE VALUES ============ }}
+  <section id="company-mvc" class="space-y-8">
+    <div class="mx-auto max-w-2xl space-y-3 text-center">
+      <p
+        class="text-xs font-semibold uppercase tracking-[0.35em] text-blue-600"
+      >{{this.mvc.eyebrow}}</p>
+      <h2
+        class="text-3xl font-bold text-slate-900 sm:text-4xl"
+      >{{this.mvc.title}}</h2>
     </div>
-    <div
-      class="company-map relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50"
-    >
-      <iframe
-        title={{if this.locale.isKorean "회사 위치 지도" "Company map"}}
-        src="https://www.google.com/maps?q=37.4857086,127.1204659&z=16&output=embed"
-        class="absolute inset-0 h-full w-full"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+    <div class="grid gap-6 md:grid-cols-3">
+      <article
+        class="group relative flex flex-col gap-4 overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+      >
+        <span
+          class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-400"
+          aria-hidden="true"
+        ></span>
+        <div
+          class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6"
+          ><circle cx="12" cy="12" r="9" /><circle
+              cx="12"
+              cy="12"
+              r="4.5"
+            /><circle
+              cx="12"
+              cy="12"
+              r="1"
+              fill="currentColor"
+              stroke="none"
+            /></svg>
+        </div>
+        <div>
+          <div
+            class="text-xs font-bold uppercase tracking-[0.25em] text-blue-600"
+          >{{this.mvc.mission.key}}</div>
+        </div>
+        <h3
+          class="text-xl font-bold leading-snug text-slate-900"
+        >{{this.mvc.mission.head}}</h3>
+        <p
+          class="text-sm font-semibold text-blue-700"
+        >{{this.mvc.mission.sub}}</p>
+        <p
+          class="mt-auto text-sm leading-relaxed text-slate-600"
+        >{{this.mvc.mission.desc}}</p>
+      </article>
+      <article
+        class="group relative flex flex-col gap-4 overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+      >
+        <span
+          class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-400"
+          aria-hidden="true"
+        ></span>
+        <div
+          class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6"
+          ><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" /><circle
+              cx="12"
+              cy="12"
+              r="3"
+            /></svg>
+        </div>
+        <div>
+          <div
+            class="text-xs font-bold uppercase tracking-[0.25em] text-blue-600"
+          >{{this.mvc.vision.key}}</div>
+        </div>
+        <h3
+          class="text-xl font-bold leading-snug text-slate-900"
+        >{{this.mvc.vision.head}}</h3>
+        <p
+          class="text-sm font-semibold text-blue-700"
+        >{{this.mvc.vision.sub}}</p>
+        <p
+          class="mt-auto text-sm leading-relaxed text-slate-600"
+        >{{this.mvc.vision.desc}}</p>
+      </article>
+      <article
+        class="group relative flex flex-col gap-4 overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+      >
+        <span
+          class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-400"
+          aria-hidden="true"
+        ></span>
+        <div
+          class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-6 w-6"
+          ><path d="M12 3 5 6v6c0 4 3 6.6 7 8 4-1.4 7-4 7-8V6l-7-3Z" /><path
+              d="m9.2 12 1.9 1.9 3.7-3.9"
+            /></svg>
+        </div>
+        <div>
+          <div
+            class="text-xs font-bold uppercase tracking-[0.25em] text-blue-600"
+          >{{this.mvc.core.key}}</div>
+        </div>
+        <h3
+          class="text-xl font-bold leading-snug text-slate-900"
+        >{{this.mvc.core.head}}</h3>
+        <p class="text-sm font-semibold text-blue-700">{{this.mvc.core.sub}}</p>
+        <p
+          class="mt-auto text-sm leading-relaxed text-slate-600"
+        >{{this.mvc.core.desc}}</p>
+      </article>
     </div>
   </section>
 
@@ -147,6 +231,55 @@
           </article>
         {{/each}}
       </div>
+    </div>
+  </section>
+
+  <section
+    id="company-location"
+    class="space-y-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
+  >
+    <div
+      class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between"
+    >
+      <div>
+        <p
+          class="text-xs font-semibold uppercase tracking-[0.35em] text-blue-600"
+        >
+          {{if this.locale.isKorean "위치" "Location"}}
+        </p>
+        <h2
+          class="text-2xl font-bold text-slate-900"
+        >{{this.copy.map.title}}</h2>
+        <p class="text-sm text-slate-600">{{this.copy.map.description}}</p>
+      </div>
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=37.4857086%2C127.1204659"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 shadow-sm transition hover:bg-blue-100"
+      >
+        {{this.copy.map.linkLabel}}
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          class="h-4 w-4 fill-current"
+        >
+          <path
+            d="M13 5a1 1 0 0 0 0 2h3.59l-9.3 9.29a1 1 0 1 0 1.42 1.42L18 8.41V12a1 1 0 0 0 2 0V6a1 1 0 0 0-1-1h-6Z"
+          />
+        </svg>
+      </a>
+    </div>
+    <div
+      class="company-map relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50"
+    >
+      <iframe
+        title={{if this.locale.isKorean "회사 위치 지도" "Company map"}}
+        src="https://www.google.com/maps?q=37.4857086,127.1204659&z=16&output=embed"
+        class="absolute inset-0 h-full w-full"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
   </section>
 

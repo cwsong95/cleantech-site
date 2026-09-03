@@ -1,0 +1,24 @@
+<div class="ac-galtabs">
+  <div class="ac-galtabs__bar" role="tablist" aria-label="시공 사진 분류">
+    {{#each this.tabs key="id" as |tab|}}
+      <button
+        type="button"
+        role="tab"
+        aria-selected={{if tab.active "true" "false"}}
+        class="ac-galtab {{if tab.active 'is-active'}}"
+        {{on "click" (fn this.select tab.id)}}
+      >
+        <span>{{tab.label}}</span>
+        <span class="ac-galtab__n">{{tab.count}}</span>
+      </button>
+    {{/each}}
+  </div>
+
+  {{#each this.tabs key="id" as |tab|}}
+    {{#if tab.active}}
+      <div class="ac-galtabs__panel" role="tabpanel">
+        <AcSlider @slides={{tab.slides}} />
+      </div>
+    {{/if}}
+  {{/each}}
+</div>

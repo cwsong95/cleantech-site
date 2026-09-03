@@ -1,79 +1,108 @@
-{{page-title
-  (if this.locale.isKorean "인증서 | CleanTech" "Certifications | CleanTech")
-}}
+{{page-title this.copy.metaTitle}}
 
-<section class="space-y-16 margin-page">
-  <header
-    class="space-y-6 rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-xl shadow-blue-500/10 backdrop-blur"
-  >
-    <p
-      class="text-sm font-semibold uppercase tracking-[0.35em] text-blue-600"
-    >{{this.copy.hero.eyebrow}}</p>
-    <h1
-      class="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl"
-    >{{this.copy.hero.title}}</h1>
-    <p class="max-w-4xl text-lg leading-relaxed text-slate-600">{{break-lines
-        this.copy.hero.description
-      }}</p>
-
-    <div class="flex flex-wrap items-center gap-6 text-sm text-slate-500">
-      <div
-        class="flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 font-semibold text-blue-700"
-      >
-        <svg
-          aria-hidden="true"
-          viewBox="0 0 24 24"
-          class="h-4 w-4 fill-current"
-        ><path
-            d="M5 5a1 1 0 0 0-2 0v12a2 2 0 0 0 2 2h14a1 1 0 0 0 0-2H5V5Zm4.18 2.4A1 1 0 0 0 8 8.4v4.32a1 1 0 0 0 1.18.99l4.64-.77a1 1 0 0 0 .84-.99V7.96a1 1 0 0 0-.84-.99l-4.64-.77Z"
-          /></svg>
-        <span>{{this.copy.metrics.totalLabel}}
-          {{this.certificateCount}}
-          {{this.copy.metrics.unit}}</span>
-      </div>
-      <div class="flex items-center gap-2">
-        <svg
-          aria-hidden="true"
-          viewBox="0 0 24 24"
-          class="h-4 w-4 fill-slate-400"
-        ><path
-            d="M12 8a1 1 0 0 1 1 1v3.59l2.3 2.3a1 1 0 1 1-1.41 1.41l-2.6-2.59a1 1 0 0 1-.29-.7V9a1 1 0 0 1 1-1Zm0-6a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8Z"
-          /></svg>
-        <span>{{this.copy.metrics.updatedLabel}}
-          ·
-          {{this.copy.updatedDate}}</span>
+<article class="resources-page page ac-page full-bleed" {{aqua-reveal}}>
+  {{! ================= HERO ================= }}
+  <section class="ac-hero ac-hero--slim">
+    <div class="ac-inner ac-hero__grid ac-hero__grid--solo">
+      <div class="ac-hero__content">
+        <span class="ac-hero__eyebrow"><span
+          >{{this.copy.hero.eyebrow}}</span></span>
+        <h1 class="ac-hero__title">{{this.copy.hero.title}}</h1>
+        <p class="ac-hero__lead">{{break-lines this.copy.hero.description}}</p>
       </div>
     </div>
-  </header>
-
-  <section class="flex flex-wrap justify-center gap-6">
-    {{#each this.displayCertificates as |certificate|}}
-      <article
-        class="group w-full max-w-xs overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg shadow-blue-500/10 transition hover:-translate-y-1 hover:shadow-2xl"
-      >
-        <figure
-          class="relative flex items-center justify-center bg-slate-100 px-4 py-5"
-        >
-          <img
-            src={{certificate.image}}
-            alt={{if
-              this.locale.isKorean
-              (concat certificate.title " 원본 스캔")
-              (concat certificate.title " scan")
-            }}
-            class="max-h-[360px] w-full object-contain transition duration-300 group-hover:scale-[1.03]"
-            loading="lazy"
-          />
-        </figure>
-        <div class="space-y-3 px-4 py-4">
-          <h2
-            class="text-xl font-semibold text-slate-900"
-          >{{certificate.title}}</h2>
-          <p
-            class="text-sm leading-relaxed text-slate-600"
-          >{{certificate.summary}}</p>
-        </div>
-      </article>
-    {{/each}}
   </section>
-</section>
+
+  <div class="margin-page">
+    <section class="ac-sec ac-resources">
+      {{! ================= TAB BAR ================= }}
+      <div class="ac-galtabs__bar ac-reveal">
+        {{#each this.tabs as |tab|}}
+          <button
+            type="button"
+            class="ac-galtab {{if tab.active 'is-active'}}"
+            {{on "click" (fn this.select tab.id)}}
+          >{{tab.label}}<i class="ac-galtab__n">{{tab.count}}</i></button>
+        {{/each}}
+      </div>
+
+      {{! ================= 자료실 ================= }}
+      {{#if this.isDownloads}}
+        <div class="rz-grid rz-grid--doc">
+          {{#each this.downloads as |card|}}
+            <article
+              class="rz-doc rz-doc--cover
+                {{unless card.available 'rz-doc--soon'}}"
+            >
+              <figure class="rz-doc__fig">
+                {{#if card.image}}
+                  <img src={{card.image}} alt={{card.name}} loading="lazy" />
+                {{else}}
+                  <span class="rz-doc__ph">{{this.copy.comingSoon}}</span>
+                {{/if}}
+              </figure>
+              <div class="rz-doc__cap">
+                <div class="rz-doc__caphead">
+                  <h3>{{card.name}}</h3>
+                  {{#unless card.available}}<span
+                      class="rz-badge"
+                    >{{this.copy.comingSoon}}</span>{{/unless}}
+                </div>
+                <p>{{card.summary}}</p>
+                {{#if card.available}}
+                  <a class="rz-dlbtn" href={{card.href}} download>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ><path d="M12 3v12" /><path d="m7 11 5 5 5-5" /><path
+                        d="M5 21h14"
+                      /></svg>
+                    {{this.copy.actions.download}}
+                  </a>
+                {{/if}}
+              </div>
+            </article>
+          {{/each}}
+        </div>
+      {{/if}}
+
+      {{! ================= 인증서 (작게만 표시) ================= }}
+      {{#if this.isCerts}}
+        <div class="rz-grid rz-grid--doc">
+          {{#each this.certificates as |doc|}}
+            <article class="rz-doc">
+              <figure class="rz-doc__fig">
+                <img src={{doc.image}} alt={{doc.title}} loading="lazy" />
+              </figure>
+              <div class="rz-doc__cap">
+                <h3>{{doc.title}}</h3>
+                <p>{{doc.summary}}</p>
+              </div>
+            </article>
+          {{/each}}
+        </div>
+      {{/if}}
+
+      {{! ================= 시험성적표 (작게만 표시) ================= }}
+      {{#if this.isReports}}
+        <div class="rz-grid rz-grid--doc">
+          {{#each this.reports as |doc|}}
+            <article class="rz-doc">
+              <figure class="rz-doc__fig">
+                <img src={{doc.image}} alt={{doc.title}} loading="lazy" />
+              </figure>
+              <div class="rz-doc__cap">
+                <h3>{{doc.title}}</h3>
+                <p>{{doc.summary}}</p>
+              </div>
+            </article>
+          {{/each}}
+        </div>
+      {{/if}}
+    </section>
+  </div>
+</article>

@@ -1,61 +1,120 @@
 import Controller from '@ember/controller';
 import { service } from '@ember/service';
 
+const QUARTZ_SLIDES = [
+  {
+    src: '/images/sky-quartz/01.jpg',
+    alt: 'SKY Floor 컬러 쿼츠 바닥 시공 (그레이)',
+  },
+  {
+    src: '/images/sky-quartz/02.jpg',
+    alt: 'SKY Floor 컬러 쿼츠 바닥 (레드) 및 트렌치',
+  },
+  {
+    src: '/images/sky-quartz/03.jpg',
+    alt: 'SKY Floor 컬러 쿼츠 주방 바닥 (그린)',
+  },
+  {
+    src: '/images/sky-quartz/04.jpg',
+    alt: 'SKY Floor 컬러 쿼츠 주방 바닥 (그레이)',
+  },
+  {
+    src: '/images/sky-quartz/05.jpg',
+    alt: 'SKY Floor 컬러 쿼츠 주방 바닥 (옐로우)',
+  },
+  {
+    src: '/images/sky-quartz/06.jpg',
+    alt: 'SKY Floor 컬러 쿼츠 바닥 시공 현장',
+  },
+  { src: '/images/sky-quartz/07.jpg', alt: 'SKY Floor 컬러 쿼츠 주방 바닥' },
+  {
+    src: '/images/sky-quartz/08.jpg',
+    alt: 'SKY Floor 컬러 쿼츠 바닥 (레드) 트렌치',
+  },
+  {
+    src: '/images/sky-quartz/09.jpg',
+    alt: 'SKY Floor 컬러 쿼츠 주방 바닥 시공',
+  },
+  { src: '/images/sky-quartz/10.jpg', alt: 'SKY Floor 컬러 쿼츠 바닥 마감' },
+  {
+    src: '/images/sky-quartz/11.jpg',
+    alt: 'SKY Floor 컬러 쿼츠 복도 바닥 시공',
+  },
+  {
+    src: '/images/sky-quartz/12.jpg',
+    alt: 'SKY Floor 컬러 쿼츠 바닥 도포 시공',
+  },
+  { src: '/images/sky-quartz/13.jpg', alt: 'SKY Floor 컬러 쿼츠 바닥 상세' },
+  {
+    src: '/images/sky-quartz/14.jpg',
+    alt: 'SKY Floor 컬러 쿼츠 코빙 마감 상세',
+  },
+  {
+    src: '/images/sky-quartz/15.jpg',
+    alt: 'SKY Floor 컬러 쿼츠 바닥 시공 (설비 구간)',
+  },
+  { src: '/images/sky-quartz/16.jpg', alt: 'SKY Floor 컬러 쿼츠 코빙 마감' },
+];
+
+const FLAKE_SLIDES = [
+  {
+    src: '/images/sky-flake/01.jpg',
+    alt: 'SKY Floor 컬러 플레이크 바닥 (오렌지) 시공',
+  },
+  {
+    src: '/images/sky-flake/02.jpg',
+    alt: 'SKY Floor 컬러 플레이크 칩 바닥 상세 (레드)',
+  },
+  {
+    src: '/images/sky-flake/03.jpg',
+    alt: 'SKY Floor 컬러 플레이크 바닥 (레드) 시공',
+  },
+  { src: '/images/sky-flake/04.jpg', alt: 'SKY Floor 씰레스 바닥 (블루) 복도' },
+  { src: '/images/sky-flake/05.jpg', alt: 'SKY Floor 씰레스 바닥 (코랄) 복도' },
+  {
+    src: '/images/sky-flake/06.jpg',
+    alt: 'SKY Floor 컬러 플레이크 바닥 (그레이) 상세',
+  },
+  {
+    src: '/images/sky-flake/07.jpg',
+    alt: 'SKY Floor 컬러 플레이크 화장실 바닥 (옐로우)',
+  },
+  { src: '/images/sky-flake/08.jpg', alt: 'SKY Floor 씰레스 바닥 (그린) 시공' },
+  { src: '/images/sky-flake/09.jpg', alt: 'SKY Floor 씰레스 바닥 (블루) 식당' },
+  {
+    src: '/images/sky-flake/10.jpg',
+    alt: 'SKY Floor 컬러 플레이크 복도 바닥 (그린)',
+  },
+  { src: '/images/sky-flake/11.jpg', alt: 'SKY Floor 씰레스 바닥 (그린) 복도' },
+  {
+    src: '/images/sky-flake/12.jpg',
+    alt: 'SKY Floor 씰레스 바닥 (오렌지) 복도',
+  },
+  {
+    src: '/images/sky-flake/13.jpg',
+    alt: 'SKY Floor 컬러 플레이크 화장실 바닥 (그레이)',
+  },
+  {
+    src: '/images/sky-flake/14.jpg',
+    alt: 'SKY Floor 컬러 플레이크 바닥 시공 현장',
+  },
+  {
+    src: '/images/sky-flake/15.jpg',
+    alt: 'SKY Floor 컬러 플레이크 바닥 (오렌지) 마감',
+  },
+];
+
 export default class ProductSkyFloorController extends Controller {
   @service locale;
 
-  get skyFloorSlides() {
-    const isKo = this.locale.isKorean;
+  get skyGalleryCategories() {
     return [
+      { id: 'quartz', ko: 'QUARTZ', en: 'QUARTZ', slides: QUARTZ_SLIDES },
       {
-        id: 'sky-1',
-        src: '/images/sky-gallery/01.jpg',
-        alt: isKo
-          ? '대형 시설 Sky Floor 심리스 바닥 시공'
-          : 'Seamless Sky Floor in a large facility',
-      },
-      {
-        id: 'sky-2',
-        src: '/images/sky-gallery/02.jpg',
-        alt: isKo
-          ? '복도 Sky Floor 심리스 마감'
-          : 'Seamless Sky Floor corridor',
-      },
-      {
-        id: 'sky-3',
-        src: '/images/sky-gallery/03.jpg',
-        alt: isKo
-          ? '주방 Sky Floor 논슬립 바닥'
-          : 'Non-slip Sky Floor in a kitchen',
-      },
-      {
-        id: 'sky-4',
-        src: '/images/sky-gallery/04.jpg',
-        alt: isKo ? 'Sky Floor 코빙 마감 상세' : 'Sky Floor coving detail',
-      },
-      {
-        id: 'sky-5',
-        src: '/images/sky-gallery/05.jpg',
-        alt: isKo
-          ? '화장실 컬러 쿼츠 Sky Floor 바닥'
-          : 'Color-quartz Sky Floor restroom',
-      },
-      {
-        id: 'sky-6',
-        src: '/images/sky-gallery/06.jpg',
-        alt: isKo ? '화장실 쿼츠 Sky Floor 바닥' : 'Quartz Sky Floor restroom',
-      },
-      {
-        id: 'sky-7',
-        src: '/images/sky-gallery/07.jpg',
-        alt: isKo ? '학교 복도 Sky Floor 바닥' : 'School corridor Sky Floor',
-      },
-      {
-        id: 'sky-8',
-        src: '/images/sky-gallery/08.jpg',
-        alt: isKo
-          ? '체육시설 Sky Floor 탄성 바닥'
-          : 'Resilient Sky Floor in a sports facility',
+        id: 'flake',
+        ko: 'Flake Chips',
+        en: 'Flake Chips',
+        slides: FLAKE_SLIDES,
       },
     ];
   }

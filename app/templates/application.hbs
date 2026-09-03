@@ -11,6 +11,11 @@
       class="nav {{if this.mobileNavOpen 'nav--open'}}"
       aria-label="Primary"
     >
+      <LinkTo
+        @route="company"
+        class="nav-link"
+        {{on "click" this.closeMobileNav}}
+      >{{this.locale.t "nav.company"}}</LinkTo>
       <div
         class="dropdown {{if this.productsOpen 'is-open'}}"
         {{on "mouseenter" this.openProductsDropdown}}
@@ -32,7 +37,11 @@
             ></path></svg>
         </button>
         <div class="dropdown-menu" id="products-menu">
-          <div class="dropdown-group-header">AQUA-CRETE</div>
+          <div class="dropdown-group-header"><img
+              class="dropdown-logo"
+              src="/images/aqua-crete-logo.png"
+              alt="AQUA-CRETE"
+            /></div>
           <LinkTo
             @route="product.aqua-crete"
             class="dropdown-item"
@@ -45,37 +54,23 @@
           >{{this.locale.t "dropdown.aquaWall"}}</LinkTo>
 
           <div class="dropdown-divider"></div>
-          <div class="dropdown-group-header">SKY</div>
+          <div class="dropdown-group-header"><img
+              class="dropdown-logo"
+              src="/images/sky-logo.png"
+              alt="SKY"
+            /></div>
           <LinkTo
             @route="product.sky-floor"
             class="dropdown-item"
             {{on "click" this.closeMobileNav}}
           >{{this.locale.t "dropdown.skyFloor"}}</LinkTo>
-          <span
-            class="dropdown-item dropdown-item--disabled"
-            title={{this.locale.t "dropdown.comingSoon"}}
-          >
-            <span>{{this.locale.t "dropdown.skyFlex"}}</span>
-            <span class="dropdown-badge">{{this.locale.t
-                "dropdown.comingSoon"
-              }}</span>
-          </span>
-          <span
-            class="dropdown-item dropdown-item--disabled"
-            title={{this.locale.t "dropdown.comingSoon"}}
-          >
-            <span>{{this.locale.t "dropdown.skyAu"}}</span>
-            <span class="dropdown-badge">{{this.locale.t
-                "dropdown.comingSoon"
-              }}</span>
-          </span>
+          <LinkTo
+            @route="product.polyaspartic-waterproof"
+            class="dropdown-item"
+            {{on "click" this.closeMobileNav}}
+          >{{this.locale.t "dropdown.skyAu"}}</LinkTo>
         </div>
       </div>
-      <LinkTo
-        @route="company"
-        class="nav-link"
-        {{on "click" this.closeMobileNav}}
-      >{{this.locale.t "nav.company"}}</LinkTo>
 
       <LinkTo
         @route="certifications"
@@ -186,7 +181,7 @@
         {{this.locale.t "footer.downloads.title"}}
       </div>
       <LinkTo
-        @route="downloads"
+        @route="certifications"
         class="mt-2 flex items-center gap-2 text-white/80 catalog"
       >
         {{this.locale.t "footer.downloads.link"}}

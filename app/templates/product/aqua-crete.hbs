@@ -1,98 +1,25 @@
 {{#if this.locale.isKorean}}
   <article class="aqua-crete-page page ac-page full-bleed" {{aqua-reveal}}>
     {{! ================= HERO ================= }}
-    <section class="ac-hero">
+    <section class="ac-hero ac-hero--photo">
       <div class="ac-hero__bg" aria-hidden="true">
-        <img src="/images/aqua-crete-hero-white.jpg" alt="" />
+        <img src="/images/aqua-crete-hero.jpg" alt="" />
       </div>
-      <div class="ac-inner ac-hero__grid">
+      <div class="ac-inner ac-hero__grid ac-hero__grid--solo">
         <div class="ac-hero__content">
-          <p class="ac-hero__eyebrow">AQUA-CRETE
-            <span>Safer · Faster · Harder</span></p>
-          <p class="ac-hero__kicker">수용성 무기불연재 세라믹 방수 바닥 마감재</p>
-          <h1 class="ac-hero__title">아쿠아크리트<span
-              class="ac-reg"
-            >®</span></h1>
-          <p class="ac-hero__lead">
-            {{break-lines
-              "Safer, Faster, Harder. 냉·온이 반복되는 고위생 현장에서 빠른 시공과 뛰어난 내구성을 동시에 제공하는 Cleantech의 대표 바닥 솔루션입니다."
-            }}
-          </p>
-          <ul class="ac-hero__tags" aria-label="핵심 슬로건">
-            <li>위생 관리 최적화</li>
-            <li>24h 빠른 재가동</li>
-            <li>폴리싱 마감 기술</li>
-          </ul>
-          <div class="ac-hero__cta">
-            <LinkTo @route="contact" class="ac-btn ac-btn--primary">도입 상담
-              요청
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-            </LinkTo>
-            <LinkTo @route="downloads" class="ac-btn ac-btn--ghost">브로슈어 /
-              SDS 보기
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" /></svg>
-            </LinkTo>
-          </div>
+          <h1 class="ac-hero__titleimg">
+            <img src="/images/aqua-crete-hero-title.png" alt="" />
+            <span class="ac-sr-only">아쿠아크리트 신제품(NEP) 불연 바닥재 —
+              Safer, Faster, Harder</span>
+          </h1>
         </div>
-        <aside class="ac-hero__panel" aria-label="슬로건 및 인증">
-          <div class="ac-hero__sfh"><span>Safer</span><i>·</i><span
-            >Faster</span><i>·</i><span>Harder</span></div>
-          <div class="ac-badges">
-            <div class="ac-badge">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ><path d="M9 11l3 3L22 4" /><path
-                  d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
-                /></svg>
-              <span><b>HACCP Certified</b></span>
-            </div>
-            <div class="ac-badge">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ><path
-                  d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"
-                /><path d="M2 21c0-3 1.85-5.36 5.08-6" /></svg>
-              <span><b>친환경 바닥재</b></span>
-            </div>
-            <div class="ac-badge">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z" /><path
-                  d="M8 12l2.5 2.5L16 9"
-                /></svg>
-              <span><b>Food Safety</b></span>
-            </div>
-          </div>
-        </aside>
+        <div class="ac-hero__certs" aria-hidden="true"><img
+            src="/images/cert-nep.png"
+            alt=""
+          /><img src="/images/cert-eco.png" alt="" /><img
+            src="/images/cert-green.png"
+            alt=""
+          /><img src="/images/cert-ktr.png" alt="" /></div>
       </div>
       <div class="ac-metrics">
         <div class="ac-inner ac-metrics__grid">
@@ -115,41 +42,13 @@
 
     <div class="margin-page">
       {{! ================= 인증 ================= }}
-      <section class="ac-sec ac-certs">
-        <div class="ac-certrow ac-reveal">
-          <div class="ac-certs__label">공인 인증 · 시험<b>NEP · 친환경 ·
-              녹색기술 · KS</b></div>
-          <div class="ac-certlist">
-            <div class="ac-cert"><figure><img
-                  src="/images/cert-eco.jpg"
-                  alt="환경표지 인증서"
-                  loading="lazy"
-                /></figure><figcaption>환경표지 인증</figcaption></div>
-            <div class="ac-cert"><figure><img
-                  src="/images/cert-green-tech.jpg"
-                  alt="녹색기술 인증서"
-                  loading="lazy"
-                /></figure><figcaption>녹색기술 인증</figcaption></div>
-            <div class="ac-cert"><figure><img
-                  src="/images/cert-quality.jpg"
-                  alt="품질 인증서"
-                  loading="lazy"
-                /></figure><figcaption>품질 인증</figcaption></div>
-            <div class="ac-cert"><figure><img
-                  src="/images/cert-ks.jpg"
-                  alt="KS 인증서"
-                  loading="lazy"
-                /></figure><figcaption>KS 인증</figcaption></div>
-          </div>
-        </div>
-      </section>
 
       {{! ================= 개념 ================= }}
       <section class="ac-sec ac-concept" id="concept">
         <div class="ac-concept__grid">
           <div class="ac-concept__aside ac-reveal">
             <span class="ac-eyebrow">Concept</span>
-            <h2>아쿠아크리트<br />개념</h2>
+            <h2>아쿠아크리트 개념</h2>
             <div class="ac-keychips">
               <span class="ac-keychip">100% 무기계 불연재</span>
               <span class="ac-keychip">고어텍스 기능</span>
@@ -164,25 +63,32 @@
               건조상태 또는 물에 젖은 상태(함수비 100%)에서 바탕면에 불연재
               아쿠아크리트를 미장 또는 스프레이뿜칠 등의 방법으로 시공하는
               마감재입니다.</p>
-            <div class="ac-nep">
-              <p>신제품(NEP) 불연재 아쿠아크리트는 100% 불연성 재료의 사용으로
-                화재시 불에 타지 않고 유독가스가 발생하지 않으며 통기성 및
-                방수성(고어텍스 기능)이 우수하고, 시공시 냄새 발생이 없는
-                바탕면과의 강력한 부착력을 발휘하는 무기 불연 방수 성능을
-                발현하는 마감재입니다.</p>
-            </div>
+            <p>신제품(NEP) 불연재 아쿠아크리트는 100% 불연성 재료의 사용으로
+              화재시 불에 타지 않고 유독가스가 발생하지 않으며 통기성 및
+              방수성(고어텍스 기능)이 우수하고, 시공시 냄새 발생이 없는
+              바탕면과의 강력한 부착력을 발휘하는 무기 불연 방수 성능을 발현하는
+              마감재입니다.</p>
           </div>
         </div>
       </section>
 
-      {{! ================= 시공 현장 (슬라이더) ================= }}
-      <section class="ac-sec ac-gallery" id="gallery">
-        <div class="ac-head ac-reveal">
-          <span class="ac-eyebrow">Gallery</span>
-          <h2>시공 현장</h2>
+      {{! ================= 구조도 ================= }}
+      <section class="ac-sec ac-diagram-sec">
+        <div class="ac-concept__grid">
+          <div class="ac-concept__aside ac-reveal">
+            <span class="ac-eyebrow">Concept</span>
+            <h2>아쿠아크리트 개념</h2>
+          </div>
         </div>
-        <div class="ac-gallery__panel ac-reveal" data-d="1">
-          <AcSlider />
+        <div class="ac-inner">
+          <figure class="ac-diagram-fig ac-reveal">
+
+            <img
+              src="/images/aqua-crete-structure.png"
+              alt="아쿠아크리트 구조도"
+              loading="lazy"
+            />
+          </figure>
         </div>
       </section>
 
@@ -220,8 +126,9 @@
               ><path
                   d="M10 13.5V5a2 2 0 1 1 4 0v8.5a4 4 0 1 1-4 0z"
                 /></svg></div>
-            <h3>영하 기온 시공</h3>
-            <p>동절기 영하온도 환경에서도 완벽한 경화반응으로 시공이 가능함</p>
+            <h3>영하 기온 시공 및 강력한 부착력</h3>
+            <p>동절기 영하온도 환경에서 시공이 가능하며 제품 시공 후 빠른
+              시간내에 경화가 이루어져 후속공정작업이 가능함</p>
           </article>
           <article class="ac-fcard ac-reveal" data-d="3">
             <div class="ac-fcard__ic"><svg
@@ -231,11 +138,12 @@
                 stroke-width="1.7"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-              ><circle cx="12" cy="13" r="8" /><path
-                  d="M12 9v4l3 2M9 2h6M12 5V2"
+              ><rect x="3" y="7.5" width="18" height="9" rx="1.5" /><path
+                  d="M7.5 7.5v9M12 7.5v9M16.5 7.5v9"
                 /></svg></div>
-            <h3>초속경화</h3>
-            <p>제품 시공 후 빠른 시간내에 경화가 이루어져 후속공정작업이 가능함</p>
+            <h3>트렌치 주위 완벽보가</h3>
+            <p>트렌치 주위의 탈락부위를 완벽히 보강하여 강력한 부착력 및 완벽한
+              방수성능을 유지함</p>
           </article>
           <article class="ac-fcard is-signature ac-reveal" data-d="4">
             <span class="ac-flag">GORE-TEX®</span>
@@ -316,282 +224,14 @@
         </div>
       </section>
 
-      {{! ================= 층별 구조 ================= }}
-      <section class="ac-sec ac-structure" id="structure">
+      {{! ================= 시공 현장 (슬라이더) ================= }}
+      <section class="ac-sec ac-gallery" id="gallery">
         <div class="ac-head ac-reveal">
-          <span class="ac-eyebrow">Structure</span>
-          <h2>층별 구조</h2>
+          <span class="ac-eyebrow">Gallery</span>
+          <h2>Steps & Gallery</h2>
         </div>
-        <div class="ac-struct-grid">
-          <figure class="ac-diagram ac-reveal">
-            <svg
-              viewBox="0 0 520 340"
-              role="img"
-              aria-label="아쿠아크리트 층별 단면 구조 다이어그램"
-            >
-              <defs>
-                <linearGradient id="acTop" x1="0" y1="0" x2="0" y2="1"><stop
-                    offset="0"
-                    stop-color="#4aa06a"
-                  /><stop offset="1" stop-color="#3a8c5b" /></linearGradient>
-                <linearGradient id="acCer" x1="0" y1="0" x2="0" y2="1"><stop
-                    offset="0"
-                    stop-color="#35c9db"
-                  /><stop offset="1" stop-color="#12b3c7" /></linearGradient>
-                <linearGradient id="acBase" x1="0" y1="0" x2="0" y2="1"><stop
-                    offset="0"
-                    stop-color="#c3ced3"
-                  /><stop offset="1" stop-color="#9fadb4" /></linearGradient>
-              </defs>
-              <g
-                stroke="#0c93a6"
-                stroke-width="2"
-                fill="none"
-                stroke-linecap="round"
-              >
-                <path
-                  d="M120 34c0 7-5 9-5 13a5 5 0 0 0 10 0c0-4-5-6-5-13z"
-                  fill="#bfeef4"
-                />
-                <path
-                  d="M180 26c0 6-4 8-4 11a4 4 0 0 0 8 0c0-3-4-5-4-11z"
-                  fill="#bfeef4"
-                />
-              </g>
-              <g
-                stroke="#0c93a6"
-                stroke-width="2.4"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                opacity="0.9"
-              >
-                <path d="M250 150c0-16 0-40 0-56M250 40l-6 8M250 40l6 8" />
-                <path d="M300 150c0-16 0-40 0-56M300 40l-6 8M300 40l6 8" />
-                <path d="M350 150c0-16 0-40 0-56M350 40l-6 8M350 40l6 8" />
-              </g>
-              <rect
-                x="70"
-                y="96"
-                width="380"
-                height="26"
-                rx="6"
-                fill="url(#acTop)"
-              />
-              <rect
-                x="70"
-                y="126"
-                width="380"
-                height="52"
-                rx="4"
-                fill="url(#acCer)"
-              />
-              <g
-                stroke="#ffffff"
-                stroke-width="3"
-                opacity="0.6"
-                stroke-linecap="round"
-              ><path
-                  d="M120 174v-44M180 174v-44M240 174v-44M300 174v-44M360 174v-44M410 174v-44"
-                /></g>
-              <rect
-                x="70"
-                y="182"
-                width="380"
-                height="16"
-                rx="3"
-                fill="#f0a808"
-                opacity="0.85"
-              />
-              <rect
-                x="70"
-                y="202"
-                width="380"
-                height="66"
-                rx="6"
-                fill="url(#acBase)"
-              />
-              <g fill="#7f8f96" opacity="0.5"><circle
-                  cx="120"
-                  cy="228"
-                  r="3"
-                /><circle cx="170" cy="248" r="2.5" /><circle
-                  cx="230"
-                  cy="232"
-                  r="3.5"
-                /><circle cx="300" cy="250" r="2.5" /><circle
-                  cx="360"
-                  cy="230"
-                  r="3"
-                /><circle cx="410" cy="246" r="2.5" /></g>
-              <g font-size="13" font-weight="700">
-                <line
-                  x1="450"
-                  y1="109"
-                  x2="470"
-                  y2="109"
-                  stroke="#3a8c5b"
-                  stroke-width="1.5"
-                /><text x="474" y="113" fill="#2f7a4f">폴리싱 · 실러</text>
-                <line
-                  x1="450"
-                  y1="152"
-                  x2="470"
-                  y2="152"
-                  stroke="#0c93a6"
-                  stroke-width="1.5"
-                /><text x="474" y="156" fill="#0a7b8b">아쿠아크리트 세라믹층</text>
-                <line
-                  x1="450"
-                  y1="190"
-                  x2="470"
-                  y2="190"
-                  stroke="#c78a06"
-                  stroke-width="1.5"
-                /><text x="474" y="194" fill="#a06f05">습윤 조성 바탕면</text>
-                <line
-                  x1="450"
-                  y1="235"
-                  x2="470"
-                  y2="235"
-                  stroke="#7f8f96"
-                  stroke-width="1.5"
-                /><text x="474" y="239" fill="#5d6f77">무근 콘크리트</text>
-              </g>
-              <text x="70" y="300" font-size="12" fill="#5d6f77">↑ 수증기
-                배출(통기)</text>
-              <text x="270" y="300" font-size="12" fill="#0a7b8b">물방울
-                차단(방수)</text>
-            </svg>
-            <figcaption>콘크리트 모체부터 폴리싱 마감까지의 층별 구조</figcaption>
-          </figure>
-          <div class="ac-struct-lists">
-            <div class="ac-struct-card ac-reveal" data-d="1">
-              <h3><span class="ac-tag"></span>층별 구조</h3>
-              <ul>
-                <li><b>폴리싱 작업 &amp; 실러 도포</b>
-                  – 세균 번식과 오염 침투를 억제하는 유리질 코팅</li>
-                <li><b>수용성 무기 불연재 아쿠아크리트 도포</b>
-                  – 수분 배출 통로를 포함한 세라믹 몰타르층</li>
-                <li><b>바탕면 습윤 조성</b>
-                  – 수증기 투과는 허용하고 역방향 수분은 차단</li>
-                <li><b>시멘트 불탈층 &amp; 무근 콘크리트</b>
-                  – 크랙 필러 &amp; 프라이머로 기층 결속력 강화</li>
-              </ul>
-            </div>
-            <div class="ac-struct-card ac-eff ac-reveal" data-d="2">
-              <h3><span class="ac-tag"></span>적용 효과</h3>
-              <ul>
-                <li>무기불연재로 화재 리스크 최소화, 고온 살균 공정과도 호환</li>
-                <li>미세먼지·분진 발생이 적어 식품/제약 HACCP 기준 대응</li>
-                <li>강력한 모체 결합력으로 들뜸·박리 없이 장기간 유지관리</li>
-                <li>폴리싱 후 고광택 유지, 청소와 위생 점검 공정을 단축</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {{! ================= 주요 적용 현장 ================= }}
-      <section class="ac-sec ac-apps" id="apps">
-        <div class="ac-head ac-reveal">
-          <span class="ac-eyebrow">Applications</span>
-          <h2>주요 적용 현장</h2>
-          <p>다양한 산업에서 검증된 아쿠아크리트 활용 사례를 소개합니다.</p>
-        </div>
-        <div class="ac-appgrid">
-          <article class="ac-app ac-reveal" data-d="1">
-            <div class="ac-app__media"><img
-                src="/images/hccp.jpg"
-                alt="급식 및 조리 시설 아쿠아크리트 시공 사진"
-                loading="lazy"
-              /></div>
-            <div class="ac-app__in"><div class="ac-k">Kitchen</div><h3>급식
-                &amp; 조리 시설</h3>
-              <p>HACCP 인증 공장, 중앙 주방, 육가공·수산물 라인,
-                학교·병원·군부대 급식소, 대형 조리실, 세척실 구간의 위생 관리와
-                미끄럼 사고 예방.</p></div>
-          </article>
-          <article class="ac-app ac-reveal" data-d="2">
-            <div class="ac-app__media"><img
-                src="/images/냉동.jpg"
-                alt="물류 및 냉동창고 아쿠아크리트 시공 사진"
-                loading="lazy"
-              /></div>
-            <div class="ac-app__in"><div class="ac-k">Cold Chain</div><h3>물류
-                &amp; 냉동창고</h3>
-              <p>저온 물류센터, 냉동창고 하역장, 주차·적재 구역 등 중량 하중과
-                온도 변화가 큰 환경.</p></div>
-          </article>
-          <article class="ac-app ac-reveal" data-d="3">
-            <div class="ac-app__media"><img
-                src="/images/외벽.jpg"
-                alt="불연 단열 방수 외장재 적용 사례"
-                loading="lazy"
-              /></div>
-            <div class="ac-app__in"><div class="ac-k">Facade</div><h3>불연 +
-                단열 + 방수 외장재</h3>
-              <p>불연·단열·방수 기능과 결로 방지, 열 손실 최소화를 동시에
-                요구하는 외벽·노출 슬래브 프로젝트.</p></div>
-          </article>
-          <article class="ac-app ac-reveal" data-d="1">
-            <div class="ac-app__media"><img
-                src="/images/활주로.jpg"
-                alt="활주로 긴급 보수 아쿠아크리트 시공 사진"
-                loading="lazy"
-              /></div>
-            <div class="ac-app__in"><div class="ac-k">Public</div><h3>긴급보수
-                &amp; 공공 시설</h3>
-              <p>공항 활주로, 도로 등 공공 인프라 긴급 보수에서 초속경화로 빠른
-                재개방과 내구성을 확보.</p></div>
-          </article>
-          <article class="ac-app ac-reveal" data-d="2">
-            <div class="ac-app__media"><img
-                src="/images/aquacrete-1.jpg"
-                alt="맞춤 색상·표면 설계 아쿠아크리트 사례"
-                loading="lazy"
-              /></div>
-            <div class="ac-app__in"><div class="ac-k">Custom</div><h3>특수 고객
-                맞춤</h3>
-              <p>베이커리, 와이너리, 스마트팜 등 맞춤형 색상·표면 설계가 필요한
-                현장.</p></div>
-          </article>
-        </div>
-      </section>
-
-      {{! ================= STEP ================= }}
-      <section class="ac-sec ac-process" id="process">
-        <div class="ac-head ac-reveal">
-          <span class="ac-eyebrow">Process</span>
-          <h2>아쿠아크리트 STEP</h2>
-          <p>표준 시공 프로세스를 통해 일관된 품질과 안전성을 확보합니다.</p>
-        </div>
-        <div class="ac-steps">
-          <div class="ac-step ac-reveal" data-d="1"><span
-              class="ac-step__line"
-            ></span><div class="ac-step__n"></div>
-            <h3>바닥 진단 &amp; 준비</h3><p>기존 마감 제거, 크랙 보수, 습도
-              측정을 수행하여 최적의 기층 상태를 확보합니다.</p></div>
-          <div class="ac-step ac-reveal" data-d="1"><span
-              class="ac-step__line"
-            ></span><div class="ac-step__n"></div>
-            <h3>프라이머 &amp; 베이스 충진</h3><p>수용성 프라이머와 세라믹
-              필러를 모공에 충진해 콘크리트와의 결속을 강화합니다.</p></div>
-          <div class="ac-step ac-reveal" data-d="2"><span
-              class="ac-step__line"
-            ></span><div class="ac-step__n"></div>
-            <h3>수용성 무기불연재 Aqua-Crete 도포</h3><p>투습형 방수층을
-              형성하여 수분 역류를 차단하고 하부 습기를 위쪽으로 배출합니다.</p></div>
-          <div class="ac-step ac-reveal" data-d="3"><span
-              class="ac-step__line"
-            ></span><div class="ac-step__n"></div>
-            <h3>폴리싱 &amp; 실러 마감</h3><p>다단계 폴리싱 공정과 마감 실러를
-              통해 고광택·저공극 표면을 완성합니다.</p></div>
-          <div class="ac-step ac-reveal" data-d="4"><span
-              class="ac-step__line"
-            ></span><div class="ac-step__n"></div>
-            <h3>품질 검사 &amp; 인수</h3><p>평활도, 미끄럼 계수, 경도, 색상
-              균일성을 점검하고 고객과 최종 검수를 진행합니다.</p></div>
+        <div class="ac-gallery__panel ac-reveal" data-d="1">
+          <AcGalleryTabs @isKorean={{this.locale.isKorean}} />
         </div>
       </section>
 
@@ -626,99 +266,25 @@
 {{else}}
   <article class="aqua-crete-page page ac-page full-bleed" {{aqua-reveal}}>
     {{! ================= HERO ================= }}
-    <section class="ac-hero">
+    <section class="ac-hero ac-hero--photo">
       <div class="ac-hero__bg" aria-hidden="true">
-        <img src="/images/aqua-crete-hero-white.jpg" alt="" />
+        <img src="/images/aqua-crete-hero.jpg" alt="" />
       </div>
-      <div class="ac-inner ac-hero__grid">
+      <div class="ac-inner ac-hero__grid ac-hero__grid--solo">
         <div class="ac-hero__content">
-          <p class="ac-hero__eyebrow">AQUA-CRETE
-            <span>Safer · Faster · Harder</span></p>
-          <p class="ac-hero__kicker">Water-based non-combustible inorganic
-            ceramic waterproof flooring</p>
-          <h1 class="ac-hero__title">Aqua-Crete<span
-              class="ac-reg"
-            >®</span></h1>
-          <p class="ac-hero__lead">
-            {{break-lines
-              "Safer, Faster, Harder. CleanTech's flagship floor for high-hygiene spaces that face repeated thermal shock and aggressive cleaning routines."
-            }}
-          </p>
-          <ul class="ac-hero__tags" aria-label="Key selling points">
-            <li>Hygiene-optimized surface</li>
-            <li>24h rapid turnaround</li>
-            <li>Polishing finish expertise</li>
-          </ul>
-          <div class="ac-hero__cta">
-            <LinkTo @route="contact" class="ac-btn ac-btn--primary">Request
-              Consultation
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-            </LinkTo>
-            <LinkTo @route="downloads" class="ac-btn ac-btn--ghost">Download
-              Brochure / SDS
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" /></svg>
-            </LinkTo>
-          </div>
+          <h1 class="ac-hero__titleimg">
+            <img src="/images/aqua-crete-hero-title.png" alt="" />
+            <span class="ac-sr-only">Aqua-Crete — New Excellent Product (NEP)
+              non-combustible flooring · Safer, Faster, Harder</span>
+          </h1>
         </div>
-        <aside class="ac-hero__panel" aria-label="Slogan and certifications">
-          <div class="ac-hero__sfh"><span>Safer</span><i>·</i><span
-            >Faster</span><i>·</i><span>Harder</span></div>
-          <div class="ac-badges">
-            <div class="ac-badge">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ><path d="M9 11l3 3L22 4" /><path
-                  d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
-                /></svg>
-              <span><b>HACCP Certified</b></span>
-            </div>
-            <div class="ac-badge">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ><path
-                  d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"
-                /><path d="M2 21c0-3 1.85-5.36 5.08-6" /></svg>
-              <span><b>Eco Flooring</b></span>
-            </div>
-            <div class="ac-badge">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z" /><path
-                  d="M8 12l2.5 2.5L16 9"
-                /></svg>
-              <span><b>Food Safety</b></span>
-            </div>
-          </div>
-        </aside>
+        <div class="ac-hero__certs" aria-hidden="true"><img
+            src="/images/cert-nep.png"
+            alt=""
+          /><img src="/images/cert-eco.png" alt="" /><img
+            src="/images/cert-green.png"
+            alt=""
+          /><img src="/images/cert-ktr.png" alt="" /></div>
       </div>
       <div class="ac-metrics">
         <div class="ac-inner ac-metrics__grid">
@@ -796,6 +362,19 @@
         </div>
       </section>
 
+      {{! ================= STRUCTURE DIAGRAM ================= }}
+      <section class="ac-sec ac-diagram-sec">
+        <div class="ac-inner">
+          <figure class="ac-diagram-fig ac-reveal">
+            <img
+              src="/images/aqua-crete-structure.png"
+              alt="Aqua-Crete structure diagram"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+
       {{! ================= GALLERY (slider) ================= }}
       <section class="ac-sec ac-gallery" id="gallery">
         <div class="ac-head ac-reveal">
@@ -803,7 +382,7 @@
           <h2>On-Site Gallery</h2>
         </div>
         <div class="ac-gallery__panel ac-reveal" data-d="1">
-          <AcSlider />
+          <AcGalleryTabs @isKorean={{this.locale.isKorean}} />
         </div>
       </section>
 
@@ -939,187 +518,6 @@
             <p>Low emissions and eco credentials support food, pharma, and other
               sensitive facilities.</p>
           </article>
-        </div>
-      </section>
-
-      {{! ================= STRUCTURE ================= }}
-      <section class="ac-sec ac-structure" id="structure">
-        <div class="ac-head ac-reveal">
-          <span class="ac-eyebrow">Structure</span>
-          <h2>Layer Structure</h2>
-        </div>
-        <div class="ac-struct-grid">
-          <figure class="ac-diagram ac-reveal">
-            <svg
-              viewBox="0 0 520 340"
-              role="img"
-              aria-label="Aqua-Crete layer cross-section diagram"
-            >
-              <defs>
-                <linearGradient id="acTopEn" x1="0" y1="0" x2="0" y2="1"><stop
-                    offset="0"
-                    stop-color="#4aa06a"
-                  /><stop offset="1" stop-color="#3a8c5b" /></linearGradient>
-                <linearGradient id="acCerEn" x1="0" y1="0" x2="0" y2="1"><stop
-                    offset="0"
-                    stop-color="#35c9db"
-                  /><stop offset="1" stop-color="#12b3c7" /></linearGradient>
-                <linearGradient id="acBaseEn" x1="0" y1="0" x2="0" y2="1"><stop
-                    offset="0"
-                    stop-color="#c3ced3"
-                  /><stop offset="1" stop-color="#9fadb4" /></linearGradient>
-              </defs>
-              <g
-                stroke="#0c93a6"
-                stroke-width="2"
-                fill="none"
-                stroke-linecap="round"
-              >
-                <path
-                  d="M120 34c0 7-5 9-5 13a5 5 0 0 0 10 0c0-4-5-6-5-13z"
-                  fill="#bfeef4"
-                />
-                <path
-                  d="M180 26c0 6-4 8-4 11a4 4 0 0 0 8 0c0-3-4-5-4-11z"
-                  fill="#bfeef4"
-                />
-              </g>
-              <g
-                stroke="#0c93a6"
-                stroke-width="2.4"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                opacity="0.9"
-              >
-                <path d="M250 150c0-16 0-40 0-56M250 40l-6 8M250 40l6 8" />
-                <path d="M300 150c0-16 0-40 0-56M300 40l-6 8M300 40l6 8" />
-                <path d="M350 150c0-16 0-40 0-56M350 40l-6 8M350 40l6 8" />
-              </g>
-              <rect
-                x="70"
-                y="96"
-                width="380"
-                height="26"
-                rx="6"
-                fill="url(#acTopEn)"
-              />
-              <rect
-                x="70"
-                y="126"
-                width="380"
-                height="52"
-                rx="4"
-                fill="url(#acCerEn)"
-              />
-              <g
-                stroke="#ffffff"
-                stroke-width="3"
-                opacity="0.6"
-                stroke-linecap="round"
-              ><path
-                  d="M120 174v-44M180 174v-44M240 174v-44M300 174v-44M360 174v-44M410 174v-44"
-                /></g>
-              <rect
-                x="70"
-                y="182"
-                width="380"
-                height="16"
-                rx="3"
-                fill="#f0a808"
-                opacity="0.85"
-              />
-              <rect
-                x="70"
-                y="202"
-                width="380"
-                height="66"
-                rx="6"
-                fill="url(#acBaseEn)"
-              />
-              <g fill="#7f8f96" opacity="0.5"><circle
-                  cx="120"
-                  cy="228"
-                  r="3"
-                /><circle cx="170" cy="248" r="2.5" /><circle
-                  cx="230"
-                  cy="232"
-                  r="3.5"
-                /><circle cx="300" cy="250" r="2.5" /><circle
-                  cx="360"
-                  cy="230"
-                  r="3"
-                /><circle cx="410" cy="246" r="2.5" /></g>
-              <g font-size="12.5" font-weight="700">
-                <line
-                  x1="450"
-                  y1="109"
-                  x2="470"
-                  y2="109"
-                  stroke="#3a8c5b"
-                  stroke-width="1.5"
-                /><text x="474" y="113" fill="#2f7a4f">Polish · Sealer</text>
-                <line
-                  x1="450"
-                  y1="152"
-                  x2="470"
-                  y2="152"
-                  stroke="#0c93a6"
-                  stroke-width="1.5"
-                /><text x="474" y="156" fill="#0a7b8b">Aqua-Crete ceramic</text>
-                <line
-                  x1="450"
-                  y1="190"
-                  x2="470"
-                  y2="190"
-                  stroke="#c78a06"
-                  stroke-width="1.5"
-                /><text x="474" y="194" fill="#a06f05">Conditioned base</text>
-                <line
-                  x1="450"
-                  y1="235"
-                  x2="470"
-                  y2="235"
-                  stroke="#7f8f96"
-                  stroke-width="1.5"
-                /><text x="474" y="239" fill="#5d6f77">Plain concrete</text>
-              </g>
-              <text x="70" y="300" font-size="12" fill="#5d6f77">↑ Vapor out
-                (breathable)</text>
-              <text x="285" y="300" font-size="12" fill="#0a7b8b">Water repelled</text>
-            </svg>
-            <figcaption>Layer structure from concrete substrate to polished
-              finish</figcaption>
-          </figure>
-          <div class="ac-struct-lists">
-            <div class="ac-struct-card ac-reveal" data-d="1">
-              <h3><span class="ac-tag"></span>Layer Structure</h3>
-              <ul>
-                <li><b>Polishing &amp; sealer application</b>
-                  – Glassy coating that suppresses bacterial growth and blocks
-                  contaminant penetration.</li>
-                <li><b>Water-based inorganic Aqua-Crete layer</b>
-                  – Ceramic mortar layer with channels for moisture discharge.</li>
-                <li><b>Moisture-conditioned base</b>
-                  – Allows vapor diffusion while blocking reverse moisture.</li>
-                <li><b>Cement laitance &amp; plain concrete</b>
-                  – Crack filler and primer reinforce the bond to the base slab.</li>
-              </ul>
-            </div>
-            <div class="ac-struct-card ac-eff ac-reveal" data-d="2">
-              <h3><span class="ac-tag"></span>Application Benefits</h3>
-              <ul>
-                <li>Non-combustible inorganic makeup minimizes fire risk and
-                  pairs well with high-temperature sterilization.</li>
-                <li>Low dust and particulates support food/pharma HACCP hygiene
-                  standards.</li>
-                <li>Strong bond to the substrate prevents lifting or
-                  delamination over long service periods.</li>
-                <li>High-gloss polish after finishing shortens cleaning and
-                  hygiene inspection time.</li>
-              </ul>
-            </div>
-          </div>
         </div>
       </section>
 

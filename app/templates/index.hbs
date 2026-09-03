@@ -20,7 +20,14 @@
       <div class="ac-home-hero__cta">
         <LinkTo @route="product.aqua-crete" class="ac-btn ac-btn--primary">
           {{this.heroCopy.ctaPrimary}}
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
         </LinkTo>
         <LinkTo @route="contact" class="ac-btn ac-btn--ghost">
           {{this.heroCopy.ctaSecondary}}
@@ -29,7 +36,14 @@
       <ul class="ac-home-hero__highlights">
         {{#each this.heroCopy.highlights as |item|}}
           <li class="ac-reveal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ><path d="M20 6 9 17l-5-5" /></svg>
             <span>{{item}}</span>
           </li>
         {{/each}}
@@ -47,7 +61,7 @@
         <h2>
           {{if
             this.locale.isKorean
-            "크린텍 제품"
+            "크린텍개발 제품"
             "CleanTech product lineup"
           }}
         </h2>
@@ -64,13 +78,21 @@
 
       <div class="ac-prod-grid">
         {{#each this.products as |product|}}
-          <article class="ac-prod ac-reveal {{if product.comingSoon 'is-soon'}}">
+          <article
+            class="ac-prod ac-reveal {{if product.comingSoon 'is-soon'}}"
+          >
             <div class="ac-prod__media">
-              <img src={{product.image}} alt={{product.imageAlt}} loading="lazy" />
+              <img
+                src={{product.image}}
+                alt={{product.imageAlt}}
+                loading="lazy"
+              />
               <span class="ac-prod__badge">{{product.badge}}</span>
               {{#if product.comingSoon}}
                 <div class="ac-prod__soon" aria-hidden="true">
-                  <span class="ac-prod__soon-badge">{{product.comingSoonLabel}}</span>
+                  <span
+                    class="ac-prod__soon-badge"
+                  >{{product.comingSoonLabel}}</span>
                 </div>
               {{/if}}
             </div>
@@ -99,12 +121,28 @@
               {{#if product.comingSoon}}
                 <span class="ac-prod__soon-pill" role="status">
                   {{product.comingSoonLabel}}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 8v4l3 2" /></svg>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ><circle cx="12" cy="12" r="9" /><path
+                      d="M12 8v4l3 2"
+                    /></svg>
                 </span>
               {{else}}
                 <LinkTo @route={{product.route}} class="ac-prod__link">
                   {{product.linkLabel}}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                 </LinkTo>
               {{/if}}
             </div>
@@ -128,15 +166,26 @@
           <ul class="ac-contact-bullets">
             {{#each this.contactCopy.bullets as |item|}}
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ><path d="M20 6 9 17l-5-5" /></svg>
                 <span>{{item}}</span>
               </li>
             {{/each}}
           </ul>
 
           <div class="ac-contact-direct">
-            <div class="ac-contact-direct__title">{{this.contactCopy.directTitle}}</div>
-            <div class="ac-contact-direct__desc">{{this.contactCopy.directDesc}}</div>
+            <div
+              class="ac-contact-direct__title"
+            >{{this.contactCopy.directTitle}}</div>
+            <div
+              class="ac-contact-direct__desc"
+            >{{this.contactCopy.directDesc}}</div>
             <div class="ac-contact-direct__links">
               <a href="tel:024202844">02-420-2844~5</a>
               <a href="mailto:ct4138605@gmail.com">ct4138605@gmail.com</a>
@@ -194,7 +243,9 @@
           </label>
 
           {{#if this.isSuccess}}
-            <div class="ac-form__msg--ok">{{this.contactCopy.successMessage}}</div>
+            <div
+              class="ac-form__msg--ok"
+            >{{this.contactCopy.successMessage}}</div>
           {{/if}}
           {{#if this.isError}}
             <div class="ac-form__msg--err">{{this.errorMessage}}</div>
@@ -206,7 +257,14 @@
             disabled={{this.submitDisabled}}
           >
             {{#if this.isSubmitting}}
-              <svg class="ac-form__spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-6.22-8.56" /></svg>
+              <svg
+                class="ac-form__spin"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+              ><path d="M21 12a9 9 0 1 1-6.22-8.56" /></svg>
             {{/if}}
             <span>{{this.buttonLabel}}</span>
           </button>

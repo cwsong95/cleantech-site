@@ -4,34 +4,54 @@ import { registerDestructor } from '@ember/destroyable';
 
 const SLIDES = [
   {
-    id: 'main-2016',
-    src: '/main/20160815_084115.jpg',
-    alt: 'On-site floor installation with polishing in progress',
+    id: 'hero-1',
+    src: '/hero/01.jpg',
+    alt: 'Polished terrazzo corridor floor finished by CleanTech',
   },
   {
-    id: 'main-2017',
-    src: '/main/20170122_200803.jpg',
-    alt: 'Completed reflective floor finish in a production area',
+    id: 'hero-2',
+    src: '/hero/02.jpg',
+    alt: 'Glossy terrazzo restroom floor finish',
   },
   {
-    id: 'main-2019',
-    src: '/main/20190130_094517.jpg',
-    alt: 'Installation team preparing a floor for coating',
+    id: 'hero-3',
+    src: '/hero/03.jpg',
+    alt: 'Commercial kitchen floor with stainless trench drains',
   },
   {
-    id: 'main-2020',
-    src: '/main/20200826_170253.jpg',
-    alt: 'Coving detail where wall and floor meet for easier cleaning',
+    id: 'hero-4',
+    src: '/hero/04.jpg',
+    alt: 'Seamless terrazzo floor with a drainage channel',
   },
   {
-    id: 'main-2022',
-    src: '/main/20220809_080710.jpg',
-    alt: 'Finished floor surface showing gloss and slip-control texture',
+    id: 'hero-5',
+    src: '/hero/05.jpg',
+    alt: 'School cafeteria hygienic floor finish',
   },
   {
-    id: 'main-2025',
-    src: '/main/KakaoTalk_20250423_165637166_14.jpg',
-    alt: 'Drainage trench reinforcement with Aqua-Crete system',
+    id: 'hero-6',
+    src: '/hero/06.jpg',
+    alt: 'Aqua-Crete being hand-troweled on site',
+  },
+  {
+    id: 'hero-7',
+    src: '/hero/07.jpg',
+    alt: 'Repainted exterior brick facade',
+  },
+  {
+    id: 'hero-8',
+    src: '/hero/08.jpg',
+    alt: 'Renovated school building exterior',
+  },
+  {
+    id: 'hero-9',
+    src: '/hero/09.jpg',
+    alt: 'High-gloss terrazzo floor with a mirror finish',
+  },
+  {
+    id: 'hero-10',
+    src: '/hero/10.jpg',
+    alt: 'Brick-lined corridor with a polished floor finish',
   },
 ];
 
@@ -72,7 +92,7 @@ export default class HeroBgSliderComponent extends Component {
       speed: 800,
       effect: 'fade',
       fadeEffect: { crossFade: true },
-      autoplay: { delay: 3000, disableOnInteraction: false },
+      autoplay: { delay: 3500, disableOnInteraction: false },
       allowTouchMove: false,
     });
   }

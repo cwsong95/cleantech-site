@@ -1,4 +1,11 @@
-{{page-title (concat (this.locale.t "dropdown.polyaspartic") " - " (this.locale.t "dropdown.polyPrimer") " | CleanTech")}}
+{{page-title
+  (concat
+    (this.locale.t "dropdown.polyaspartic")
+    " - "
+    (this.locale.t "dropdown.polyPrimer")
+    " | CleanTech"
+  )
+}}
 
 <article class="page margin-page">
   <div class="container-app">
@@ -6,17 +13,27 @@
       class="space-y-4 rounded-3xl border border-slate-200 bg-white/90 p-10 shadow-xl shadow-blue-500/10 backdrop-blur"
     >
       <p class="coming-soon-badge">{{this.locale.t "dropdown.comingSoon"}}</p>
-      <h1 class="text-3xl font-bold leading-tight text-slate-900">{{this.locale.t "dropdown.polyaspartic"}} — {{this.locale.t "dropdown.polyPrimer"}}</h1>
+      <h1
+        class="text-3xl font-bold leading-tight text-slate-900"
+      >{{this.locale.t "dropdown.polyaspartic"}}
+        —
+        {{this.locale.t "dropdown.polyPrimer"}}</h1>
       <p class="text-base leading-relaxed text-slate-600">
         {{#if this.locale.isKorean}}
-          폴리아스파틱 프라이머 제품 페이지를 준비 중입니다. 제품 정보와 시공 자료가 업데이트되면 바로 안내드리겠습니다.
+          폴리아스파틱 프라이머 제품 페이지를 준비 중입니다. 제품 정보와 시공
+          자료가 업데이트되면 바로 안내드리겠습니다.
         {{else}}
-          The polyaspartic primer product page is coming soon. We will update you as soon as product information and application data are available.
+          The polyaspartic primer product page is coming soon. We will update
+          you as soon as product information and application data are available.
         {{/if}}
       </p>
       <div class="flex flex-wrap gap-3">
-        <LinkTo @route="contact" class="btn">{{this.locale.t "nav.contact"}}</LinkTo>
-        <LinkTo @route="downloads" class="btn-ghost">{{this.locale.t "footer.downloads.title"}}</LinkTo>
+        <LinkTo @route="contact" class="btn">{{this.locale.t
+            "nav.contact"
+          }}</LinkTo>
+        <LinkTo @route="downloads" class="btn-ghost">{{this.locale.t
+            "footer.downloads.title"
+          }}</LinkTo>
       </div>
     </section>
   </div>
