@@ -1245,12 +1245,12 @@ a:hover {
 /* Aqua-Crete simplified hero (no side panel) — match original height */
 .ac-page .ac-hero__grid--solo {
   grid-template-columns: 1fr;
-  min-height: 420px;
+  min-height: 480px;
 }
 @media (min-width: 940px) {
   .ac-page .ac-hero__grid--solo {
     grid-template-columns: 1fr;
-    min-height: 578px;
+    min-height: 660px;
   }
 }
 .ac-page .ac-hero__grid--solo .ac-hero__content {
@@ -1277,7 +1277,7 @@ a:hover {
 .ac-page .ac-hero__titleimg img {
   display: block;
   width: 100%;
-  max-width: 620px;
+  max-width: 680px;
   height: auto;
   filter: drop-shadow(0 2px 16px rgba(3, 12, 16, 0.45));
 }
@@ -1298,7 +1298,7 @@ a:hover {
 }
 .ac-page .ac-hero__certs img {
   display: block;
-  height: clamp(30px, 4vw, 46px);
+  height: clamp(38px, 5vw, 58px);
   width: auto;
   filter: drop-shadow(0 2px 9px rgba(3, 12, 16, 0.5));
 }
@@ -1309,7 +1309,7 @@ a:hover {
     bottom: 12px;
   }
   .ac-page .ac-hero__certs img {
-    height: 28px;
+    height: 34px;
   }
 }
 
@@ -3838,7 +3838,7 @@ a:hover {
 
 /* SKY Floor: smaller hero logo + larger intro text */
 .sky-floor-page .ac-hero__titleimg img {
-  max-width: 440px;
+  max-width: 480px;
 }
 .sky-floor-page .ac-concept__body p {
   font-size: clamp(17px, 1.95vw, 20px);
@@ -3894,7 +3894,7 @@ a:hover {
 }
 
 .sky-au-page .ac-hero__titleimg img {
-  max-width: 440px;
+  max-width: 480px;
 }
 
 /* ===== SKY-AU reaction mechanism ===== */
@@ -4315,4 +4315,50 @@ a:hover {
 .ac-page .rz-dlbtn svg {
   width: 17px;
   height: 17px;
+}
+
+/* SKY Floor: red tagline under the hero logo (aqua-crete lockup feel) */
+.sky-floor-page .ac-hero__logotag,
+.sky-au-page .ac-hero__logotag {
+  margin: 14px 0 0;
+  font-weight: 800;
+  font-size: clamp(20px, 3.2vw, 32px);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: #fff;
+  text-shadow: 0 2px 14px rgba(3, 12, 16, 0.4);
+}
+
+/* SKY Floor: hero feature pills under the tagline */
+.sky-floor-page .ac-hero__pills,
+.sky-au-page .ac-hero__pills {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.sky-floor-page .ac-hero__pills li,
+.sky-au-page .ac-hero__pills li {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  color: #f2fbfc;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1;
+  backdrop-filter: blur(4px);
+}
+.sky-floor-page .ac-hero__pills li::before,
+.sky-au-page .ac-hero__pills li::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: var(--ac-aqua);
 }

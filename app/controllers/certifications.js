@@ -15,7 +15,7 @@ const CONTENT = {
     tabs: {
       downloads: '카탈로그',
       certs: '인증서',
-      reports: '시험성적표',
+      reports: '시험성적서',
     },
     actions: {
       open: '새 창에서 보기',
@@ -27,7 +27,7 @@ const CONTENT = {
     downloads: [
       {
         id: 'aqua-crete',
-        name: '아쿠아크리트',
+        name: '불연재 아쿠아크리트 - 바닥',
         summary: '세라믹 무기불연 바닥 솔루션',
         image: '/images/catalog-aqua-crete.jpg',
         href: '/downloads/aqua-crete-catalog.pdf',
@@ -35,7 +35,7 @@ const CONTENT = {
       },
       {
         id: 'aqua-crete-eifs',
-        name: '아쿠아크리트 외벽',
+        name: '불연재 아쿠아크리트 - 외벽',
         summary: '무기불연 외단열 · 외벽도막방수 시스템',
         image: '/images/catalog-aqua-crete-eifs.jpg',
         href: '/downloads/aqua-crete-eifs-catalog.pdf',
@@ -43,7 +43,7 @@ const CONTENT = {
       },
       {
         id: 'sky-floor',
-        name: 'SKY-Floor',
+        name: 'SKY FLOOR - 바닥',
         summary: '대형 상업 공간용 하드 플로어',
         image: '/images/catalog-sky-floor.jpg',
         href: '/downloads/sky-floor-catalog.pdf',
@@ -59,7 +59,7 @@ const CONTENT = {
     certificates: [
       {
         id: 'nep-ko',
-        title: '신제품(NEP) 인증서',
+        title: '불연재 아쿠아크리트 - 신제품(NEP) 인증서',
         summary:
           '산업통상자원부 신제품(NEP) 인증 · 초속경 불연 방수 바닥마감재',
         image: '/images/doc-nep-ko.jpg',
@@ -67,35 +67,35 @@ const CONTENT = {
       },
       {
         id: 'nep-en',
-        title: '신제품(NEP) 인증서 (영문)',
+        title: '불연재 아쿠아크리트 - 신제품(NEP) 인증서 (영문)',
         summary: 'Certificate of New Excellent Product · 영문본',
         image: '/images/doc-nep-en.jpg',
         original: '/downloads/nep-certificate-en.pdf',
       },
       {
         id: 'quality',
-        title: '아쿠아크리트 - 품질 인증서',
+        title: '불연재 아쿠아크리트 - 품질 인증서',
         summary: 'KS 시험 성적서 기반 품질 인증',
         image: '/images/cert-quality.jpg',
         original: '/images/cert-quality.jpg',
       },
       {
         id: 'eco',
-        title: '아쿠아크리트 - 환경표지 인증서',
+        title: '불연재 아쿠아크리트 - 환경표지 인증서',
         summary: '친환경 소재 및 저배출 평가 통과',
         image: '/images/cert-eco.jpg',
         original: '/images/cert-eco.jpg',
       },
       {
         id: 'ks',
-        title: '아쿠아크리트 - ISO 인증서',
+        title: '불연재 아쿠아크리트 - ISO 인증서',
         summary: '도막형 바닥재 · 무기고분자 세라믹 불연성 바닥재 KS 인증',
         image: '/images/cert-ks.jpg',
         original: '/images/cert-ks.jpg',
       },
       {
         id: 'green-tech',
-        title: '아쿠아크리트 - 녹색기술 인증서',
+        title: '불연재 아쿠아크리트 - 녹색기술 인증서',
         summary: '에너지 절감 및 친환경 성능을 입증한 녹색기술 인증',
         image: '/images/cert-green-tech.jpg',
         original: '/images/cert-green-tech.jpg',
@@ -118,35 +118,35 @@ const CONTENT = {
     reports: [
       {
         id: 'seismic',
-        title: '불연재 아쿠아크리트 내진성능 시험확인서',
+        title: '불연재 아쿠아크리트 - 내진성능 시험확인서',
         summary: '지진방재연구센터 내진성능 시험 확인서',
         image: '/images/doc-seismic.jpg',
         original: '/downloads/seismic-test-report.pdf',
       },
       {
         id: 'kcl',
-        title: '불연성 · 가스유해성 시험성적서',
+        title: '불연재 아쿠아크리트 - 불연성 · 가스유해성 시험성적서',
         summary: 'KCL 한국건설생활환경시험연구원 시험성적서',
         image: '/images/doc-kcl.jpg',
         original: '/downloads/kcl-noncombustible-report.pdf',
       },
       {
         id: 'ktr-aquacrete',
-        title: '아쿠아크리트 시험성적서 (KS F 4918)',
+        title: '불연재 아쿠아크리트 - 시험성적서 (KS F 4918)',
         summary: 'KTR 한국화학융합시험연구원 시험성적서',
         image: '/images/doc-ktr-aquacrete.jpg',
         original: '/images/doc-ktr-aquacrete.jpg',
       },
       {
         id: 'ktr-mma',
-        title: '도막형 바닥재(MMA수지) 시험성적서',
+        title: 'SKY FLOOR - 도막형 바닥재(MMA수지) 시험성적서',
         summary: 'KTR 한국화학융합시험연구원 시험성적서',
         image: '/images/doc-ktr-mma.jpg',
         original: '/images/doc-ktr-mma.jpg',
       },
       {
         id: 'ktr-sky',
-        title: 'SKY 상도 시험성적서',
+        title: 'SKY FLOOR - 상도 시험성적서',
         summary: 'KTR 한국화학융합시험연구원 시험성적서',
         image: '/images/doc-ktr-sky.jpg',
         original: '/images/doc-ktr-sky.jpg',
@@ -176,7 +176,7 @@ const CONTENT = {
     downloads: [
       {
         id: 'aqua-crete',
-        name: 'Aqua-Crete',
+        name: 'Aqua-Crete - Floor',
         summary: 'Inorganic ceramic flooring system',
         image: '/images/catalog-aqua-crete.jpg',
         href: '/downloads/aqua-crete-catalog-en.pdf',
@@ -184,7 +184,7 @@ const CONTENT = {
       },
       {
         id: 'aqua-crete-eifs',
-        name: 'Aqua-Crete EIFS',
+        name: 'Aqua-Crete - Wall',
         summary: 'Non-combustible EIFS & wall waterproofing',
         image: '/images/catalog-aqua-crete-eifs.jpg',
         href: '/downloads/aqua-crete-eifs-catalog-en.pdf',
@@ -192,7 +192,7 @@ const CONTENT = {
       },
       {
         id: 'sky-floor',
-        name: 'SKY-Floor',
+        name: 'SKY FLOOR - Floor',
         summary: 'Hard-wearing commercial deck',
         image: '/images/catalog-sky-floor.jpg',
         href: '/downloads/sky-floor-catalog-en.pdf',
@@ -208,7 +208,7 @@ const CONTENT = {
     certificates: [
       {
         id: 'nep-en',
-        title: 'New Excellent Product (NEP)',
+        title: 'Aqua-Crete - New Excellent Product (NEP)',
         summary:
           'Certificate of New Excellent Product · Ministry of Trade, Industry & Energy',
         image: '/images/doc-nep-en.jpg',
@@ -216,7 +216,7 @@ const CONTENT = {
       },
       {
         id: 'iso-en',
-        title: 'ISO Certification (English)',
+        title: 'Aqua-Crete - ISO Certification',
         summary:
           'Official ISO certificate translated into English for international documentation.',
         image: '/images/cert-iso-en.jpeg',
@@ -226,35 +226,35 @@ const CONTENT = {
     reports: [
       {
         id: 'seismic',
-        title: 'Seismic Performance Test',
+        title: 'Aqua-Crete - Seismic Performance Test',
         summary: 'Confirmation of Test · Seismic Research and Test Center',
         image: '/images/doc-seismic.jpg',
         original: '/downloads/seismic-test-report.pdf',
       },
       {
         id: 'kcl',
-        title: 'Non-combustibility & Gas Toxicity Test',
+        title: 'Aqua-Crete - Non-combustibility & Gas Toxicity Test',
         summary: 'KCL — Korea Conformity Laboratories test report',
         image: '/images/doc-kcl.jpg',
         original: '/downloads/kcl-noncombustible-report.pdf',
       },
       {
         id: 'ktr-aquacrete',
-        title: 'Aqua-Crete Test Report (KS F 4918)',
+        title: 'Aqua-Crete - Test Report (KS F 4918)',
         summary: 'KTR — Korea Testing & Research Institute',
         image: '/images/doc-ktr-aquacrete.jpg',
         original: '/images/doc-ktr-aquacrete.jpg',
       },
       {
         id: 'ktr-mma',
-        title: 'Coating Floor (MMA) Test Report',
+        title: 'SKY FLOOR - Coating Floor (MMA) Test Report',
         summary: 'KTR — Korea Testing & Research Institute',
         image: '/images/doc-ktr-mma.jpg',
         original: '/images/doc-ktr-mma.jpg',
       },
       {
         id: 'ktr-sky',
-        title: 'SKY Top-coat Test Report',
+        title: 'SKY FLOOR - Top-coat Test Report',
         summary: 'KTR — Korea Testing & Research Institute',
         image: '/images/doc-ktr-sky.jpg',
         original: '/images/doc-ktr-sky.jpg',
