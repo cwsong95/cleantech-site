@@ -3261,6 +3261,63 @@ a:hover {
   flex: none;
 }
 
+/* signature: vertical right-edge message (reads top -> bottom) */
+.ac-home-hero__sign {
+  position: absolute;
+  z-index: 2;
+  right: clamp(22px, 3vw, 58px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: #eaf6f8;
+  pointer-events: none;
+}
+.ac-home-hero__sign svg {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  color: var(--ac-aqua);
+  filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.6));
+}
+.ac-home-hero__sign-line {
+  display: block;
+  width: 1px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.ac-home-hero__sign-text {
+  display: block;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 768px) {
+  .ac-home-hero__sign {
+    top: auto;
+    right: auto;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 10px;
+  }
+  .ac-home-hero__sign-line {
+    width: 28px;
+    height: 1px;
+  }
+  .ac-home-hero__sign-text {
+    writing-mode: horizontal-tb;
+  }
+}
+
 /* products */
 .ac-home-products {
   background: var(--ac-bg);
