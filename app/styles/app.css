@@ -3301,10 +3301,7 @@ a:hover {
 }
 @media (max-width: 768px) {
   .ac-home-hero__sign {
-    top: auto;
-    right: auto;
-    bottom: 18px;
-    left: 50%;
+    inset: auto auto 18px 50%;
     transform: translateX(-50%);
     flex-direction: row;
     gap: 10px;
@@ -4418,4 +4415,18 @@ a:hover {
   height: 11px;
   border-radius: 999px;
   background: var(--ac-aqua);
+}
+
+/* ========= Footer — English copy is longer; tighten so rows stay on one line like Korean ========= */
+html[lang="en"] .site-footer .footer-wrap {
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+html[lang="en"] .site-footer .footer-wrap > div:first-child > .font-semibold {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  html[lang="en"] .site-footer .footer-wrap {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 0.8fr);
+  }
 }

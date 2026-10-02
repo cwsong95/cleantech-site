@@ -1,5 +1,9 @@
 <div class="ac-galtabs">
-  <div class="ac-galtabs__bar" role="tablist" aria-label="시공 사진 분류">
+  <div
+    class="ac-galtabs__bar"
+    role="tablist"
+    aria-label={{if this.isKorean "시공 사진 분류" "Project photo categories"}}
+  >
     {{#each this.tabs key="id" as |tab|}}
       <button
         type="button"

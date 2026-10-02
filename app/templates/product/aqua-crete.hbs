@@ -1,3 +1,11 @@
+{{page-title
+  (if
+    this.locale.isKorean
+    "아쿠아크리트 바닥 공법 | 크린텍개발"
+    "Aqua-Crete Floor System | CleanTech"
+  )
+}}
+
 {{#if this.locale.isKorean}}
   <article class="aqua-crete-page page ac-page full-bleed" {{aqua-reveal}}>
     {{! ================= HERO ================= }}
@@ -274,8 +282,8 @@
         <div class="ac-hero__content">
           <h1 class="ac-hero__titleimg">
             <img src="/images/aqua-crete-hero-title.png" alt="" />
-            <span class="ac-sr-only">Aqua-Crete — New Excellent Product (NEP)
-              non-combustible flooring · Safer, Faster, Harder</span>
+            <span class="ac-sr-only">Aqua-Crete — NEP (New Excellent Product)
+              certified non-combustible flooring · Safer, Faster, Harder</span>
           </h1>
         </div>
         <div class="ac-hero__certs" aria-hidden="true"><img
@@ -290,52 +298,24 @@
         <div class="ac-inner ac-metrics__grid">
           <div class="ac-metric"><div class="ac-metric__n"><span
                 data-count="24"
-              >0</span><em>h</em></div><div class="ac-metric__l">Rapid
-              turnaround</div></div>
+              >0</span><em>h</em></div><div class="ac-metric__l">Return to
+              service</div></div>
           <div class="ac-metric"><div class="ac-metric__n"><span
                 data-count="100"
-              >0</span><em>%</em></div><div class="ac-metric__l">Inorganic &amp;
+              >0</span><em>%</em></div><div class="ac-metric__l">Inorganic,
               non-combustible</div></div>
           <div class="ac-metric"><div class="ac-metric__n">Sub-zero</div><div
               class="ac-metric__l"
-            >Cold-weather install</div></div>
+            >Cold-weather application</div></div>
           <div class="ac-metric"><div class="ac-metric__n">Wet</div><div
               class="ac-metric__l"
-            >Saturated-surface install</div></div>
+            >Saturated-substrate application</div></div>
         </div>
       </div>
     </section>
 
     <div class="margin-page">
       {{! ================= CERTIFICATIONS ================= }}
-      <section class="ac-sec ac-certs">
-        <div class="ac-certrow ac-reveal">
-          <div class="ac-certs__label">Certified · Tested<b>NEP · Eco ·
-              Green-Tech · KS</b></div>
-          <div class="ac-certlist">
-            <div class="ac-cert"><figure><img
-                  src="/images/cert-eco.jpg"
-                  alt="Eco-Label certificate"
-                  loading="lazy"
-                /></figure><figcaption>Eco-Label</figcaption></div>
-            <div class="ac-cert"><figure><img
-                  src="/images/cert-green-tech.jpg"
-                  alt="Green Technology certificate"
-                  loading="lazy"
-                /></figure><figcaption>Green Tech</figcaption></div>
-            <div class="ac-cert"><figure><img
-                  src="/images/cert-quality.jpg"
-                  alt="Quality certificate"
-                  loading="lazy"
-                /></figure><figcaption>Quality</figcaption></div>
-            <div class="ac-cert"><figure><img
-                  src="/images/cert-ks.jpg"
-                  alt="KS certificate"
-                  loading="lazy"
-                /></figure><figcaption>KS</figcaption></div>
-          </div>
-        </div>
-      </section>
 
       {{! ================= CONCEPT ================= }}
       <section class="ac-sec ac-concept" id="concept">
@@ -344,45 +324,43 @@
             <span class="ac-eyebrow">Concept</span>
             <h2>Aqua-Crete<br />Concept</h2>
             <div class="ac-keychips">
-              <span class="ac-keychip">100% inorganic</span>
+              <span class="ac-keychip">100% inorganic, non-combustible</span>
               <span class="ac-keychip">GORE-TEX® function</span>
               <span class="ac-keychip">Strong adhesion</span>
-              <span class="ac-keychip">Odor-free</span>
+              <span class="ac-keychip">Odor-free application</span>
             </div>
           </div>
           <div class="ac-concept__body ac-reveal" data-d="1">
-            <p>Aqua-Crete blends a 100% inorganic, non-combustible ceramic
-              binder powder with a water-based liquid, allowing direct placement
-              on saturated concrete (100% moisture) and foot traffic after
-              roughly one hour. Strong adhesion, high compressive strength, and
-              a GORE-TEX®-style breathable waterproof function protect the base,
-              while the odor-free, non-toxic chemistry delivers ultra-fast cure
-              as an eco-friendly inorganic ceramic waterproof floor topping.</p>
+            <p>Aqua-Crete is a finish material made from a powder binder
+              composed entirely of inorganic, non-combustible ingredients and a
+              water-based liquid. It is applied by trowel or spray directly onto
+              building substrates — concrete (cement mortar), masonry, tile,
+              EIFS finishes, and more — whether the surface is dry or saturated
+              with water (100% moisture content).</p>
+            <p>Because NEP-certified Aqua-Crete is made from 100%
+              non-combustible materials, it does not burn or release toxic gases
+              in a fire. It offers excellent breathability and waterproofing
+              (GORE-TEX® function), produces no odor during application, and
+              bonds powerfully to the substrate — an inorganic, non-combustible
+              finish with built-in waterproofing performance.</p>
           </div>
         </div>
       </section>
 
-      {{! ================= STRUCTURE DIAGRAM ================= }}
+      {{! ================= STRUCTURE ================= }}
       <section class="ac-sec ac-diagram-sec">
+        <div class="ac-head ac-reveal">
+          <span class="ac-eyebrow">Structure</span>
+          <h2>System Structure</h2>
+        </div>
         <div class="ac-inner">
           <figure class="ac-diagram-fig ac-reveal">
             <img
               src="/images/aqua-crete-structure.png"
-              alt="Aqua-Crete structure diagram"
+              alt="Aqua-Crete system structure diagram"
               loading="lazy"
             />
           </figure>
-        </div>
-      </section>
-
-      {{! ================= GALLERY (slider) ================= }}
-      <section class="ac-sec ac-gallery" id="gallery">
-        <div class="ac-head ac-reveal">
-          <span class="ac-eyebrow">Gallery</span>
-          <h2>On-Site Gallery</h2>
-        </div>
-        <div class="ac-gallery__panel ac-reveal" data-d="1">
-          <AcGalleryTabs @isKorean={{this.locale.isKorean}} />
         </div>
       </section>
 
@@ -390,9 +368,9 @@
       <section class="ac-sec ac-features" id="features">
         <div class="ac-head ac-reveal">
           <span class="ac-eyebrow">Features</span>
-          <h2>Performance Highlights</h2>
-          <p>Engineered to perform in extreme wet, cold, and chemically
-            aggressive production environments.</p>
+          <h2>Aqua-Crete Features</h2>
+          <p>The advantages that let Aqua-Crete be installed and operated even
+            in the harshest environments.</p>
         </div>
         <div class="ac-fgrid">
           <article class="ac-fcard ac-reveal" data-d="1">
@@ -406,9 +384,9 @@
               ><path
                   d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"
                 /><path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5" /></svg></div>
-            <h3>Wet-Surface Placement</h3>
-            <p>Installs directly on saturated slabs without priming and
-              maintains adhesion inside chillers or wash-down zones.</p>
+            <h3>Wet-Surface Application</h3>
+            <p>Applies directly to substrates that are dry or permanently
+              exposed to water (100% moisture content).</p>
           </article>
           <article class="ac-fcard ac-reveal" data-d="2">
             <div class="ac-fcard__ic"><svg
@@ -421,9 +399,9 @@
               ><path
                   d="M10 13.5V5a2 2 0 1 1 4 0v8.5a4 4 0 1 1-4 0z"
                 /></svg></div>
-            <h3>Low-Temperature Cure</h3>
-            <p>Reliable cure from -4°F to 122°F (-20°C to 50°C) covering freezer
-              docks and steam-cleaned areas alike.</p>
+            <h3>Sub-Zero Application &amp; Strong Adhesion</h3>
+            <p>Installs in sub-zero winter conditions and cures quickly after
+              application, so follow-on trades can proceed without delay.</p>
           </article>
           <article class="ac-fcard ac-reveal" data-d="3">
             <div class="ac-fcard__ic"><svg
@@ -433,12 +411,12 @@
                 stroke-width="1.7"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-              ><circle cx="12" cy="13" r="8" /><path
-                  d="M12 9v4l3 2M9 2h6M12 5V2"
+              ><rect x="3" y="7.5" width="18" height="9" rx="1.5" /><path
+                  d="M7.5 7.5v9M12 7.5v9M16.5 7.5v9"
                 /></svg></div>
-            <h3>Rapid Turnaround</h3>
-            <p>Production can resume in ~24 hours, minimizing downtime for busy
-              processing plants.</p>
+            <h3>Complete Trench Reinforcement</h3>
+            <p>Fully reinforces delaminated areas around drain trenches,
+              maintaining strong adhesion and complete waterproofing.</p>
           </article>
           <article class="ac-fcard is-signature ac-reveal" data-d="4">
             <span class="ac-flag">GORE-TEX®</span>
@@ -455,8 +433,9 @@
                   d="M5.5 8.5L7 6l1.5 2.5M10.5 6.5L12 4l1.5 2.5M15.5 8.5L17 6l1.5 2.5"
                 /></svg></div>
             <h3>Waterproof &amp; Breathable</h3>
-            <p>Vapor channels vent moisture while the waterproof layer stops
-              blistering caused by upward hydrostatic pressure.</p>
+            <p>Moisture held within the structure escapes through the coating
+              (breathability), while water cannot penetrate from above
+              (waterproofing).</p>
           </article>
           <article class="ac-fcard ac-reveal" data-d="1">
             <div class="ac-fcard__ic"><svg
@@ -469,9 +448,9 @@
               ><path d="M4 17l5-1 3.5 1.5L21 14" /><path d="M3 20h18" /><path
                   d="M9 16l1.5-4.5 3 1 1.2-3.2"
                 /><circle cx="15.5" cy="6.5" r="1.5" /></svg></div>
-            <h3>Slip-Control Options</h3>
-            <p>From textured matte to polished gloss, the surface can be tuned
-              for safety and cleanability.</p>
+            <h3>Permanent Slip Resistance</h3>
+            <p>The Aqua-Crete coating delivers permanent slip resistance the
+              moment it comes into contact with moisture.</p>
           </article>
           <article class="ac-fcard is-signature ac-reveal" data-d="2">
             <div class="ac-fcard__ic"><svg
@@ -484,9 +463,9 @@
               ><path
                   d="M12 3s5 4.5 5 9a5 5 0 0 1-10 0c0-1.6.6-3 1.4-4.2"
                 /><path d="M4 4l16 16" /></svg></div>
-            <h3>Non-Combustible Strength</h3>
-            <p>Inorganic ceramic composition resists flame spread and survives
-              high-temperature sanitation cycles.</p>
+            <h3>Non-Combustible</h3>
+            <p>Composed of inorganic, non-combustible materials that do not
+              burn, keeping the floor safe in a fire.</p>
           </article>
           <article class="ac-fcard ac-reveal" data-d="3">
             <div class="ac-fcard__ic"><svg
@@ -499,9 +478,9 @@
               ><path
                   d="M9 3h6M10 3v6l-5 8.5A2 2 0 0 0 6.7 21h10.6a2 2 0 0 0 1.7-3.5L14 9V3"
                 /><path d="M7.5 15h9" /></svg></div>
-            <h3>Chemical &amp; Impact Resistance</h3>
-            <p>Handles acids, alkalis, fats, oils, and heavy traffic from carts
-              or forklifts without chipping.</p>
+            <h3>Chemical &amp; Stain Resistance</h3>
+            <p>Excellent resistance to acids and alkalis, no change in
+              properties under salt exposure, and outstanding stain resistance.</p>
           </article>
           <article class="ac-fcard ac-reveal" data-d="4">
             <div class="ac-fcard__ic"><svg
@@ -514,117 +493,21 @@
               ><path
                   d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"
                 /><path d="M2 21c0-3 1.85-5.36 5.08-6" /></svg></div>
-            <h3>Low-VOC &amp; Sustainable</h3>
-            <p>Low emissions and eco credentials support food, pharma, and other
-              sensitive facilities.</p>
+            <h3>Eco-Friendly Flooring</h3>
+            <p>A non-combustible, eco-friendly finish that emits no VOCs and
+              minimizes hazardous substances.</p>
           </article>
         </div>
       </section>
 
-      {{! ================= APPLICATIONS ================= }}
-      <section class="ac-sec ac-apps" id="apps">
+      {{! ================= GALLERY (slider) ================= }}
+      <section class="ac-sec ac-gallery" id="gallery">
         <div class="ac-head ac-reveal">
-          <span class="ac-eyebrow">Applications</span>
-          <h2>Where Aqua-Crete Excels</h2>
-          <p>Trusted in demanding industries that require uncompromised hygiene
-            and uptime.</p>
+          <span class="ac-eyebrow">Gallery</span>
+          <h2>Steps & Gallery</h2>
         </div>
-        <div class="ac-appgrid">
-          <article class="ac-app ac-reveal" data-d="1">
-            <div class="ac-app__media"><img
-                src="/images/hccp.jpg"
-                alt="Aqua-Crete floor in a catering and kitchen HACCP zone"
-                loading="lazy"
-              /></div>
-            <div class="ac-app__in"><div class="ac-k">Kitchen</div><h3>Catering
-                &amp; Kitchen Facilities</h3>
-              <p>HACCP plants, central kitchens, meat/seafood lines, school,
-                hospital, and military canteens, large kitchens, and wash zones
-                where hygiene and slip prevention are critical.</p></div>
-          </article>
-          <article class="ac-app ac-reveal" data-d="2">
-            <div class="ac-app__media"><img
-                src="/images/냉동.jpg"
-                alt="Aqua-Crete floor in a cold storage and logistics bay"
-                loading="lazy"
-              /></div>
-            <div class="ac-app__in"><div class="ac-k">Cold Chain</div><h3
-              >Logistics &amp; Cold Storage</h3>
-              <p>Freezer warehouses, loading docks, parking and staging areas
-                that see heavy loads and wide temperature swings.</p></div>
-          </article>
-          <article class="ac-app ac-reveal" data-d="3">
-            <div class="ac-app__media"><img
-                src="/images/외벽.jpg"
-                alt="Non-combustible insulated waterproof facade application"
-                loading="lazy"
-              /></div>
-            <div class="ac-app__in"><div class="ac-k">Facade</div><h3
-              >Non-Combustible Insulated Waterproof Facades</h3>
-              <p>Exterior walls or exposed slabs that need fire resistance,
-                insulation, and waterproofing while preventing condensation and
-                minimizing heat loss.</p></div>
-          </article>
-          <article class="ac-app ac-reveal" data-d="1">
-            <div class="ac-app__media"><img
-                src="/images/활주로.jpg"
-                alt="Runway and public works rapid repair with Aqua-Crete"
-                loading="lazy"
-              /></div>
-            <div class="ac-app__in"><div class="ac-k">Public</div><h3>Emergency
-                Repair &amp; Public Works</h3>
-              <p>Runways, roads, and public infrastructure where ultra-fast cure
-                secures quick reopening and durable performance.</p></div>
-          </article>
-          <article class="ac-app ac-reveal" data-d="2">
-            <div class="ac-app__media"><img
-                src="/images/aquacrete-1.jpg"
-                alt="Custom color and texture Aqua-Crete finish"
-                loading="lazy"
-              /></div>
-            <div class="ac-app__in"><div class="ac-k">Custom</div><h3>Custom
-                Concepts</h3>
-              <p>Bakeries, wineries, smart farms, or any site needing bespoke
-                colors and surface design.</p></div>
-          </article>
-        </div>
-      </section>
-
-      {{! ================= PROCESS ================= }}
-      <section class="ac-sec ac-process" id="process">
-        <div class="ac-head ac-reveal">
-          <span class="ac-eyebrow">Process</span>
-          <h2>Standard Installation Steps</h2>
-          <p>Consistent QA-driven workflow keeps safety, performance, and
-            compliance on track.</p>
-        </div>
-        <div class="ac-steps">
-          <div class="ac-step ac-reveal" data-d="1"><span
-              class="ac-step__line"
-            ></span><div class="ac-step__n"></div>
-            <h3>Floor Diagnosis &amp; Prep</h3><p>Remove legacy coatings, repair
-              cracks, and measure moisture to stabilize the substrate.</p></div>
-          <div class="ac-step ac-reveal" data-d="1"><span
-              class="ac-step__line"
-            ></span><div class="ac-step__n"></div>
-            <h3>Primer &amp; Base Fill</h3><p>Water-based primer and ceramic
-              fillers penetrate pores for superior adhesion.</p></div>
-          <div class="ac-step ac-reveal" data-d="2"><span
-              class="ac-step__line"
-            ></span><div class="ac-step__n"></div>
-            <h3>Water-Based Inorganic Aqua-Crete</h3><p>Form a vapor-permeable
-              waterproof layer that vents moisture upward while blocking reverse
-              flow.</p></div>
-          <div class="ac-step ac-reveal" data-d="3"><span
-              class="ac-step__line"
-            ></span><div class="ac-step__n"></div>
-            <h3>Polishing &amp; Sealer Finish</h3><p>Multi-stage polishing and
-              sealing deliver a dense, easy-clean surface.</p></div>
-          <div class="ac-step ac-reveal" data-d="4"><span
-              class="ac-step__line"
-            ></span><div class="ac-step__n"></div>
-            <h3>QA Inspection &amp; Handover</h3><p>Verify flatness, slip
-              resistance, hardness, and color uniformity with the client.</p></div>
+        <div class="ac-gallery__panel ac-reveal" data-d="1">
+          <AcGalleryTabs @isKorean={{this.locale.isKorean}} />
         </div>
       </section>
 
@@ -633,13 +516,14 @@
         <div class="ac-callout__box ac-reveal">
           <div>
             <h2>Safer · Faster · Harder</h2>
-            <p>CleanTech provides end-to-end support—from design and site survey
-              through polishing and inspection—via a dedicated Aqua-Crete team.
-              Contact us anytime for a site diagnosis.</p>
+            <p>CleanTech Development Co., Ltd. supports you end to end — from
+              design through final inspection — with a dedicated Aqua-Crete
+              installation team and ongoing maintenance service. Contact us
+              anytime for an on-site diagnosis.</p>
           </div>
           <div class="ac-callout__cta">
-            <LinkTo @route="contact" class="ac-btn ac-btn--primary">Book a Site
-              Visit
+            <LinkTo @route="contact" class="ac-btn ac-btn--primary">Request a
+              Site Consultation
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -649,7 +533,7 @@
                 stroke-linejoin="round"
               ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </LinkTo>
-            <LinkTo @route="downloads" class="ac-btn ac-btn--ghost">Download
+            <LinkTo @route="downloads" class="ac-btn ac-btn--ghost">View
               Brochure / SDS</LinkTo>
           </div>
         </div>

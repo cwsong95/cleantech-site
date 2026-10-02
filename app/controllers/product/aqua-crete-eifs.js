@@ -3,25 +3,56 @@ import { service } from '@ember/service';
 
 const AC = '아쿠아크리트';
 const EIFS_GALLERY = [
-  { src: '/images/eifs-gallery/01.jpg', alt: '외벽 색채 제안 도면' },
+  {
+    src: '/images/eifs-gallery/01.jpg',
+    alt: '외벽 색채 제안 도면',
+    altEn: 'Exterior wall color proposal drawing',
+  },
   {
     src: '/images/eifs-gallery/02.jpg',
     alt: `학교 외벽 ${AC} 불연 도막 시공 사례`,
+    altEn: 'Aqua-Crete non-combustible exterior wall coating on a school',
   },
-  { src: '/images/eifs-gallery/03.jpg', alt: '유치원 외벽 색채 제안 도면' },
+  {
+    src: '/images/eifs-gallery/03.jpg',
+    alt: '유치원 외벽 색채 제안 도면',
+    altEn: 'Kindergarten exterior wall color proposal drawing',
+  },
   {
     src: '/images/eifs-gallery/04.jpg',
     alt: `유치원 외벽 ${AC} 마감 시공 완료`,
+    altEn: 'Completed Aqua-Crete exterior wall finish on a kindergarten',
   },
   {
     src: '/images/eifs-gallery/05.jpg',
     alt: `초등학교 외벽 ${AC} 컬러 마감 사례`,
+    altEn: 'Aqua-Crete color exterior wall finish on an elementary school',
   },
-  { src: '/images/eifs-gallery/06.jpg', alt: `학교 외벽 ${AC} 도막 시공 현장` },
-  { src: '/images/eifs-gallery/07.jpg', alt: '중학교 외벽 색채 제안 도면' },
-  { src: '/images/eifs-gallery/08.jpg', alt: `학교 외벽 ${AC} 불연 마감 상세` },
-  { src: '/images/eifs-gallery/09.jpg', alt: '외벽 색채 제안 도면' },
-  { src: '/images/eifs-gallery/10.jpg', alt: `학교 외벽 ${AC} 마감 시공 완료` },
+  {
+    src: '/images/eifs-gallery/06.jpg',
+    alt: `학교 외벽 ${AC} 도막 시공 현장`,
+    altEn: 'Aqua-Crete exterior wall coating installation at a school',
+  },
+  {
+    src: '/images/eifs-gallery/07.jpg',
+    alt: '중학교 외벽 색채 제안 도면',
+    altEn: 'Middle school exterior wall color proposal drawing',
+  },
+  {
+    src: '/images/eifs-gallery/08.jpg',
+    alt: `학교 외벽 ${AC} 불연 마감 상세`,
+    altEn: 'Aqua-Crete non-combustible exterior wall finish detail at a school',
+  },
+  {
+    src: '/images/eifs-gallery/09.jpg',
+    alt: '외벽 색채 제안 도면',
+    altEn: 'Exterior wall color proposal drawing',
+  },
+  {
+    src: '/images/eifs-gallery/10.jpg',
+    alt: `학교 외벽 ${AC} 마감 시공 완료`,
+    altEn: 'Completed Aqua-Crete exterior wall finish on a school',
+  },
 ];
 
 export default class ProductAquaCreteEifsController extends Controller {

@@ -1,5 +1,5 @@
 {{page-title
-  (if this.locale.isKorean "문의하기 | CleanTech" "Contact | CleanTech")
+  (if this.locale.isKorean "문의하기 | CleanTech" "Contact Us | CleanTech")
 }}
 
 <section class="space-y-16 margin-page">
@@ -81,8 +81,16 @@
             />
           </svg>
           <div>
-            <div class="font-semibold">CleanTech Customer Care</div>
-            <div class="text-slate-600">MON–FRI 09:00–18:00 (KST)</div>
+            <div class="font-semibold">{{if
+                this.locale.isKorean
+                "크린텍개발 고객지원"
+                "CleanTech Customer Support"
+              }}</div>
+            <div class="text-slate-600">{{if
+                this.locale.isKorean
+                "평일 09:00–18:00 (KST)"
+                "Mon–Fri 09:00–18:00 (KST)"
+              }}</div>
           </div>
         </div>
       </section>
@@ -90,12 +98,16 @@
       <section
         class="rounded-3xl border border-slate-200 bg-slate-900 p-6 text-slate-100 shadow-sm"
       >
-        <h2 class="text-lg font-semibold">Project Snapshot</h2>
+        <h2 class="text-lg font-semibold">{{if
+            this.locale.isKorean
+            "현장 자료 안내"
+            "Project Materials"
+          }}</h2>
         <p class="mt-2 text-sm text-slate-300">
           {{if
             this.locale.isKorean
             "현장 도면, 사진, 요구 성능 자료가 있다면 함께 전달해 주세요. 보다 빠르게 솔루션을 제안해 드릴 수 있습니다."
-            "Have layout drawings, photos, or specs ready? Attach them in your reply so we can respond with a precise proposal."
+            "If you have site drawings, photos, or performance requirements, please share them with your inquiry so we can propose a solution faster."
           }}
         </p>
       </section>

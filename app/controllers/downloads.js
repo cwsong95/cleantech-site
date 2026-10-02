@@ -65,22 +65,23 @@ const COPY = {
     metaTitle: 'Downloads | CleanTech',
     hero: {
       eyebrow: 'DOWNLOADS',
-      title: 'Product Downloads',
-      description: 'Grab brochures and SDS without hunting around.',
+      title: 'Brochures & Resources',
+      description: 'Download the key documents for our products in one place.',
       metrics: {
         totalLabel: 'Total',
-        readyLabel: 'Ready',
+        readyLabel: 'Available',
         unit: 'files',
       },
-      note: 'Additional PDFs roll out soon.',
+      note: 'Additional documents will be added as they become available.',
     },
     actions: {
       download: 'Download PDF',
       open: 'Open in new tab',
     },
     preview: {
-      heading: 'Aqua-Crete',
-      description: 'Highlights, performance data, and installs at a glance.',
+      heading: 'Aqua-Crete Catalog',
+      description:
+        'Key information and project references for the inorganic, non-combustible ceramic floor system.',
       fileInfo: 'PDF · 3.0MB',
       href: '/downloads/aqua-crete-catalog-en.pdf',
     },
@@ -88,23 +89,24 @@ const COPY = {
       {
         id: 'aqua-crete',
         name: 'Aqua-Crete',
-        summary: 'Inorganic ceramic flooring system',
+        summary: 'Inorganic, non-combustible ceramic floor system',
         href: '/downloads/aqua-crete-catalog-en.pdf',
         available: true,
         fileInfo: 'PDF · 3.0MB',
       },
       {
         id: 'aqua-crete-eifs',
-        name: 'Aqua-Crete EIFS',
-        summary: 'Non-combustible EIFS & wall waterproofing',
+        name: 'Aqua-Crete Exterior Wall',
+        summary:
+          'Non-combustible exterior insulation and wall coating waterproofing system',
         href: '/downloads/aqua-crete-eifs-catalog-en.pdf',
         available: true,
         fileInfo: 'PDF · 8.3MB',
       },
       {
         id: 'sky-floor',
-        name: 'SKY-Floor',
-        summary: 'Hard-wearing commercial deck',
+        name: 'SKY Floor',
+        summary: 'Hard-wearing floor system for large commercial spaces',
         href: '/downloads/sky-floor-catalog-en.pdf',
         available: true,
         fileInfo: 'PDF · 6.6MB',
@@ -117,7 +119,7 @@ const COPY = {
       },
     ],
     comingSoon: 'Coming soon',
-    comingSoonNote: 'More files coming soon.',
+    comingSoonNote: 'This file will be uploaded soon.',
   },
 };
 

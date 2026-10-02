@@ -2,13 +2,13 @@
   class="ac-slider"
   id={{this.rootId}}
   aria-roledescription="carousel"
-  aria-label="시공 현장 사진"
+  aria-label={{this.labels.carousel}}
 >
   <div class="ac-slider__frame" data-ac-frame>
     <div class="ac-slides" data-ac-track>
       {{#each this.slides as |slide|}}
         <div class="ac-slide">
-          <img src={{slide.src}} alt={{slide.alt}} loading="lazy" />
+          <img src={{slide.src}} alt={{slide.label}} loading="lazy" />
         </div>
       {{/each}}
     </div>
@@ -16,7 +16,7 @@
       type="button"
       class="ac-slider__arrow ac-slider__arrow--prev"
       data-ac-prev
-      aria-label="이전 사진"
+      aria-label={{this.labels.prev}}
     >
       <svg
         viewBox="0 0 24 24"
@@ -31,7 +31,7 @@
       type="button"
       class="ac-slider__arrow ac-slider__arrow--next"
       data-ac-next
-      aria-label="다음 사진"
+      aria-label={{this.labels.next}}
     >
       <svg
         viewBox="0 0 24 24"
@@ -51,7 +51,7 @@
       class="ac-slider__dots"
       data-ac-dots
       role="tablist"
-      aria-label="슬라이드 선택"
+      aria-label={{this.labels.dots}}
     ></div>
   </div>
 </div>

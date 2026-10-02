@@ -32,30 +32,31 @@ const COPY = {
   },
   en: {
     eyebrow: 'CONTACT',
-    title: 'Tell us about your floor project',
+    title: 'Request an on-site diagnosis and solution consultation',
     description:
-      'Share the project background, target performance, and timeline. Our engineering team will get back with the best-fit solution.',
+      'From floor solution consulting and installation quotes to maintenance inquiries, we handle it all in one place. Sending site photos or your performance requirements helps us respond more precisely.',
     bulletTitle: 'Helpful details to include',
     bullets: [
-      'Site location, industry, and usage zone',
-      'Current floor issues or pain points',
-      'Performance requirements and schedule',
+      'Site address, industry, and intended use',
+      'Current floor condition and main issues',
+      'Requirements (site, product, etc.) and schedule',
     ],
-    supportTitle: 'Direct line',
-    responseTime: 'We respond within one business day',
-    successMessage: 'Thanks for reaching out! We will follow up shortly.',
+    supportTitle: 'Contact us directly',
+    responseTime: 'Reply within one business day',
+    successMessage:
+      'Your inquiry has been received. A specialist will be in touch shortly.',
     errorFallback:
-      'Something went wrong. Please try again or email us directly.',
-    submitLabel: 'Send message',
+      'A problem occurred while sending. Please try again shortly or email us directly.',
+    submitLabel: 'Send Inquiry',
     submittingLabel: 'Sending…',
     nameLabel: 'Name',
     emailLabel: 'Email',
     phoneLabel: 'Phone (optional)',
-    companyLabel: 'Company (optional)',
-    messageLabel: 'Project details',
-    messagePlaceholder: 'Tell us about the space, expectations, and timeline.',
-    privacyNote:
-      'We only use the submitted details to respond to your inquiry.',
+    companyLabel: 'Company / Organization (optional)',
+    messageLabel: 'Your Inquiry',
+    messagePlaceholder:
+      'Describe your site and anything you would like to know.',
+    privacyNote: 'Your information is used only to respond to your inquiry.',
   },
 };
 

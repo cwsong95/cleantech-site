@@ -1,24 +1,59 @@
 import Component from '@glimmer/component';
 import { guidFor } from '@ember/object/internals';
 import { registerDestructor } from '@ember/destroyable';
+import { service } from '@ember/service';
 
 const SLIDES = [
   {
     src: '/images/aqua-gallery/01.jpg',
     alt: '급식 조리시설 아쿠아크리트 바닥 시공 현장',
+    altEn: 'Aqua-Crete floor installation at a food-service kitchen',
   },
-  { src: '/images/aqua-gallery/02.jpg', alt: '폴리싱 마감 아쿠아크리트 바닥' },
+  {
+    src: '/images/aqua-gallery/02.jpg',
+    alt: '폴리싱 마감 아쿠아크리트 바닥',
+    altEn: 'Aqua-Crete floor with polished finish',
+  },
   {
     src: '/images/aqua-gallery/03.jpg',
     alt: '트렌치 드레인 구간 아쿠아크리트 마감',
+    altEn: 'Aqua-Crete finish along a drain trench',
   },
-  { src: '/images/aqua-gallery/04.jpg', alt: '아쿠아크리트 바닥 트렌치 상세' },
-  { src: '/images/aqua-gallery/05.jpg', alt: '복도 아쿠아크리트 바닥 시공' },
-  { src: '/images/aqua-gallery/06.jpg', alt: '조리시설 아쿠아크리트 바닥' },
-  { src: '/images/aqua-gallery/07.jpg', alt: '아쿠아크리트 바닥 마감 상세' },
-  { src: '/images/aqua-gallery/08.jpg', alt: '아쿠아크리트 바닥 시공 현장' },
-  { src: '/images/aqua-gallery/09.jpg', alt: '아쿠아크리트 도포 시공' },
-  { src: '/images/aqua-gallery/10.jpg', alt: '아쿠아크리트 불연 성능 시험' },
+  {
+    src: '/images/aqua-gallery/04.jpg',
+    alt: '아쿠아크리트 바닥 트렌치 상세',
+    altEn: 'Aqua-Crete floor drain trench detail',
+  },
+  {
+    src: '/images/aqua-gallery/05.jpg',
+    alt: '복도 아쿠아크리트 바닥 시공',
+    altEn: 'Aqua-Crete corridor floor installation',
+  },
+  {
+    src: '/images/aqua-gallery/06.jpg',
+    alt: '조리시설 아쿠아크리트 바닥',
+    altEn: 'Aqua-Crete floor in a commercial kitchen',
+  },
+  {
+    src: '/images/aqua-gallery/07.jpg',
+    alt: '아쿠아크리트 바닥 마감 상세',
+    altEn: 'Aqua-Crete floor finish detail',
+  },
+  {
+    src: '/images/aqua-gallery/08.jpg',
+    alt: '아쿠아크리트 바닥 시공 현장',
+    altEn: 'Aqua-Crete floor installation site',
+  },
+  {
+    src: '/images/aqua-gallery/09.jpg',
+    alt: '아쿠아크리트 도포 시공',
+    altEn: 'Aqua-Crete being applied',
+  },
+  {
+    src: '/images/aqua-gallery/10.jpg',
+    alt: '아쿠아크리트 불연 성능 시험',
+    altEn: 'Aqua-Crete non-combustibility test',
+  },
 ];
 
 /**
@@ -29,6 +64,8 @@ const SLIDES = [
  *        <AcSlider @slides={{this.skyFloorSlides}} />.
  */
 export default class AcSliderComponent extends Component {
+  @service locale;
+
   rootId = `ac-slider-${guidFor(this)}`;
 
   constructor() {
@@ -44,8 +81,33 @@ export default class AcSliderComponent extends Component {
     });
   }
 
+  get isKorean() {
+    return this.locale?.isKorean ?? true;
+  }
+
   get slides() {
-    return this.args.slides ?? SLIDES;
+    const base = this.args.slides ?? SLIDES;
+    const ko = this.isKorean;
+    return base.map((slide) => ({
+      ...slide,
+      label: ko || !slide.altEn ? slide.alt : slide.altEn,
+    }));
+  }
+
+  get labels() {
+    return this.isKorean
+      ? {
+          carousel: '시공 현장 사진',
+          prev: '이전 사진',
+          next: '다음 사진',
+          dots: '슬라이드 선택',
+        }
+      : {
+          carousel: 'Project photos',
+          prev: 'Previous photo',
+          next: 'Next photo',
+          dots: 'Select slide',
+        };
   }
 
   _init() {
@@ -75,6 +137,8 @@ export default class AcSliderComponent extends Component {
     let i = 0;
     let timer = null;
     const dots = [];
+    const dotLabel = (k) =>
+      this.isKorean ? k + 1 + '번 사진' : 'Photo ' + (k + 1);
     if (totEl) {
       totEl.textContent = ('0' + n).slice(-2);
     }
@@ -119,7 +183,7 @@ export default class AcSliderComponent extends Component {
       const b = document.createElement('button');
       b.type = 'button';
       b.setAttribute('role', 'tab');
-      b.setAttribute('aria-label', d + 1 + '번 사진');
+      b.setAttribute('aria-label', dotLabel(d));
       if (d === 0) {
         b.setAttribute('aria-current', 'true');
       }

@@ -11,7 +11,7 @@ const MESSAGES = {
     },
     dropdown: {
       aquaFloor: 'Floor System',
-      aquaWall: 'EIFS (Exterior Wall)',
+      aquaWall: 'Exterior Wall (EIFS)',
       skyFloor: 'SKY Floor',
       skyFlex: 'SKY Flex',
       skyAu: 'SKY-AU',
@@ -26,22 +26,22 @@ const MESSAGES = {
     },
     footer: {
       company: {
-        name: 'CLEANTECH Co., Ltd',
-        address: '114 C-406, Beobwon-ro, Songpa-gu, Seoul',
-        contact: 'TEL 02-420-2844~5 · FAX 02-413-8605',
-        copyright: 'Copyrightⓒ--- All Rights Reserved',
+        name: 'CLEANTECH Co., Ltd.',
+        address: 'C-406, 114 Beobwon-ro, Songpa-gu, Seoul, Korea',
+        contact: 'TEL +82-2-420-2844~5 · FAX +82-2-413-8605',
+        copyright: 'Copyright © CleanTech Co., Ltd. All rights reserved.',
       },
       certifications: {
         title: 'Certifications',
         items: [
-          'HACCP (in progress)',
-          'ECO-Friendly',
-          'New Excellent Product(NEP)',
+          'KS F 8414 Full-Scale Fire Test',
+          'Eco-Label Certified',
+          'New Excellent Product (NEP)',
         ],
       },
       downloads: {
-        title: 'Downloads',
-        link: 'Catalog',
+        title: 'Resources',
+        link: 'Catalogs',
       },
     },
   },

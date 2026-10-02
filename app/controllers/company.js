@@ -96,6 +96,7 @@ const DATA = {
       {
         year: '2020',
         entries: [
+          'G-PASS 기업 지정',
           '기업부설연구소 연구전담부서 설립',
           '한국도로공사 기술마켓 등록',
           '불연재 아쿠아크리트 친환경 인증 획득',
@@ -142,6 +143,7 @@ const DATA = {
       {
         year: '2025',
         entries: [
+          '기업부설연구소 설립',
           '도막형바닥재(SKY-Floor) 제품 단체표준 인증 획득',
           '도막형바닥재(SKY-Floor) 제품 친환경 인증 획득',
           '불연재 아쿠아크리트 외단열시스템 국토해양부고시 실물모형시험인증성능획득',
@@ -159,67 +161,67 @@ const DATA = {
   },
   en: {
     map: {
-      title: 'Visit us',
+      title: 'Visit Us',
       description:
-        '114 Beobwon-ro, Songpa-gu, Seoul (Garden Five / Legal Town area), Suite C-406',
+        'C-406, 114 Beobwon-ro, Songpa-gu, Seoul, Korea (near Garden Five and the Munjeong legal district)',
       linkLabel: 'Open in Google Maps',
     },
     mvc: {
-      eyebrow: 'Our direction',
+      eyebrow: 'Our Direction',
       title: 'Mission · Vision · Core Values',
       mission: {
         key: 'MISSION',
         tag: 'Why we exist',
         head: 'We create value from the ground up.',
-        sub: '우리는 가장 낮은 곳에서 가치를 창조합니다.',
-        desc: 'Keeping the ground people work on safe — and passing its fruit to our neighbors.',
+        sub: 'Why we exist',
+        desc: 'We keep the ground people work on safe, and share the fruits with our neighbors.',
       },
       vision: {
         key: 'VISION',
         tag: 'Where we are headed',
         head: 'Technology · Trust · To the World',
-        sub: '기술 · 신뢰 · 세계',
-        desc: 'Trusted products, built on our technology, for customers worldwide.',
+        sub: 'Where we are headed',
+        desc: 'Trusted products built on our own technology, delivered to customers around the world.',
       },
       core: {
         key: 'CORE VALUES',
         tag: 'How we work',
         head: 'Sincerity · Steadfastness · Sanctification · Servanthood · Stewardship',
-        sub: '정직 · 견고 · 청결 · 섬김 · 나눔',
-        desc: 'Integrity comes first. Without it, the other four are just marketing.',
+        sub: 'How we work',
+        desc: 'Sincerity comes first. Without it, the other four are nothing more than marketing slogans.',
       },
     },
-    timelineTitle: 'Milestones',
+    timelineTitle: 'Milestones by Year',
     timeline: [
       {
         year: '2000',
         entries: [
-          'Incorporated CleanTech Development Co., Ltd.',
-          'Registered plastering and waterproofing works',
-          'Registered painting works',
+          'CleanTech Development Co., Ltd. incorporated',
+          'Registered as a plastering & waterproofing contractor',
+          'Registered as a painting contractor',
         ],
       },
       {
         year: '2012',
-        entries: ['Developed polyurea elastic composite waterproofing method'],
+        entries: ['Developed polyurea elastic composite waterproofing system'],
       },
       {
         year: '2013',
         entries: [
-          'Developed wire-reinforced fiberglass mesh method',
-          'Introduced SILIKAL Germany coating-type flooring products',
+          'Developed wire-reinforced fiberglass mesh system',
+          'Introduced SILIKAL (Germany) coating-type flooring products',
         ],
       },
       {
         year: '2014',
         entries: [
-          'Began development of Aqua-Crete inorganic non-combustible product',
+          'Began development of Aqua-Crete inorganic non-combustible material',
         ],
       },
       {
         year: '2015',
         entries: [
-          'Field-applied prototype Aqua-Crete inorganic non-combustible floor finish',
+          'Field trial of Aqua-Crete inorganic non-combustible floor finish',
         ],
       },
       {
@@ -231,89 +233,91 @@ const DATA = {
       {
         year: '2017',
         entries: [
-          'Developed facility structure restoration method',
-          'Field-applied prototype Aqua-Crete inorganic non-combustible exterior wall finish',
+          'Developed facility and structure restoration system',
+          'Field trial of Aqua-Crete inorganic non-combustible exterior wall finish',
         ],
       },
       {
         year: '2018',
         entries: [
-          'Obtained eco-friendly certification for SILIKAL Germany coating-type flooring products',
+          'SILIKAL (Germany) coating-type flooring awarded Eco-Label certification',
           'Established production plant for Aqua-Crete inorganic non-combustible materials',
-          'Obtained eco-friendly certification for ceramic products',
-          'Developed exterior wall transparent waterproofing material and method',
-          'Produced and field-applied Aqua-Crete non-combustible products',
+          'Aqua-Crete inorganic non-combustible material awarded Eco-Label certification',
+          'Developed transparent waterproofing material and system for exterior walls',
+          'Commenced production and field application of Aqua-Crete non-combustible products',
         ],
       },
       {
         year: '2019',
         entries: [
-          'Obtained ISO 9001 certification',
-          'Obtained government new technology and New Excellent Product (NEP) certification for Aqua-Crete non-combustible products',
-          'Began development of SKY-Floor coating-type flooring',
-          'Began development of SKY Flex water-curing coating waterproofing material',
+          'Achieved ISO 9001 certification',
+          'Aqua-Crete non-combustible material awarded government New Excellent Product (NEP) certification',
+          'Began development of SKY Floor coating-type flooring',
+          'Began development of SKY Flex water-cured membrane waterproofing',
         ],
       },
       {
         year: '2020',
         entries: [
-          'Established a dedicated R&D department under the corporate research institute',
-          'Registered with Korea Expressway Corporation Technology Market',
-          'Obtained eco-friendly certification for Aqua-Crete non-combustible material',
-          'Obtained Green Technology certification for Aqua-Crete non-combustible material',
-          'Obtained Q-Mark certification for Aqua-Crete non-combustible material',
-          'Verified seismic performance test results for Aqua-Crete non-combustible material',
-          'Developed fixed-hardware reinforcement method for Aqua-Crete exterior insulation system',
-          'Field-applied SKY-Floor prototypes',
+          'Designated a G-PASS company',
+          'Established a dedicated R&D division (corporate research institute)',
+          'Registered with the Korea Expressway Corporation Technology Market',
+          'Aqua-Crete non-combustible material awarded Eco-Label certification',
+          'Aqua-Crete non-combustible material awarded Green Technology certification',
+          'Aqua-Crete non-combustible material awarded Q-Mark certification',
+          'Seismic performance of Aqua-Crete non-combustible material verified by test',
+          'Developed mechanical-anchor reinforcement system for the Aqua-Crete exterior insulation system',
+          'Field trial of SKY Floor coating-type flooring',
         ],
       },
       {
         year: '2021',
         entries: [
-          'Developed aerogel-based thermal insulation composite waterproofing method',
-          'Developed waterproofing method using Aqua-Crete non-combustible material',
-          'Obtained KC hygiene safety standard certification for Aqua-Crete non-combustible material',
+          'Developed aerogel-based insulated composite waterproofing system',
+          'Developed waterproofing system using Aqua-Crete non-combustible material',
+          'Aqua-Crete non-combustible material awarded KC Hygiene & Safety certification',
         ],
       },
       {
         year: '2022',
         entries: [
-          'Field-applied prototype SKY FLEX water-based coating waterproofing material',
-          'Developed exterior wall coating waterproofing material',
-          'Field-applied SKY-Floor products',
-          'Obtained Korea Venture Enterprise certification',
+          'Field trial of SKY Flex water-based membrane waterproofing',
+          'Developed membrane waterproofing material for exterior walls',
+          'Commenced field application of SKY Floor coating-type flooring',
+          'Certified as a Korean Venture Enterprise',
         ],
       },
       {
         year: '2023',
         entries: [
-          'Developed SKY AU polyurea product using polyaspartic technology',
-          'Registered polyurea coating waterproofing material in the Korea Public Procurement Service shopping mall',
+          'Developed SKY-AU polyaspartic polyurea product',
+          'Polyurea membrane waterproofing registered on the Public Procurement Service (PPS) marketplace',
         ],
       },
       {
         year: '2024',
         entries: [
-          'Registered license for metal roofing, windows, doors, and building assembly works',
-          'Developed SKY AU polyaspartic polyurea multipurpose primer',
-          'Introduced sloped flashing method to prevent leakage around exterior wall windows',
-          'Introduced method for crack reinforcement and seismic performance of exterior wall facing bricks',
+          'Licensed as a metal roofing, window & door, and building assembly contractor',
+          'Developed SKY-AU polyaspartic polyurea multi-purpose primer',
+          'Introduced sloped flashing system to prevent leaks around exterior wall openings',
+          'Introduced crack reinforcement and seismic strengthening system for exterior face brick',
         ],
       },
       {
         year: '2025',
         entries: [
-          'Obtained group standard certification for SKY-Floor products',
-          'Obtained eco-friendly certification for SKY-Floor products',
-          'Obtained full-scale mock-up test performance certification under the Ministry of Land, Transport and Maritime Affairs notice for Aqua-Crete exterior insulation system',
-          'Developed SKY AU polyaspartic polyurea flooring product',
+          'Established corporate R&D center',
+          'SKY Floor coating-type flooring awarded Group Standard certification',
+          'SKY Floor coating-type flooring awarded Eco-Label certification',
+          'Aqua-Crete exterior insulation system passed the full-scale mock-up fire test under the Ministry of Land, Infrastructure and Transport notice',
+          'Developed SKY-AU polyaspartic polyurea flooring product',
         ],
       },
       {
         year: '2026',
         entries: [
-          'Registered SKY-Floor products in the Korea Public Procurement Service shopping mall',
-          'Developed SKY AU polyaspartic polyurea waterproofing material',
+          'SKY Floor coating-type flooring registered on the Public Procurement Service (PPS) marketplace',
+          'Developed SKY-AU polyaspartic polyurea waterproofing product',
         ],
       },
     ],

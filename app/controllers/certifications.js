@@ -159,10 +159,10 @@ const CONTENT = {
       eyebrow: 'RESOURCES',
       title: 'Resources',
       description:
-        'Download product catalogs, official certifications, and accredited test reports — all in one place.',
+        'Product catalogs, official certifications, and accredited test reports — all in one place, ready to view and download.',
     },
     tabs: {
-      downloads: 'Catalog',
+      downloads: 'Catalogs',
       certs: 'Certificates',
       reports: 'Test Reports',
     },
@@ -172,28 +172,29 @@ const CONTENT = {
       view: 'View original',
     },
     comingSoon: 'Coming soon',
-    comingSoonNote: 'More files coming soon.',
+    comingSoonNote: 'This file will be uploaded soon.',
     downloads: [
       {
         id: 'aqua-crete',
-        name: 'Aqua-Crete - Floor',
-        summary: 'Inorganic ceramic flooring system',
+        name: 'Aqua-Crete — Floor',
+        summary: 'Inorganic, non-combustible ceramic floor system',
         image: '/images/catalog-aqua-crete.jpg',
         href: '/downloads/aqua-crete-catalog-en.pdf',
         available: true,
       },
       {
         id: 'aqua-crete-eifs',
-        name: 'Aqua-Crete - Wall',
-        summary: 'Non-combustible EIFS & wall waterproofing',
+        name: 'Aqua-Crete — Exterior Wall',
+        summary:
+          'Non-combustible exterior insulation and wall coating waterproofing system',
         image: '/images/catalog-aqua-crete-eifs.jpg',
         href: '/downloads/aqua-crete-eifs-catalog-en.pdf',
         available: true,
       },
       {
         id: 'sky-floor',
-        name: 'SKY FLOOR - Floor',
-        summary: 'Hard-wearing commercial deck',
+        name: 'SKY Floor — Floor',
+        summary: 'Hard-wearing floor system for large commercial spaces',
         image: '/images/catalog-sky-floor.jpg',
         href: '/downloads/sky-floor-catalog-en.pdf',
         available: true,
@@ -208,54 +209,109 @@ const CONTENT = {
     certificates: [
       {
         id: 'nep-en',
-        title: 'Aqua-Crete - New Excellent Product (NEP)',
+        title: 'Aqua-Crete — New Excellent Product (NEP) Certificate (English)',
         summary:
-          'Certificate of New Excellent Product · Ministry of Trade, Industry & Energy',
+          'Certificate of New Excellent Product · Ministry of Trade, Industry and Energy',
         image: '/images/doc-nep-en.jpg',
         original: '/downloads/nep-certificate-en.pdf',
       },
       {
         id: 'iso-en',
-        title: 'Aqua-Crete - ISO Certification',
+        title: 'Aqua-Crete — ISO Certificate (English)',
         summary:
-          'Official ISO certificate translated into English for international documentation.',
+          'ISO certificate, English version for international documentation',
         image: '/images/cert-iso-en.jpeg',
         original: '/images/cert-iso-en.jpeg',
+      },
+      {
+        id: 'nep-ko',
+        title: 'Aqua-Crete — New Excellent Product (NEP) Certificate (Korean)',
+        summary:
+          'Ultra-fast-curing, non-combustible waterproof floor finish · Korean original',
+        image: '/images/doc-nep-ko.jpg',
+        original: '/downloads/nep-certificate-ko.pdf',
+      },
+      {
+        id: 'quality',
+        title: 'Aqua-Crete — Quality Certificate',
+        summary: 'Quality certification based on KS test reports',
+        image: '/images/cert-quality.jpg',
+        original: '/images/cert-quality.jpg',
+      },
+      {
+        id: 'eco',
+        title: 'Aqua-Crete — Eco-Label Certificate',
+        summary: 'Passed eco-friendly material and low-emission evaluation',
+        image: '/images/cert-eco.jpg',
+        original: '/images/cert-eco.jpg',
+      },
+      {
+        id: 'ks',
+        title: 'Aqua-Crete — ISO Certificate',
+        summary:
+          'KS certification for coating-type, inorganic polymer ceramic non-combustible flooring',
+        image: '/images/cert-ks.jpg',
+        original: '/images/cert-ks.jpg',
+      },
+      {
+        id: 'green-tech',
+        title: 'Aqua-Crete — Green Technology Certificate',
+        summary:
+          'Green Technology certification verifying energy savings and eco-friendly performance',
+        image: '/images/cert-green-tech.jpg',
+        original: '/images/cert-green-tech.jpg',
+      },
+      {
+        id: 'sky-eco',
+        title: 'SKY Floor — Eco-Label Certificate',
+        summary:
+          'Eco-Label certification verifying energy savings and eco-friendly performance',
+        image: '/images/cert-sky-eco.jpg',
+        original: '/images/cert-sky-eco.jpg',
+      },
+      {
+        id: 'sky-single',
+        title: 'SKY Floor — Group Standard Certificate',
+        summary:
+          'Certified compliance of the SKY Floor system with group standards',
+        image: '/images/cert-sky-group.jpg',
+        original: '/images/cert-sky-group.jpg',
       },
     ],
     reports: [
       {
         id: 'seismic',
-        title: 'Aqua-Crete - Seismic Performance Test',
-        summary: 'Confirmation of Test · Seismic Research and Test Center',
+        title: 'Aqua-Crete — Seismic Performance Test Confirmation',
+        summary:
+          'Confirmation of seismic performance test · Seismic Research and Test Center',
         image: '/images/doc-seismic.jpg',
         original: '/downloads/seismic-test-report.pdf',
       },
       {
         id: 'kcl',
-        title: 'Aqua-Crete - Non-combustibility & Gas Toxicity Test',
-        summary: 'KCL — Korea Conformity Laboratories test report',
+        title: 'Aqua-Crete — Non-Combustibility & Gas Toxicity Test Report',
+        summary: 'Test report · KCL (Korea Conformity Laboratories)',
         image: '/images/doc-kcl.jpg',
         original: '/downloads/kcl-noncombustible-report.pdf',
       },
       {
         id: 'ktr-aquacrete',
-        title: 'Aqua-Crete - Test Report (KS F 4918)',
-        summary: 'KTR — Korea Testing & Research Institute',
+        title: 'Aqua-Crete — Test Report (KS F 4918)',
+        summary: 'Test report · KTR (Korea Testing & Research Institute)',
         image: '/images/doc-ktr-aquacrete.jpg',
         original: '/images/doc-ktr-aquacrete.jpg',
       },
       {
         id: 'ktr-mma',
-        title: 'SKY FLOOR - Coating Floor (MMA) Test Report',
-        summary: 'KTR — Korea Testing & Research Institute',
+        title: 'SKY Floor — Coating-Type Flooring (MMA Resin) Test Report',
+        summary: 'Test report · KTR (Korea Testing & Research Institute)',
         image: '/images/doc-ktr-mma.jpg',
         original: '/images/doc-ktr-mma.jpg',
       },
       {
         id: 'ktr-sky',
-        title: 'SKY FLOOR - Top-coat Test Report',
-        summary: 'KTR — Korea Testing & Research Institute',
+        title: 'SKY Floor — Topcoat Test Report',
+        summary: 'Test report · KTR (Korea Testing & Research Institute)',
         image: '/images/doc-ktr-sky.jpg',
         original: '/images/doc-ktr-sky.jpg',
       },
