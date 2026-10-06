@@ -96,7 +96,7 @@ export const ROUTE_META = {
       en: 'Aqua-Crete (Aquacrete) Inorganic Non-Combustible Flooring | CleanTech',
     },
     description: {
-      ko: '아쿠아크리트(Aqua-crete, Aquacrete)는 (주)크린텍개발의 무기 불연 친환경 바닥재·외단열 시스템입니다. 급식실·식품공장·물류창고 바닥 공법, 외벽 불연 외단열(EIFS), SKY Floor까지 — 습윤·영하 시공, 24시간 내 재가동.',
+      ko: '아쿠아크리트(Aqua-crete) — (주)크린텍개발의 무기 불연 친환경 바닥재·외단열 시스템. 급식실·식품공장·물류창고, 습윤·영하 시공.',
       en: 'Aqua-Crete (Aquacrete) is CleanTech’s inorganic, non-combustible, eco-friendly flooring and exterior-insulation system. Floor systems for kitchens, food plants and logistics, non-combustible EIFS, and SKY Floor — wet and sub-zero application, back in service within 24 hours.',
     },
     image: '/images/aqua-crete-hero.jpg',
@@ -121,7 +121,7 @@ export const ROUTE_META = {
       en: 'About Us | CleanTech — Maker of Aqua-Crete',
     },
     description: {
-      ko: '2000년 설립된 (주)크린텍개발은 무기 불연 바닥재 아쿠아크리트(Aqua-crete)와 SKY Floor를 개발·시공하는 바닥재 전문 기업입니다. 미션·비전·연혁과 서울 송파구 본사 안내.',
+      ko: '2000년 설립 (주)크린텍개발 — 무기 불연 바닥재 아쿠아크리트(Aqua-crete)·SKY Floor 개발·시공. 연혁, 서울 송파구 본사.',
       en: 'Founded in 2000, CleanTech Co., Ltd. develops and installs Aqua-Crete inorganic non-combustible flooring and SKY Floor systems. Mission, vision, company history and our Seoul (Songpa-gu) headquarters.',
     },
     jsonLd: [ORGANIZATION],
@@ -134,7 +134,7 @@ export const ROUTE_META = {
       en: 'Aqua-Crete Floor System (Aquacrete) | CleanTech',
     },
     description: {
-      ko: '아쿠아크리트(Aqua-crete) 바닥 공법 — NEP 신제품 인증을 받은 무기계 불연 바닥재. 습윤 바탕면·영하 기온 시공, 강력한 부착력, 영구적 미끄럼 저항, VOC 무발생 친환경 마감. 급식실·식품공장·위생구역에 최적.',
+      ko: '아쿠아크리트(Aqua-crete) 바닥 공법 — NEP 인증 무기 불연 바닥재. 습윤·영하 시공, 강력한 부착력, 영구 미끄럼 저항.',
       en: 'Aqua-Crete floor system — NEP-certified inorganic, non-combustible flooring. Applies on wet substrates and at sub-zero temperatures, with strong adhesion, permanent slip resistance and zero-VOC eco-friendly finish. Ideal for kitchens, food plants and hygiene zones.',
     },
     image: '/images/aqua-crete-hero.jpg',
@@ -159,7 +159,7 @@ export const ROUTE_META = {
       en: 'Aqua-Crete Exterior Wall System (EIFS) | CleanTech',
     },
     description: {
-      ko: '아쿠아크리트(Aqua-crete) 외벽 공법 — 화염 확산을 차단하는 무기 불연 외단열 시스템(EIFS). KS F 8414 실물화재시험, 내진 성능 인증, 고어텍스형 방수·통기 성능. 동절기 영하 시공 가능.',
+      ko: '아쿠아크리트(Aqua-crete) 외벽 공법 — 화염 확산을 차단하는 무기 불연 외단열(EIFS). KS F 8414 실물화재시험 통과.',
       en: 'Aqua-Crete exterior wall system — inorganic, non-combustible EIFS that stops flame spread. KS F 8414 full-scale fire test, seismic performance certification, GORE-TEX-like waterproof & breathable function. Applies in sub-zero winter conditions.',
     },
     image: '/images/aqua-crete-eifs-hero.jpg',
@@ -184,7 +184,7 @@ export const ROUTE_META = {
       en: 'SKY Floor System | CleanTech',
     },
     description: {
-      ko: 'SKY Floor(스카이 플로어) — 바닥재 수지와 스테인리스 와이어 글라스 메쉬를 결합한 균열 방지형 고강도 바닥 시스템. 친환경 인증, 조달청 등록, 산·알칼리·용제 저항. 물류·중량 하중 현장용.',
+      ko: 'SKY Floor(스카이 플로어) — 스테인리스 와이어 글라스 메쉬 결합 균열 방지 고강도 바닥. 친환경 인증, 조달청 등록, 내화학성.',
       en: 'SKY Floor — crack-resistant, high-strength floor system combining resin with stainless wire glass mesh. Eco-label certified, registered with Korea’s Public Procurement Service, resistant to acids, alkalis and solvents. Built for logistics and heavy-load sites.',
     },
     image: '/images/sky-floor-hero-green.jpg',
@@ -209,7 +209,7 @@ export const ROUTE_META = {
       en: 'SKY-AU Polyaspartic Polyurea | CleanTech',
     },
     description: {
-      ko: 'SKY-AU — 지방족 폴리아스파틱 폴리우레아 코팅. 상온 무촉매 초속경화, 무황변·UV 안정, 방수·바닥 마감용. (주)크린텍개발.',
+      ko: 'SKY-AU — 지방족 폴리아스파틱 폴리우레아 코팅. 상온 무촉매 초속경화, 무황변·UV 안정, 방수·바닥 마감. (주)크린텍개발.',
       en: 'SKY-AU — aliphatic polyaspartic polyurea coating. Ultra-fast ambient cure without catalyst, non-yellowing and UV-stable, for waterproofing and floor finishes. By CleanTech Co., Ltd.',
     },
     image: '/images/sky-au-hero.jpg',
@@ -222,7 +222,7 @@ export const ROUTE_META = {
       en: 'Resources & Certifications | CleanTech (Aqua-Crete)',
     },
     description: {
-      ko: '아쿠아크리트(Aqua-crete)·SKY Floor 제품 카탈로그, NEP 신제품 인증, 친환경 인증, KS F 8414 실물화재시험 등 공인 인증서와 시험성적서를 확인하고 내려받으세요.',
+      ko: '아쿠아크리트(Aqua-crete)·SKY Floor 카탈로그, NEP·친환경 인증, KS F 8414 실물화재시험 등 인증서·시험성적서.',
       en: 'Download Aqua-Crete and SKY Floor catalogs, NEP certification, eco-label certification, KS F 8414 fire-test and other official certificates and test reports.',
     },
   },
@@ -234,7 +234,7 @@ export const ROUTE_META = {
       en: 'Contact Us | CleanTech (Aqua-Crete)',
     },
     description: {
-      ko: '아쿠아크리트(Aqua-crete) 바닥·외벽 공법, SKY Floor 시공 상담 및 견적 문의. (주)크린텍개발 — 서울 송파구 법원로 114 C-406, 02-420-2844.',
+      ko: '아쿠아크리트(Aqua-crete) 바닥·외벽 공법, SKY Floor 시공 상담·견적 문의. (주)크린텍개발 02-420-2844.',
       en: 'Consultation and quotes for Aqua-Crete floor and exterior wall systems and SKY Floor. CleanTech Co., Ltd. — C-406, 114 Beobwon-ro, Songpa-gu, Seoul, +82-2-420-2844.',
     },
   },
