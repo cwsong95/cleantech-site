@@ -1,3 +1,8 @@
 # http://www.robotstxt.org
+# Placeholder pages (sky-flex, polyaspartic-primer, downloads) are excluded
+# with <meta name="robots" content="noindex"> instead of Disallow, so crawlers
+# can actually see that directive.
 User-agent: *
 Disallow:
+
+Sitemap: https://aqua-crete.com/sitemap.xml

@@ -70,6 +70,8 @@ export default class AcSliderComponent extends Component {
 
   constructor() {
     super(...arguments);
+    // No DOM / rAF during FastBoot (prerender) — the slider is browser-only.
+    if (typeof requestAnimationFrame !== 'function') return;
     this._raf = requestAnimationFrame(() => this._init());
     registerDestructor(this, () => {
       if (this._raf) {

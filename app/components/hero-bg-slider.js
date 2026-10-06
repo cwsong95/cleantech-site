@@ -60,6 +60,8 @@ export default class HeroBgSliderComponent extends Component {
 
   constructor() {
     super(...arguments);
+    // No DOM / rAF during FastBoot (prerender) — Swiper is browser-only.
+    if (typeof requestAnimationFrame !== 'function') return;
     this._rafId = requestAnimationFrame(() => this._init());
 
     registerDestructor(this, () => {

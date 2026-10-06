@@ -36,7 +36,7 @@ const PRODUCT_CARDS = {
       id: 'aqua-crete',
       title: 'AQUA-CRETE',
       description:
-        '무기불연마감 시스템으로 주방 급식실 식품 공장 위생구역에 최적화.',
+        '아쿠아크리트(Aqua-crete) 무기 불연 마감 시스템으로 주방·급식실·식품 공장 위생구역에 최적화.',
       image: '/images/aqua-crete-hero.jpg',
       imageAlt: '아쿠아크리트 시공 이미지',
       badge: '식품 · 위생',
@@ -53,7 +53,7 @@ const PRODUCT_CARDS = {
       id: 'aqua-crete-eifs',
       title: 'AQUA-CRETE 외단열',
       description:
-        '무기 불연재 외단열시스템으로 외벽의 화재 방지 및 언존ㄱ안전과 방수·단열을 동시에 확보.',
+        '아쿠아크리트 무기 불연재 외단열 시스템으로 외벽의 화재 방지 및 언존ㄱ안전과 방수·단열을 동시에 확보.',
       image: '/images/aqua-crete-eifs-hero.jpg',
       imageAlt: '아쿠아크리트 외단열 시공 이미지',
       badge: '외벽 · 불연',
@@ -74,7 +74,7 @@ const PRODUCT_CARDS = {
       image: '/images/sky-floor-hero-green.jpg',
       imageAlt: '스카이 플로어 시공 이미지',
       badge: '물류 · 중량',
-      points: ['균열 벙지 성능 제품', '친환경 인증 제품', '조달청 등록 재품'],
+      points: ['균열 방지 성능 제품', '친환경 인증 제품', '조달청 등록 제품'],
       linkLabel: '자세히 보기',
       route: 'product.sky-floor',
       readyToView: true,

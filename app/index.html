@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="utf-8">
-    <title>CleanTech</title>
+    <!--
+      No static title element here on purpose: ember-page-title owns the page
+      title in both the browser and the FastBoot/prember prerender (a static
+      one would be duplicated in the prerendered HTML).
+      Per-page description / canonical / Open Graph / JSON-LD live in
+      app/templates/head.hbs (ember-cli-head).
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- 검색엔진 소유 확인 태그: 등록 후 발급받은 값을 넣고 주석 해제 -->
+    <!-- <meta name="naver-site-verification" content="REPLACE_WITH_NAVER_SEARCH_ADVISOR_TOKEN"> -->
+    <!-- <meta name="google-site-verification" content="REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_TOKEN"> -->
 
     {{content-for "head"}}
 
-    <!-- 🔥 Ember가 여기에 app CSS를 자동 삽입합니다 -->
+    <!-- 🔥 Ember가 여기에 app CSS를 자동 삽입합니다 (vendor.css는 ember-auto-import가 스타일을 끼워 넣는 기준점이라 비어 있어도 필요) -->
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link rel="stylesheet" href="{{rootURL}}assets/cleantech-fresh.css">
     <link rel="icon" href="{{rootURL}}images/cleantech-icon-favicon.png" type="image/png" sizes="45x64">
 

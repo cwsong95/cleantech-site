@@ -7,8 +7,11 @@ export default class ApplicationRoute extends Route {
 
   constructor() {
     super(...arguments);
+    // `window` exists (but is mostly empty) inside the FastBoot sandbox,
+    // so check for `history` itself, not just `window`.
     if (
       typeof window !== 'undefined' &&
+      window.history &&
       'scrollRestoration' in window.history
     ) {
       // Prevent browser from restoring the previous scroll position on SPA navigations.
@@ -24,7 +27,10 @@ export default class ApplicationRoute extends Route {
 
   @action
   handleRouteChange() {
-    if (typeof window !== 'undefined') {
+    if (
+      typeof window !== 'undefined' &&
+      typeof window.requestAnimationFrame === 'function'
+    ) {
       window.requestAnimationFrame(() => {
         window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
         // Reset any scrollable main container just in case.

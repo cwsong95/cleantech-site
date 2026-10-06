@@ -5,7 +5,7 @@ import { service } from '@ember/service';
 
 const CONTENT = {
   ko: {
-    metaTitle: '기술자료 | CleanTech',
+    metaTitle: '기술자료·인증서 | 크린텍개발 (아쿠아크리트)',
     hero: {
       eyebrow: 'RESOURCES',
       title: '기술자료',
@@ -154,7 +154,7 @@ const CONTENT = {
     ],
   },
   en: {
-    metaTitle: 'Resources | CleanTech',
+    metaTitle: 'Resources & Certifications | CleanTech (Aqua-Crete)',
     hero: {
       eyebrow: 'RESOURCES',
       title: 'Resources',

@@ -1,0 +1,33 @@
+{{! template-lint-disable no-triple-curlies }}
+{{!
+  Rendered into <head> by ember-cli-head (<HeadLayout /> in application.hbs).
+  `this.model` is the `head-data` service — see app/services/head-data.js.
+  The <title> element is set separately by ember-page-title in each route template.
+}}
+<meta name="description" content={{this.model.description}} />
+<link rel="canonical" href={{this.model.canonical}} />
+{{#if this.model.noindex}}
+  <meta name="robots" content="noindex, follow" />
+{{else}}
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1"
+  />
+{{/if}}
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={{this.model.siteName}} />
+<meta property="og:locale" content={{this.model.ogLocale}} />
+<meta property="og:title" content={{this.model.title}} />
+<meta property="og:description" content={{this.model.description}} />
+<meta property="og:url" content={{this.model.canonical}} />
+<meta property="og:image" content={{this.model.ogImage}} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={{this.model.title}} />
+<meta name="twitter:description" content={{this.model.description}} />
+<meta name="twitter:image" content={{this.model.ogImage}} />
+
+{{#if this.model.jsonLd}}
+  {{{this.model.jsonLd}}}
+{{/if}}
