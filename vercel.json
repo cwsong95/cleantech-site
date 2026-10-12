@@ -1,6 +1,20 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/en/sub/aqua_crete.php",
+      "destination": "/product/aqua-crete",
+      "permanent": true
+    },
+    {
+      "source": "/sub/aqua_crete.php",
+      "destination": "/product/aqua-crete",
+      "permanent": true
+    },
+    { "source": "/en/:path*", "destination": "/", "permanent": true },
+    { "source": "/sub/:path*", "destination": "/", "permanent": true }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/_empty.html" }],
   "headers": [
     {
