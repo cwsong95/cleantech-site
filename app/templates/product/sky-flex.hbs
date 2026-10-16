@@ -1,29 +1,617 @@
-{{page-title "SKY-Flex | CleanTech"}}
+{{page-title this.c.metaTitle}}
 
-<article class="page margin-page">
-  <div class="container-app">
-    <section
-      class="space-y-4 rounded-3xl border border-slate-200 bg-white/90 p-10 shadow-xl shadow-blue-500/10 backdrop-blur"
-    >
-      <p class="coming-soon-badge">{{this.locale.t "dropdown.comingSoon"}}</p>
-      <h1 class="text-3xl font-bold leading-tight text-slate-900">SKY-Flex</h1>
-      <p class="text-base leading-relaxed text-slate-600">
-        {{#if this.locale.isKorean}}
-          SKY-Flex 자료와 시공 사례를 준비 중입니다. 곧 업데이트될 예정이며,
-          문의가 필요하시면 아래 연락처로 알려주세요.
-        {{else}}
-          SKY-Flex product information and project references are being prepared
-          and will be published soon. In the meantime, feel free to reach us
-          through the links below.
-        {{/if}}
-      </p>
-      <div class="flex flex-wrap gap-3">
-        <LinkTo @route="contact" class="btn">{{this.locale.t
-            "nav.contact"
-          }}</LinkTo>
-        <LinkTo @route="downloads" class="btn-ghost">{{this.locale.t
-            "footer.downloads.title"
-          }}</LinkTo>
+<article class="sky-flex-page page ac-page full-bleed" {{aqua-reveal}}>
+  {{! ================= HERO ================= }}
+  <section class="ac-hero ac-hero--photo">
+    <div class="ac-hero__bg" aria-hidden="true">
+      <img src="/images/sky-flex-hero.jpg" alt="" />
+    </div>
+    <div class="ac-inner ac-hero__grid ac-hero__grid--solo">
+      <div class="ac-hero__content">
+        <h1 class="ac-hero__titleimg">
+          <img src="/images/sky-flex-hero-title.png" alt="" />
+          <span class="ac-sr-only">{{this.c.hero.srTitle}}</span>
+        </h1>
+        <p class="ac-hero__logotag">{{this.c.hero.tagline}}</p>
+        <ul class="ac-hero__pills">
+          {{#each this.c.hero.pills as |pill|}}
+            <li>{{pill}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class="ac-metrics">
+      <div class="ac-inner ac-metrics__grid">
+        {{#each this.c.hero.metrics as |m|}}
+          <div class="ac-metric">
+            <div class="ac-metric__n">{{m.n}}</div>
+            <div class="ac-metric__l">{{m.l}}</div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <div class="margin-page">
+    {{! ================= 소개 ================= }}
+    <section class="ac-sec ac-concept" id="about">
+      <div class="ac-head ac-reveal">
+        <span class="ac-eyebrow">{{this.c.intro.eyebrow}}</span>
+        <h2>{{this.c.intro.title}}</h2>
+        <p>{{this.c.intro.body}}</p>
+      </div>
+
+      <div class="sf-intro">
+        <div class="sf-intro__comp ac-reveal" data-d="1">
+          <h3 class="sf-subtitle">{{this.c.intro.componentsTitle}}</h3>
+          <ol class="sf-comp">
+            {{#each this.c.intro.components as |item|}}
+              <li class="sf-comp__item">
+                <span class="sf-comp__ic" aria-hidden="true"><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ><path d={{item.icon}} /></svg></span>
+                <span class="sf-comp__name">{{item.name}}</span>
+                <span class="sf-comp__val">{{item.value}}</span>
+              </li>
+            {{/each}}
+          </ol>
+        </div>
+
+        <figure class="sf-layer ac-reveal" data-d="2">
+          <h3 class="sf-subtitle">{{this.c.intro.diagramTitle}}</h3>
+          {{#if this.locale.isKorean}}
+            {{! 카탈로그 원본 상세도 (한글 라벨 포함) }}
+            <div class="sf-layer__pic">
+              <img
+                src="/images/sky-flex/layer-diagram.png"
+                alt={{this.c.intro.diagramCaption}}
+                loading="lazy"
+              />
+            </div>
+          {{else}}
+            <div class="sf-layer__body">
+              <svg
+                class="sf-layer__svg"
+                viewBox="0 0 360 300"
+                role="img"
+                aria-label={{this.c.intro.diagramCaption}}
+              >
+                <defs>
+                  <pattern
+                    id="sf-concrete"
+                    width="14"
+                    height="14"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <circle cx="3" cy="4" r="1.3" class="sf-layer__dot" />
+                    <circle cx="10" cy="9" r="1.6" class="sf-layer__dot" />
+                    <circle cx="7" cy="12.5" r="0.9" class="sf-layer__dot" />
+                  </pattern>
+                  <pattern
+                    id="sf-mesh"
+                    width="10"
+                    height="10"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <path d="M0 5h10M5 0v10" class="sf-layer__meshline" />
+                  </pattern>
+                </defs>
+                {{! concrete }}
+                <rect
+                  x="30"
+                  y="178"
+                  width="300"
+                  height="100"
+                  rx="6"
+                  class="sf-layer__concrete"
+                />
+                <rect
+                  x="30"
+                  y="178"
+                  width="300"
+                  height="100"
+                  rx="6"
+                  fill="url(#sf-concrete)"
+                />
+                {{! primer }}
+                <rect
+                  x="30"
+                  y="166"
+                  width="300"
+                  height="12"
+                  class="sf-layer__primer"
+                />
+                {{! base coat with mesh }}
+                <rect
+                  x="30"
+                  y="138"
+                  width="300"
+                  height="28"
+                  class="sf-layer__base"
+                />
+                <rect
+                  x="30"
+                  y="146"
+                  width="300"
+                  height="12"
+                  fill="url(#sf-mesh)"
+                />
+                <rect
+                  x="30"
+                  y="146"
+                  width="300"
+                  height="12"
+                  class="sf-layer__meshband"
+                />
+                {{! main coat }}
+                <rect
+                  x="30"
+                  y="94"
+                  width="300"
+                  height="44"
+                  class="sf-layer__main"
+                />
+                {{! top coat }}
+                <rect
+                  x="30"
+                  y="78"
+                  width="300"
+                  height="16"
+                  rx="3"
+                  class="sf-layer__top"
+                />
+                {{! numbered markers }}
+                <g class="sf-layer__marks">
+                  <circle cx="48" cy="86" r="9" /><text x="48" y="89.5">1</text>
+                  <circle cx="48" cy="116" r="9" /><text
+                    x="48"
+                    y="119.5"
+                  >2</text>
+                  <circle cx="48" cy="137" r="9" /><text
+                    x="48"
+                    y="140.5"
+                  >3</text>
+                  <circle cx="48" cy="156" r="9" /><text
+                    x="48"
+                    y="159.5"
+                  >4</text>
+                  <circle cx="48" cy="172" r="9" /><text
+                    x="48"
+                    y="175.5"
+                  >5</text>
+                  <circle cx="48" cy="228" r="9" /><text
+                    x="48"
+                    y="231.5"
+                  >6</text>
+                </g>
+                {{! thickness dimension }}
+                <g class="sf-layer__dim">
+                  <path d="M342 78v100" />
+                  <path d="M336 78h12M336 178h12" />
+                  <text
+                    x="348"
+                    y="132"
+                    transform="rotate(90 348 132)"
+                  >{{this.c.intro.thickness}}</text>
+                </g>
+              </svg>
+              <ol class="sf-layer__legend">
+                {{#each this.c.intro.layers as |layer|}}
+                  <li class="sf-layer__key sf-layer__key--{{layer.c}}">
+                    <span class="sf-layer__swatch" aria-hidden="true"></span>
+                    <span>
+                      {{#if layer.k}}<small>{{layer.k}}</small>{{/if}}
+                      <b>{{layer.v}}</b>
+                    </span>
+                  </li>
+                {{/each}}
+              </ol>
+            </div>
+          {{/if}}
+          <figcaption>{{this.c.intro.diagramCaption}}</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    {{! ================= 제품 특성 ================= }}
+    <section class="ac-sec ac-features" id="properties">
+      <div class="ac-head ac-reveal">
+        <span class="ac-eyebrow">{{this.c.features.eyebrow}}</span>
+        <h2>{{this.c.features.title}}</h2>
+        <p>{{this.c.features.lead}}</p>
+      </div>
+      <div class="sf-groups">
+        {{#each this.c.features.groups as |group|}}
+          <div class="sf-group sf-group--{{group.id}} ac-reveal">
+            <h3 class="sf-group__title">
+              <span class="sf-group__ic" aria-hidden="true"><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ><path d={{group.icon}} /></svg></span>
+              {{group.title}}
+            </h3>
+            <div class="sf-pcards">
+              {{#each group.items as |item|}}
+                <article class="sf-pcard">
+                  <figure class="sf-pcard__fig">
+                    <img src={{item.img}} alt={{item.h}} loading="lazy" />
+                  </figure>
+                  <div class="sf-pcard__body">
+                    <h4>{{item.h}}</h4>
+                    <p>{{item.p}}</p>
+                  </div>
+                </article>
+              {{/each}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </section>
+
+    {{! ================= 구조 특성 ================= }}
+    <section class="ac-sec ac-structure" id="structure">
+      <div class="ac-head ac-reveal">
+        <span class="ac-eyebrow">{{this.c.structure.eyebrow}}</span>
+        <h2>{{this.c.structure.title}}</h2>
+      </div>
+
+      <div class="sf-struct ac-reveal" data-d="1">
+        <div class="sf-struct__text">
+          <h3
+            class="sf-subtitle sf-subtitle--lg"
+          >{{this.c.structure.subtitle}}</h3>
+          <p class="sf-struct__body">{{this.c.structure.body}}</p>
+        </div>
+        <div class="sf-figrow">
+          {{#each this.c.structure.photos as |ph|}}
+            <figure class="sf-fig">
+              <img src={{ph.img}} alt={{ph.cap}} loading="lazy" />
+              <figcaption>{{ph.cap}}</figcaption>
+            </figure>
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="sf-compare ac-reveal" data-d="2">
+        <div class="sf-compare__panel sf-compare__panel--plain">
+          <h4>{{this.c.structure.compare.plain.title}}</h4>
+          <svg viewBox="0 0 240 110" class="sf-compare__svg" aria-hidden="true">
+            <rect x="10" y="30" width="220" height="70" class="sf-cmp-sub" />
+            <rect x="10" y="22" width="220" height="12" class="sf-cmp-film" />
+            <path d="M118 34 L122 34 L120 92 Z" class="sf-cmp-crack" />
+            <rect x="113" y="22" width="14" height="12" class="sf-cmp-break" />
+            <path d="M24 70h40M64 70l-6-5M64 70l-6 5" class="sf-cmp-arrow" />
+            <path d="M216 70h-40M176 70l6-5M176 70l6 5" class="sf-cmp-arrow" />
+            <path
+              d="M120 8c-3 5-4 7-4 9a4 4 0 0 0 8 0c0-2-1-4-4-9z"
+              class="sf-cmp-drop"
+            />
+          </svg>
+          <ol class="sf-compare__flow">
+            {{#each this.c.structure.compare.plain.flow as |f|}}
+              <li>{{f}}</li>
+            {{/each}}
+          </ol>
+        </div>
+        <div class="sf-compare__panel sf-compare__panel--flex">
+          <h4>{{this.c.structure.compare.flex.title}}</h4>
+          <svg viewBox="0 0 240 110" class="sf-compare__svg" aria-hidden="true">
+            <rect x="10" y="30" width="220" height="70" class="sf-cmp-sub" />
+            <rect
+              x="10"
+              y="18"
+              width="220"
+              height="16"
+              class="sf-cmp-film sf-cmp-film--flex"
+            />
+            <path d="M14 26h212" class="sf-cmp-meshline" />
+            <path d="M118 34 L122 34 L120 92 Z" class="sf-cmp-crack" />
+            <path d="M24 70h40M64 70l-6-5M64 70l-6 5" class="sf-cmp-arrow" />
+            <path d="M216 70h-40M176 70l6-5M176 70l6 5" class="sf-cmp-arrow" />
+          </svg>
+          <ol class="sf-compare__flow">
+            {{#each this.c.structure.compare.flex.flow as |f|}}
+              <li>{{f}}</li>
+            {{/each}}
+          </ol>
+          <p class="sf-compare__note">{{this.c.structure.compare.flex.note}}</p>
+        </div>
+      </div>
+
+      <ol class="sf-points">
+        {{#each this.c.structure.points as |pt|}}
+          <li class="sf-point ac-reveal">
+            <span class="sf-point__n" aria-hidden="true"></span>
+            <div>
+              <h4>{{pt.h}}</h4>
+              <p>{{pt.p}}</p>
+            </div>
+          </li>
+        {{/each}}
+      </ol>
+
+      <div class="sf-meshsteps ac-reveal">
+        <h3
+          class="sf-subtitle sf-subtitle--lg"
+        >{{this.c.structure.meshStepsTitle}}</h3>
+        <ol class="sf-stepgrid">
+          {{#each this.c.structure.meshSteps as |st|}}
+            <li class="sf-step">
+              <figure class="sf-step__fig">
+                <img src={{st.img}} alt={{st.h}} loading="lazy" />
+                <span class="sf-step__badge" aria-hidden="true"></span>
+              </figure>
+              <h4>{{st.h}}</h4>
+              <p>{{st.p}}</p>
+            </li>
+          {{/each}}
+        </ol>
+      </div>
+
+      <div class="sf-keygrid ac-reveal">
+        <div class="sf-keybox">
+          <h3 class="sf-subtitle">{{this.c.structure.keyTitle}}</h3>
+          <ul class="sf-keylist">
+            {{#each this.c.structure.keyPoints as |kp|}}
+              <li>
+                <b>{{kp.h}}</b>
+                <span>{{kp.p}}</span>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="sf-keybox sf-keybox--areas">
+          <h3 class="sf-subtitle">{{this.c.structure.areasTitle}}</h3>
+          <ul class="sf-areas">
+            {{#each this.c.structure.areas as |a|}}
+              <li>{{a}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {{! ================= 구성 및 배합 · 비교 · 주의사항 ================= }}
+    <section class="ac-sec sf-tech" id="specification">
+      <div class="ac-head ac-reveal">
+        <span class="ac-eyebrow">{{this.c.tech.eyebrow}}</span>
+        <h2>{{this.c.tech.title}}</h2>
+        <p>{{this.c.tech.lead}}</p>
+      </div>
+
+      <div class="sf-acc ac-reveal">
+        <details class="sf-acc__item" open>
+          <summary>
+            <span class="sf-acc__n">01</span>
+            <span class="sf-acc__t">{{this.c.tech.composition.title}}</span>
+            <span class="sf-acc__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="sf-acc__body">
+            <div class="sf-tablewrap">
+              <table class="sf-table">
+                <thead>
+                  <tr>
+                    {{#each this.c.tech.composition.head as |h|}}<th
+                      >{{h}}</th>{{/each}}
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each this.c.tech.composition.rows as |row|}}
+                    <tr>
+                      {{#each row as |cell|}}<td>{{cell}}</td>{{/each}}
+                    </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <details class="sf-acc__item">
+          <summary>
+            <span class="sf-acc__n">02</span>
+            <span class="sf-acc__t">{{this.c.tech.ratio.title}}</span>
+            <span class="sf-acc__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="sf-acc__body">
+            <div class="sf-tablewrap">
+              <table class="sf-table sf-table--center">
+                <thead>
+                  <tr>
+                    {{#each this.c.tech.ratio.head as |h|}}<th
+                      >{{h}}</th>{{/each}}
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each this.c.tech.ratio.rows as |row|}}
+                    <tr>
+                      {{#each row as |cell|}}<td>{{cell}}</td>{{/each}}
+                    </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <details class="sf-acc__item">
+          <summary>
+            <span class="sf-acc__n">03</span>
+            <span class="sf-acc__t">{{this.c.tech.mixing.title}}</span>
+            <span class="sf-acc__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="sf-acc__body">
+            <ol class="sf-mix">
+              {{#each this.c.tech.mixing.steps as |st|}}
+                <li class="sf-mix__step">
+                  <span class="sf-mix__n" aria-hidden="true"></span>
+                  <h4>{{st.h}}</h4>
+                  <p>{{st.p}}</p>
+                </li>
+              {{/each}}
+            </ol>
+          </div>
+        </details>
+
+        <details class="sf-acc__item">
+          <summary>
+            <span class="sf-acc__n">04</span>
+            <span class="sf-acc__t">{{this.c.tech.compare.title}}</span>
+            <span class="sf-acc__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="sf-acc__body">
+            <div class="sf-tablewrap">
+              <table class="sf-table sf-table--vs">
+                <thead>
+                  <tr>
+                    {{#each this.c.tech.compare.head as |h|}}<th
+                      >{{h}}</th>{{/each}}
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each this.c.tech.compare.rows as |row|}}
+                    <tr>
+                      {{#each row as |cell|}}<td>{{cell}}</td>{{/each}}
+                    </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <details class="sf-acc__item">
+          <summary>
+            <span class="sf-acc__n">05</span>
+            <span class="sf-acc__t">{{this.c.tech.cautions.title}}</span>
+            <span class="sf-acc__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="sf-acc__body">
+            <ol class="ac-numlist sf-cautions">
+              {{#each this.c.tech.cautions.items as |item|}}
+                <li><span class="ac-numlist__n" aria-hidden="true"></span><div
+                  >{{item}}</div></li>
+              {{/each}}
+            </ol>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    {{! ================= 시공순서 ================= }}
+    <section class="ac-sec sf-seq" id="procedure">
+      <div class="ac-head ac-reveal">
+        <span class="ac-eyebrow">{{this.c.sequence.eyebrow}}</span>
+        <h2>{{this.c.sequence.title}}</h2>
+        <p>{{this.c.sequence.lead}}</p>
+      </div>
+      <div class="ac-reveal">
+        <div
+          class="ac-galtabs__bar"
+          role="tablist"
+          aria-label={{this.c.sequence.tabsAria}}
+        >
+          {{#each this.sequenceTabs as |tab|}}
+            <button
+              type="button"
+              role="tab"
+              aria-selected={{if tab.active "true" "false"}}
+              class="ac-galtab {{if tab.active 'is-active'}}"
+              {{on "click" (fn this.selectSequence tab.id)}}
+            >
+              <span>{{tab.label}}</span>
+              <span class="ac-galtab__n">{{tab.steps.length}}</span>
+            </button>
+          {{/each}}
+        </div>
+        <ol class="sf-stepgrid sf-stepgrid--4" role="tabpanel">
+          {{#each this.activeSequenceTab.steps key="h" as |st|}}
+            <li class="sf-step">
+              <figure class="sf-step__fig">
+                <img src={{st.img}} alt={{st.h}} loading="lazy" />
+                <span
+                  class="sf-step__badge"
+                  aria-hidden="true"
+                >{{this.c.sequence.stepLabel}}</span>
+              </figure>
+              <h4>{{st.h}}</h4>
+              <p>{{st.p}}</p>
+            </li>
+          {{/each}}
+        </ol>
+      </div>
+    </section>
+
+    {{! ================= 시공사례 ================= }}
+    <section class="ac-sec ac-gallery" id="gallery">
+      <div class="ac-head ac-reveal">
+        <span class="ac-eyebrow">{{this.c.cases.eyebrow}}</span>
+        <h2>{{this.c.cases.title}}</h2>
+        <p>{{this.c.cases.lead}}</p>
+      </div>
+      <div class="ac-reveal" data-d="1">
+        <div
+          class="ac-galtabs__bar"
+          role="tablist"
+          aria-label={{this.c.cases.tabsAria}}
+        >
+          {{#each this.caseTabs as |tab|}}
+            <button
+              type="button"
+              role="tab"
+              aria-selected={{if tab.active "true" "false"}}
+              class="ac-galtab {{if tab.active 'is-active'}}"
+              {{on "click" (fn this.selectCase tab.id)}}
+            >
+              <span>{{tab.label}}</span>
+              <span class="ac-galtab__n">{{tab.count}}</span>
+            </button>
+          {{/each}}
+        </div>
+        <div class="sf-casegrid" role="tabpanel">
+          {{#each this.activeCaseTab.items key="img" as |item|}}
+            <figure class="sf-case">
+              <img src={{item.img}} alt={{item.cap}} loading="lazy" />
+              <figcaption>{{item.cap}}</figcaption>
+            </figure>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
+    {{! ================= CTA ================= }}
+    <section class="ac-sec ac-callout" id="callout">
+      <div class="ac-callout__box ac-reveal">
+        <div>
+          <h2>{{this.c.callout.title}}</h2>
+          <p>{{this.c.callout.body}}</p>
+        </div>
+        <div class="ac-callout__cta">
+          <LinkTo @route="contact" class="ac-btn ac-btn--primary">
+            {{this.c.callout.primary}}
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </LinkTo>
+          <LinkTo
+            @route="downloads"
+            class="ac-btn ac-btn--ghost"
+          >{{this.c.callout.secondary}}</LinkTo>
+        </div>
       </div>
     </section>
   </div>

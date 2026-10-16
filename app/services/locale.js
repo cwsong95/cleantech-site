@@ -56,7 +56,7 @@ const MESSAGES = {
       aquaFloor: '바닥 공법',
       aquaWall: '외벽 공법',
       skyFloor: '스카이 플로어',
-      skyFlex: '스카이 플렉스',
+      skyFlex: '스카이 Flex',
       skyAu: '스카이 AU',
       polyaspartic: '폴리아스파틱',
       polyWaterproof: '방수재',

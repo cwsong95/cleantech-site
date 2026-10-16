@@ -54,6 +54,11 @@ const ORGANIZATION = {
       name: 'SKY Floor',
       alternateName: ['스카이 플로어', 'SKY-FLOOR'],
     },
+    {
+      '@type': 'Brand',
+      name: 'SKY Flex',
+      alternateName: ['스카이 플렉스', 'SKY-FLEX', 'Sky-Flex'],
+    },
   ],
 };
 
@@ -202,6 +207,31 @@ export const ROUTE_META = {
     ],
   },
 
+  'product.sky-flex': {
+    path: '/product/sky-flex',
+    ogTitle: {
+      ko: '스카이 플렉스 (SKY Flex) 내진구조형 수경화도막방수공법 | 크린텍개발',
+      en: 'SKY Flex Seismic-Resistant Water-Cured Membrane Waterproofing | CleanTech',
+    },
+    description: {
+      ko: 'SKY Flex(스카이 플렉스) — 물을 경화제로 사용하는 내진구조형 수경화도막방수공법. 무용제·무취, 습윤·영하 시공, 스테인리스 메시 내진 보강.',
+      en: 'SKY Flex — seismic-resistant, water-cured liquid membrane waterproofing that uses water as the hardener. Solvent-free and odorless, applies on damp substrates and below freezing, reinforced with stainless wire glass mesh.',
+    },
+    image: '/images/sky-flex-hero.jpg',
+    jsonLd: [
+      product({
+        name: 'SKY Flex (스카이 플렉스)',
+        alternateName: ['SKY Flex', '스카이 플렉스', 'SKY-FLEX', 'Sky-Flex'],
+        brand: 'SKY Flex',
+        description:
+          '물을 경화제로 사용하는 내진구조형 수경화도막방수공법. 무용제, 습윤·영하 시공, 스테인리스 와이어 글라스 메시 내진 보강.',
+        path: '/product/sky-flex',
+        image: '/images/sky-flex-hero.jpg',
+        category: 'Waterproofing membrane',
+      }),
+    ],
+  },
+
   'product.polyaspartic-waterproof': {
     path: '/product/polyaspartic-waterproof',
     ogTitle: {
@@ -222,8 +252,8 @@ export const ROUTE_META = {
       en: 'Resources & Certifications | CleanTech (Aqua-Crete)',
     },
     description: {
-      ko: '아쿠아크리트(Aqua-crete)·SKY Floor 카탈로그, NEP·친환경 인증, KS F 8414 실물화재시험 등 인증서·시험성적서.',
-      en: 'Download Aqua-Crete and SKY Floor catalogs, NEP certification, eco-label certification, KS F 8414 fire-test and other official certificates and test reports.',
+      ko: '아쿠아크리트(Aqua-crete)·SKY Floor·SKY Flex 카탈로그, NEP·친환경 인증, KS F 8414 실물화재시험 등 인증서·시험성적서.',
+      en: 'Download Aqua-Crete, SKY Floor and SKY Flex catalogs, NEP certification, eco-label certification, KS F 8414 fire-test and other official certificates and test reports.',
     },
   },
 
@@ -240,7 +270,6 @@ export const ROUTE_META = {
   },
 
   // Placeholder / redirect pages: keep crawlers from indexing them.
-  'product.sky-flex': { path: '/product/sky-flex', noindex: true },
   'product.polyaspartic-primer': {
     path: '/product/polyaspartic-primer',
     noindex: true,

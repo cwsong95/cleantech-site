@@ -50,6 +50,14 @@ const CONTENT = {
         available: true,
       },
       {
+        id: 'sky-flex',
+        name: 'SKY FLEX - 바닥',
+        summary: '내진구조형 수경화도막방수공법',
+        image: '/images/catalog-sky-flex.jpg',
+        href: '/downloads/sky-flex-catalog.pdf',
+        available: true,
+      },
+      {
         id: 'sky-au',
         name: 'SKY-AU',
         summary: '폴리아스파틱 폴리우레아 시스템',
@@ -197,6 +205,15 @@ const CONTENT = {
         summary: 'Hard-wearing floor system for large commercial spaces',
         image: '/images/catalog-sky-floor.jpg',
         href: '/downloads/sky-floor-catalog-en.pdf',
+        available: true,
+      },
+      {
+        id: 'sky-flex',
+        name: 'SKY Flex — Floor',
+        summary:
+          'Seismic-resistant water-cured membrane waterproofing (Korean catalog)',
+        image: '/images/catalog-sky-flex.jpg',
+        href: '/downloads/sky-flex-catalog.pdf',
         available: true,
       },
       {

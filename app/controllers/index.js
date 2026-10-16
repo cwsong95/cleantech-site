@@ -80,6 +80,19 @@ const PRODUCT_CARDS = {
       readyToView: true,
     },
     {
+      id: 'sky-flex',
+      title: 'SKY-FLEX',
+      description:
+        '물을 경화제로 사용하는 내진구조형 수경화도막방수공법. 물이 희석제가 아닌 경화제로 작용하여 이음매 없는 도막 방수층을 형성합니다.',
+      image: '/images/sky-flex/case-exp-1.jpg',
+      imageAlt: '스카이 플렉스 옥상 방수 시공 이미지',
+      badge: '방수 · 내진',
+      points: ['균열 저항 · 내진', '습윤 바탕면 시공', '동절기 경화'],
+      linkLabel: '자세히 보기',
+      route: 'product.sky-flex',
+      readyToView: true,
+    },
+    {
       id: 'sky-au',
       title: 'SKY-AU',
       description:
@@ -143,6 +156,23 @@ const PRODUCT_CARDS = {
       ],
       linkLabel: 'Learn more',
       route: 'product.sky-floor',
+      readyToView: true,
+    },
+    {
+      id: 'sky-flex',
+      title: 'SKY-FLEX',
+      description:
+        'Seismic-resistant water-cured membrane waterproofing that uses water as the hardener — water acts as a hardener, not a diluent, forming a seamless membrane.',
+      image: '/images/sky-flex/case-exp-1.jpg',
+      imageAlt: 'SKY Flex roof waterproofing installation',
+      badge: 'Waterproofing · Seismic',
+      points: [
+        'Crack resistance · Seismic',
+        'Damp-substrate application',
+        'Winter curing',
+      ],
+      linkLabel: 'Learn more',
+      route: 'product.sky-flex',
       readyToView: true,
     },
     {

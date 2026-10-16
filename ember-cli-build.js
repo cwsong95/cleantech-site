@@ -16,6 +16,7 @@ const PRERENDER_URLS = [
   '/product/aqua-crete',
   '/product/aqua-crete-eifs',
   '/product/sky-floor',
+  '/product/sky-flex',
   '/product/polyaspartic-waterproof',
   '/certifications',
   '/contact',
